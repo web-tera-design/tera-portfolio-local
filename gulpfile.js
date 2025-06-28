@@ -29,7 +29,14 @@ function compileSass() {
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("./dist/css", { sourcemaps: "." }));
+    .pipe(gulp.dest("./dist/assets/css", { sourcemaps: "." }));
+}
+
+// HTMLコピー
+function copyHtml() {
+  return gulp
+    .src("./src/**/*.html") // src/index.html に置いてるなら "./src/index.html"
+    .pipe(gulp.dest("./dist"));
 }
 
 // JS → minify
@@ -38,7 +45,7 @@ function compileJs() {
     .src("./src/assets/js/script.js", { sourcemaps: true })
     .pipe(plumber({ errorHandler: notify.onError("JS Error: <%= error.message %>") }))
     .pipe(uglify())
-    .pipe(gulp.dest("./dist/js", { sourcemaps: "." }));
+    .pipe(gulp.dest("./dist/assets/js", { sourcemaps: "." }));
 }
 
 // 画像はそのまま dist にコピー
@@ -48,19 +55,19 @@ function copyImages() {
       ["./src/assets/img/**/*.{svg,webp}", "!./src/assets/img/**/.DS_Store"],
       { encoding: false } // バイナリファイルとして処理
     )
-    .pipe(newer("./dist/img")) // ← 追加
+    .pipe(newer("./dist/assets/img")) // ← 追加
     .pipe(plumber({ errorHandler: notify.onError("Image Copy Error: <%= error.message %>") }))
-    .pipe(gulp.dest("./dist/img"));
+    .pipe(gulp.dest("./dist/assets/img"));
 }
 
 // 画像変換
 function convertToWebp() {
   return gulp
     .src(["./src/assets/img/**/*.{jpg,jpeg,png}", "!./src/assets/img/**/.DS_Store"], { encoding: false })
-    .pipe(newer({ dest: "./dist/img", ext: ".webp" })) // ← 追加
+    .pipe(newer({ dest: "./dist/assets/img", ext: ".webp" })) // ← 追加
     .pipe(plumber({ errorHandler: notify.onError("WebP Convert Error: <%= error.message %>") }))
     .pipe(webp({ quality: 90 })) // オプションで画質指定も可能
-    .pipe(gulp.dest("./dist/img"));
+    .pipe(gulp.dest("./dist/assets/img"));
 }
 
 // ===============================================
@@ -128,7 +135,8 @@ function watchFiles() {
     "./src/assets/img/**/*.{jpg,jpeg,png,svg,webp}",
     gulp.series(copyImages, convertToWebp, reload) // ← ここでWebPも同時に
   );
-  gulp.watch("./**/*.php", reload);
+  gulp.watch("./src/**/*.html", gulp.series(copyHtml, reload)); // ★ここ！
+  gulp.watch("./**/*.php", reload); // 今は "./*.php"
 }
 
 // タスク
@@ -136,7 +144,7 @@ exports.sass = compileSass;
 exports.js = compileJs;
 exports.default = gulp.series(
   generateIndexScss, // ← ここを追加
-  gulp.parallel(compileSass, compileJs, copyImages, convertToWebp), // 初回もWebP生成
+  gulp.parallel(compileSass, compileJs, copyImages, convertToWebp, copyHtml), // 初回もWebP生成
   serve,
   watchFiles
 );

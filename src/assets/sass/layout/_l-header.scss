@@ -1,2 +1,36 @@
 @use '../global' as *;
 
+.l-header {
+    position: fixed;
+    z-index: 102;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #222222;
+}
+
+.l-header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+}
+
+.l-header__logo {
+      display: block;
+      padding-block: 18px;
+}
+
+.l-header__logo-link {
+
+}
+
+.l-header__nav {
+    display: none;
+    @include mq(lg) {
+        display: flex;
+        color: #ffffff;
+    }
+}
+

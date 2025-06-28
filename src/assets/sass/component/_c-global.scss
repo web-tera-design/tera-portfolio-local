@@ -1,0 +1,20 @@
+@use '../global' as *;
+
+.c-global-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.c-global-nav__item {
+
+}
+
+.c-global-nav__link {
+    color: var(--Text-Inverse, #FFF);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: var(--Font-Line-Height-Navigation, 24px); /* 150% */
+    letter-spacing: var(--Font-Letter-Spacing-Navigation, 1px);
+}
+

@@ -1,0 +1,8 @@
+@use '../global' as *;
+
+.p-header__button {
+    display: flex;
+    flex-direction: column;
+    padding: 17px 20px;
+    background: linear-gradient(271deg, #FFF800 0.98%, #FB0000 99.02%);
+}

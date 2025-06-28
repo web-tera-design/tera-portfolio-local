@@ -54,18 +54,18 @@ function theme_enqueue_assets()
     // メインCSS
     wp_enqueue_style(
         'theme-style',
-        get_template_directory_uri() . '/dist/css/style.css',
+        get_template_directory_uri() . '/dist/assets/css/style.css',
         ['google-fonts', 'font-awesome', 'swiper'],
-        filemtime(get_theme_file_path('/dist/css/style.css')),
+        filemtime(get_theme_file_path('/dist/assets/css/style.css')),
         'all'
     );
 
     // メインJS
     wp_enqueue_script(
         'theme-script',
-        get_template_directory_uri() . '/dist/js/script.js',
+        get_template_directory_uri() . '/dist/assets/js/script.js',
         ['swiper', 'gsap', 'scrolltrigger', 'jquery'],
-        filemtime(get_theme_file_path('/dist/js/script.js')),
+        filemtime(get_theme_file_path('/dist/assets/js/script.js')),
         true
     );
 }

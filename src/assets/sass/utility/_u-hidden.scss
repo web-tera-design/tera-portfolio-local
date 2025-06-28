@@ -2,14 +2,35 @@
 
 .u-hidden--sp {
     display: none;
+    @include mq(tb) {
+      display: block;
+    }
+}
+.u-hidden--tb {
+    display: none;
     @include mq(md) {
       display: block;
     }
-  }
+}
   
-.u-hidden--pc {
-  display: block;
-  @include mq(md) {
-    display: none;
+.u-hidden--md {
+  display: none;
+  @include mq(lg) {
+    display: block;
   }
 }
+
+.u-hidden--lg {
+  display: none;
+  @include mq(pc) {
+    display: block;
+  }
+}
+.u-hidden--pc {
+  display: none;
+  @include mq(xl) {
+    display: block;
+  }
+}
+
+

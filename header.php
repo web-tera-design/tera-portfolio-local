@@ -52,9 +52,58 @@
 </head>
 
 <body <?php body_class(); ?>>
-
     <header class="l-header">
-        <div class="l-header__inner">
-
+        <div class="l-header__inner l-section__inner--wide">
+            <h1 class="l-header__logo">
+                <a href="" class="l-header__logo-link">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-logo.svg" alt="Tera’s portfolio">
+                </a>
+            </h1>
+            <nav class="l-header__nav">
+                <ul class="c-global-nav u-mr30">
+                    <li class="c-global-nav__item">
+                        <a href="" class="c-global-nav__link">実績一覧</a>
+                    </li>
+                    <li class="c-global-nav__item">
+                        <a href="" class="c-global-nav__link">提供サービス</a>
+                    </li>
+                    <li class="c-global-nav__item">
+                        <a href="" class="c-global-nav__link">ご依頼の流れ</a>
+                    </li>
+                    <li class="c-global-nav__item">
+                        <a href="" class="c-global-nav__link">私について</a>
+                    </li>
+                </ul>
+                <a href="" class="c-button p-header__button">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt="">
+                    <span class="c-button-text">ご相談はこちら</span>
+                </a>
+            </nav>
         </div>
     </header>
+    <button class="c-drawer-icon" aria-label="メニューを開く">
+        <span class="c-drawer-icon__bar"></span>
+        <span class="c-drawer-icon__bar"></span>
+        <span class="c-drawer-icon__bar"></span>
+    </button>
+    <div class="c-drawer">
+        <div class="c-drawer__content">
+            <ul class="c-drawer__list">
+                <li class="c-drawer__item">
+                    <a href="" class="c-drawer__link">実績一覧</a>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="" class="c-drawer__link">提供サービス</a>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="" class="c-drawer__link">ご依頼の流れ</a>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="" class="c-drawer__link">私について</a>
+                </li>
+            </ul>
+            <a href="" class="c-button c-drawer__button u-mt56">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt="">
+                ご相談はこちら</a>
+        </div>
+    </div>

@@ -1,0 +1,19 @@
+@use '../global' as *;
+
+.l-section__inner--wide {
+    inline-size: min(calc(1440px + 20px * 2), 100%);
+    // padding-inline: 20px;
+    margin-inline: auto;
+}
+
+.l-section__inner {
+    inline-size: min(calc(1120px + 20px * 2), 100%);
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
+.l-section__inner--narrow {
+    inline-size: min(calc(800px + 20px * 2), 100%);
+    padding-inline: 20px;
+    margin-inline: auto;
+}
