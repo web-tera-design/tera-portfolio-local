@@ -1,0 +1,15 @@
+@use '../global' as *;
+
+.u-hidden--sp {
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
+  }
+  
+.u-hidden--pc {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html <?php language_attributes(); ?>>
+
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <?php
+    // タイトル
+    $page_title = function_exists('wp_get_document_title') ? wp_get_document_title() : wp_title('|', false, 'right') . get_bloginfo('name');
+    // description
+    if (is_singular() && has_excerpt()) {
+        $description = get_the_excerpt();
+    } else {
+        $description = get_bloginfo('description');
+    }
+    // OGP画像
+    if (is_singular() && has_post_thumbnail()) {
+        $og_image = get_the_post_thumbnail_url(null, 'full');
+    } else {
+        $og_image = get_template_directory_uri() . '/img/og-image.jpg';
+    }
+    // OGP URL
+    $og_url = is_singular() ? get_permalink() : home_url();
+    ?>
+
+    <title><?php echo esc_html($page_title); ?></title>
+    <meta name="description" content="<?php echo esc_attr($description); ?>" />
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="<?php echo esc_attr($page_title); ?>" />
+    <meta property="og:description" content="<?php echo esc_attr($description); ?>" />
+    <meta property="og:type" content="<?php echo is_singular() ? 'article' : 'website'; ?>" />
+    <meta property="og:url" content="<?php echo esc_url($og_url); ?>" />
+    <meta property="og:image" content="<?php echo esc_url($og_image); ?>" />
+
+    <!-- Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<?php echo esc_attr($page_title); ?>" />
+    <meta name="twitter:description" content="<?php echo esc_attr($description); ?>" />
+    <meta name="twitter:image" content="<?php echo esc_url($og_image); ?>" />
+
+    <!-- canonical -->
+    <link rel="canonical" href="<?php echo esc_url($og_url); ?>" />
+
+    <!-- noindexは本番以外でのみ -->
+    <?php if (wp_get_environment_type() !== 'production') : ?>
+        <meta name="robots" content="noindex, nofollow" />
+    <?php endif; ?>
+
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+    <header class="l-header">
+        <div class="l-header__inner">
+
+        </div>
+    </header>
