@@ -42,21 +42,6 @@
     }
 }
 
-.c-drawer-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    z-index: 100;
-  }
-  .c-drawer-overlay.js-show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
 .c-drawer {
     position: fixed;
     z-index: 101;
