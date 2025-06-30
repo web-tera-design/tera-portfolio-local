@@ -31,8 +31,9 @@
             </div>
         </div>
     </section>
+
     <section class="p-top-assurance">
-        <div class="p-top-assurance__inner l-section__inner">
+        <div class="p-top-assurance__inner l-section__inner l-section__inner--narrow">
             <div class="p-top-assurance__heading">
                 <div class="c-section-heading">
                     <p class="c-heading--en" aria-hidden="true">Assurance</p>
@@ -76,6 +77,45 @@
                     </ul>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <section class="p-top-works">
+        <div class="p-top-works__inner l-section__inner">
+            <div class="c-section-heading">
+                <p class="c-heading--en" aria-hidden="true">Assurance</p>
+                <h2 class="c-heading--title"><span class="u-red">安</span>心してご依頼いただくために</h2>
+            </div>
+            <ul class="p-top-works__list">
+                <li class="p-top-works__item">
+                    <a href="" class="p-top-works__link">
+                        <div class="p-top-works__image">
+                            <img src="" alt="">
+                        </div>
+                        <span class="p-top-works__detail">
+                            <img src="" alt="">
+
+                        </span>
+                        <h3 class="p-top-works__title"></h3>
+                        <ul class="c-tags">
+                            <li class="c-tag"></li>
+                            <li class="c-tag"></li>
+                            <li class="c-tag"></li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <div class="p-top-works__button">
+                <a href="" class="c-button">
+                    <span class="c-button__icon" aria-hidden="true">
+                        <img src="" alt="">
+                    </span>
+                    <span class="c-button__text"></span>
+                    <span class="c-button__arrow" aria-hidden="true">
+                        <img src="" alt="">
+                    </span>
+                </a>
+            </div>
         </div>
     </section>
 </main>

@@ -26,6 +26,7 @@
 .p-top-assurance__image {
     margin-block-start: rclamp(25, 32, 375, 1440);
     width: rclamp(265, 516, 375, 1440);
+    margin-inline: auto;
     img {
         width: 100%;
         height: auto;
@@ -36,10 +37,11 @@
 
 .p-top-assurance__list {
     margin-block-start: 32px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: rclamp(16, 24, 375, 1440);
-    @include mq(md) {
+    @include mq(lg) {
       margin-block-start: revert;
     }
 }

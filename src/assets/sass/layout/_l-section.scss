@@ -19,9 +19,11 @@
 }
 
 .l-section__inner--narrow {
-    inline-size: min(calc(600px + 20px * 2), 100%);
-    padding-inline: 20px;
-    margin-inline: auto;
+    @include mq(lg-down) {
+        inline-size: min(calc(600px + 20px * 2), 100%);
+        padding-inline: 20px;
+        margin-inline: auto;
+    }
 }
 
 .l-main {
