@@ -1,0 +1,41 @@
+@use '../global' as *;
+
+.p-top-commitment {
+    background: linear-gradient(
+        120deg, 
+        #ffe7b3 0%, 
+        #ffd392 30%, 
+        #fecb7e 50%, 
+        #feb678 70%, 
+        #fd9974 100%
+      );
+      padding-block: rclamp(56, 120, 375, 1440);
+
+      text-align: center;
+}
+
+.p-top-commitment__inner {
+
+}
+
+
+.p-top-commitment__messages {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-block-start: rclamp(40, 52, 375, 1440);
+    gap: rclamp(16, 24, 375, 1440);
+}
+
+.p-top-commitment__message {
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+    @include mq(sm-down) {
+        text-align: left;    /* テキストだけ左揃え */
+        max-width: 500px;    /* 横幅制限（任意） */
+        width: 100%;
+        margin-inline:auto;
+    }
+}
+

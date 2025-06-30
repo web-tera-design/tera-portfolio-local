@@ -19,7 +19,7 @@
 .c-drawer-icon__bar {
     inline-size: 100%;
     block-size: 2px;
-    background: #ffffff;
+    background: $color-wt;
     transition: all 0.5s ease;
     position: relative;
     z-index: 1;
@@ -42,6 +42,21 @@
     }
 }
 
+.c-drawer-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 100;
+  }
+  .c-drawer-overlay.js-show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
 .c-drawer {
     position: fixed;
     z-index: 101;
@@ -50,7 +65,7 @@
     inline-size: 100%;
     block-size: 100vh;
     block-size: 100svh;
-    background: #222222;
+    background: $color-bk;
     overflow-y: scroll;
     translate: 101%;
     transition: translate 0.5s ease;
@@ -58,11 +73,15 @@
     &.js-show {
       translate: 0;
     }
+
+   @include mq(ct) {
+     inline-size: 375px;
+   }
 }
 
 .c-drawer__content {
     inline-size: 100%;
-    block-size: 150px 38px 20px 38px;
+    padding: 150px 38px 20px 38px;
 }
 
 .c-drawer__list {
@@ -79,8 +98,8 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: #ffffff;
-    font-size: 14px;
+    color: $color-wt;
+    font-size: clamp(14px, 3.7333333333vw, 20px);
     font-weight: 400;
 }
 
@@ -94,8 +113,8 @@
     margin-inline: auto;
     align-items: center;
     inline-size: fit-content;
-    block-size: 10px 32px;
-    color: #ffffff;
+    padding: 10px 32px;
+    color: $color-wt;
     background: linear-gradient(271deg, #FFF800 0.98%, #FB0000 99.02%);
 
     transition: all 0.3s ease;

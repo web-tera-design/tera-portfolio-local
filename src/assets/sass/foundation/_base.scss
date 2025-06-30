@@ -2,10 +2,15 @@
 
 body {
     font-family: $font-main;
-    color: #222222;
-    background-color: #ffffff;
+    color: $color-bk;
+    background-color: $color-wt;
     line-height: 150%;
     letter-spacing: 1px;
+  }
+
+  body.is-fixed {
+    height: 100%;
+    overflow: hidden;
   }
   
   html {

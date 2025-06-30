@@ -36,7 +36,6 @@ function setMainMargin() {
     main.style.marginBlockStart = header.offsetHeight + "px";
   }
 }
-
 window.addEventListener("DOMContentLoaded", setMainMargin);
 window.addEventListener("resize", setMainMargin);
 
@@ -48,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const drawerNavItem = document.querySelectorAll('.c-drawer__content a[href^="#"]');
   const header = document.querySelector(".l-header");
   const headerHeight = header ? header.offsetHeight : 0;
-  const breakpoint = 768;
+  const breakpoint = 900;
   let isMenuOpen = false;
   let isMenuOpenAtBreakpoint = false;
 

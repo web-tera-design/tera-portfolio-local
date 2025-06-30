@@ -86,6 +86,7 @@
         <span class="c-drawer-icon__bar"></span>
         <span class="c-drawer-icon__bar"></span>
     </button>
+    <div class="c-drawer-overlay"></div>
     <div class="c-drawer">
         <div class="c-drawer__content">
             <ul class="c-drawer__list">

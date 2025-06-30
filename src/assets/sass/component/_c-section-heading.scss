@@ -1,0 +1,20 @@
+@use '../global' as *;
+
+.c-section-heading {
+
+}
+
+.c-heading--en {
+    color: $color-rd;
+    font-family: $font-sub;
+    font-size: rclamp(14, 20, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(12, 30, 375, 1440); /* 85.714% */
+}
+
+.c-heading--title {
+    padding-block-start: 12px;
+    font-size: rclamp(28, 40, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(42, 60, 375, 1440);
+}

@@ -1,16 +1,21 @@
 @use '../global' as *;
 
-.p-index-mv {
+.p-top-mv {
     overflow: hidden;
-    background: #222222;
+    background: $color-bk;
     z-index: 0;
 }
 
-.p-index-mv__inner {
-  @include mq(md) {
-    margin-block: min(32px, 2.222222222vw) min(373px, 25.9027777777vw);
+.p-top-mv__inner {
     position: relative;
     z-index: 1;
+    margin-block: min(32px, 2.222222222vw) rclamp(474, 270, 375, 899);
+    // inline-size: min(640px, 100%);
+    padding-inline: 20px;
+  @include mq(lg) {
+    margin-block: min(32px, 2.222222222vw) min(373px, 25.9027777777vw);
+    inline-size: min(calc(1220px + 80px * 2), 100%);
+    padding-inline: 80px;
   }
 }
 
@@ -18,84 +23,90 @@
 
 }
 
-.p-index-mv__content {
+.p-top-mv__content {
     position: relative;
     z-index: 1;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+    padding-block-start: 80px;
+    margin-inline: auto;
 
-    @include mq(md) {
+    @include mq(lg) {
         padding-block-start: min(133px, 9.2361111111vw);
     }
 }
 
-.p-index-mv__label {
-    color: #ffffff;
+.p-top-mv__label {
+    color: $color-wt;
     font-family: $font-sub;
     font-size: rclamp(14, 20, 375, 1440);
     font-weight: 700;
     line-height: rclamp(12, 30, 375, 1440); /* 85.714% */
 
-    @include mq(md) {
+    @include mq(lg) {
       font-size: min(20px, 1.3888888888vw);
     }
 }
 
-.p-index-mv__title {
+.p-top-mv__title {
     margin-block-start: rclamp(10, 20, 375, 1440);
-    color: #ffffff;
+    color: $color-wt;
     font-family: $font-sub;
     font-size: rclamp(32, 56, 375, 1440);
     font-weight: 700;
     letter-spacing: rclamp(2, 3, 375, 1440);
     line-height: 150%;
 
-    @include mq(md) {
+    @include mq(lg) {
       font-size: min(56px, 3.8888888888vw);
     }
 }
 
-.p-index-mv__copy {
+.p-top-mv__copy {
     margin-block-start: rclamp(20, 32, 375, 1440);
 }
 
-.p-index-mv__lead {
+.p-top-mv__lead {
 
     margin-block-start: 20px;
-    color: #ffffff;
+    color: $color-wt;
     font-size: rclamp(28, 40, 375, 1440);
     font-weight: 700;
     letter-spacing: rclamp(2, 3, 375, 1440);
     line-height: 150%;
 
-    @include mq(md) {
+    @include mq(lg) {
       font-size: min(40px, 2.7777777777vw);
     }
 }
 
-.p-index-mv__sub {
-    color: #ffffff;
+.p-top-mv__sub {
+    color: $color-wt;
     font-size: rclamp(16, 24, 375, 1440);
     font-weight: 400;
     letter-spacing: rclamp(1, 2, 375, 1440);
     line-height: 150%;
-    @include mq(md) {
+    @include mq(lg) {
       font-size: min(24px, 1.666666666vw);
     }
 }
-.p-index__image-wrapper {
-    overflow: hidden;
-    @include mq(md) {
+.p-top__image-wrapper {
+    @include mq(lg) {
+        overflow: hidden;
     }
 }
 
-.p-index-mv__image {
+.p-top-mv__image {
     position: absolute;
-    inset-block-start: 0;
     z-index: -1;
-    inline-size: rclamp(419, 748, 375, 1440);
     aspect-ratio: 115 / 100;
-    @include mq(md) {
+    margin-block-start: rclamp(53, -350, 375, 900);
+    right: -60px;
+    inline-size: rclamp(419, 748, 375, 1440);
+    // inline-size: 419px;
+    @include mq(lg) {
+        margin-block-start: revert;
         inset-inline-start: min(607px, 42.152777777vw);
+        inset-block-start: 0;
         inline-size: min(748px, 51.9444vw);
     }
     img {

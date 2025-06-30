@@ -2,12 +2,12 @@
 
 .l-header {
     position: fixed;
-    z-index: 102;
+    z-index: 100;
     inset-block-start: 0;
     inset-inline-start: 0;
     inline-size: 100%;
     block-size: auto;
-    background: #222222;
+    background: $color-bk
 }
 
 .l-header__inner {
@@ -19,11 +19,14 @@
 
 .l-header__logo {
       display: block;
-      padding-block: min(18px, 1.25vw);
+      padding-block: 16px;
+      @include mq(lg) {
+          padding-block: min(18px, 1.25vw);
+      }
 }
 
 .l-header__logo-link {
-    color: #ffffff;
+    color: $color-wt;
     font-family: $font-sub;
     font-size: 30px;
     font-style: normal;
@@ -36,7 +39,7 @@
     display: none;
     @include mq(lg) {
         display: flex;
-        color: #ffffff;
+        color: $color-wt;
     }
 }
 
