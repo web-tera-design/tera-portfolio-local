@@ -1,17 +1,9 @@
 @use '../global' as *;
 
 .p-top-commitment {
-    background: linear-gradient(
-        120deg, 
-        #ffe7b3 0%, 
-        #ffd392 30%, 
-        #fecb7e 50%, 
-        #feb678 70%, 
-        #fd9974 100%
-      );
-      padding-block: rclamp(56, 120, 375, 1440);
-
-      text-align: center;
+    background: url(../img/commitment-story-bg-image.webp) no-repeat center center / cover;
+    padding-block: rclamp(56, 120, 375, 1440);
+    text-align: center;
 }
 
 .p-top-commitment__inner {
