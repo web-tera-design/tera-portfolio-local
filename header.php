@@ -56,7 +56,7 @@
         <div class="l-header__inner l-section__inner--wide">
             <h1 class="l-header__logo">
                 <a href="" class="l-header__logo-link">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-logo.svg" alt="Tera’s portfolio">
+                    Tera’s portfolio
                 </a>
             </h1>
             <nav class="l-header__nav">
@@ -76,7 +76,7 @@
                 </ul>
                 <a href="" class="c-button p-header__button">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt="">
-                    <span class="c-button-text">ご相談はこちら</span>
+                    <span class="c-button__text">ご相談はこちら</span>
                 </a>
             </nav>
         </div>

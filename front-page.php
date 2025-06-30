@@ -2,7 +2,7 @@
 
 <main class="l-main">
     <section class="p-index-mv">
-        <div class="p-index-mv__inner l-section__inner">
+        <div class="p-index-mv__inner l-section__inner--mv">
             <div class="p-index-mv__content">
                 <p class="p-index-mv__label">Web coder</p>
                 <h2 class="p-index-mv__title">Tera’s portfolio</h2>

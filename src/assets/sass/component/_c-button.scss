@@ -4,5 +4,8 @@
     display: inline-flex;
     align-items: center; // 上下中央揃え
     justify-content: center; // 左右中央揃え
-    gap: 8px; // アイコンとテキストの間
+}
+
+.c-button__text {
+    font-size: min(20px, 1.3888888888vw);
 }

@@ -12,9 +12,9 @@
     margin-inline: auto;
 }
 
-.l-section__inner {
-    inline-size: min(calc(1220px + 20px * 2), 100%);
-    padding-inline: 20px;
+.l-section__inner--mv {
+    inline-size: min(calc(1220px + 80px * 2), 100%);
+    padding-inline: 80px;
     margin-inline: auto;
 }
 
@@ -25,8 +25,5 @@
 }
 
 .l-main {
-    margin-top: 63px;
-    @include mq(lg) {
-        margin-top: 90px;
-    }
+
 }

@@ -3,10 +3,10 @@
 .c-drawer-icon {
     position: fixed;
     z-index: 102;
-    top: 22px;
-    right: 24px;
-    width: 24px;
-    height: 16px;
+    inset-block-start: 22px;
+    inset-inline-end: 24px;
+    inline-size: 24px;
+    block-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,8 +17,8 @@
 }
 
 .c-drawer-icon__bar {
-    width: 100%;
-    height: 2px;
+    inline-size: 100%;
+    block-size: 2px;
     background: #ffffff;
     transition: all 0.5s ease;
     position: relative;
@@ -45,11 +45,11 @@
 .c-drawer {
     position: fixed;
     z-index: 101;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    height: 100svh;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    inline-size: 100%;
+    block-size: 100vh;
+    block-size: 100svh;
     background: #222222;
     overflow-y: scroll;
     translate: 101%;
@@ -61,8 +61,8 @@
 }
 
 .c-drawer__content {
-    width: 100%;
-    padding: 150px 38px 20px 38px;
+    inline-size: 100%;
+    block-size: 150px 38px 20px 38px;
 }
 
 .c-drawer__list {
@@ -93,8 +93,8 @@
     display: flex;
     margin-inline: auto;
     align-items: center;
-    width: fit-content;
-    padding: 10px 32px;
+    inline-size: fit-content;
+    block-size: 10px 32px;
     color: #ffffff;
     background: linear-gradient(271deg, #FFF800 0.98%, #FB0000 99.02%);
 

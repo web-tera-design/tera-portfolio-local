@@ -11,6 +11,7 @@
   switchViewport();
 })();
 
+// ページ内リンクを踏むとスムーススクロール
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     const targetId = this.getAttribute("href");
@@ -26,6 +27,18 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+// l-mainのmargin-block-startをl-headerの高さに合わせる
+function setMainMargin() {
+  const header = document.querySelector(".l-header");
+  const main = document.querySelector(".l-main");
+  if (header && main) {
+    main.style.marginBlockStart = header.offsetHeight + "px";
+  }
+}
+
+window.addEventListener("DOMContentLoaded", setMainMargin);
+window.addEventListener("resize", setMainMargin);
 
 document.addEventListener("DOMContentLoaded", () => {
   // 要素取得
