@@ -7,5 +7,17 @@
 }
 
 .c-button__text {
-    font-size: min(20px, 1.3888888888vw);
+    // font-size: min(20px, 1.3888888888vw);
+    color: $color-rd;
+    font-size: rclamp(16, 20, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(24, 30, 375, 1440); /* 150% */
+}
+
+.c-button__icon {
+
+}
+
+.c-button__arrow {
+    margin-inline-start: rclamp(28, 12, 375, 1440);
 }

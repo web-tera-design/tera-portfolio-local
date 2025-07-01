@@ -1,0 +1,14 @@
+@use '../global' as *;
+
+.c-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.c-tag {
+    padding: 4px 16px;
+    border: 1px solid $color-bk;
+    font-size: rclamp(12, 14, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(18, 21, 375, 1440); /* 150% */
+}

@@ -1,0 +1,75 @@
+@use '../global' as *;
+
+.p-top-works {
+    padding-block: rclamp(56, 120, 375, 1440);
+}
+
+.p-top-works__inner {
+
+}
+
+.p-top-works__list {
+    margin-block-start: rclamp(40, 52, 375, 1440);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rclamp(48, 56, 375, 1440);
+    @include mq(lg) {
+        grid-template-columns: repeat(auto-fit, minmax(336px, 1fr));
+    }
+}
+
+.p-top-works__item {
+
+}
+
+.p-top-works__link {
+    display: flex;
+    flex-direction: column;
+    gap: rclamp(8, 12, 375, 1440);
+}
+
+.p-top-works__image {
+
+}
+
+.p-top-works__detail {
+    display: flex;
+    gap: 8px;
+    font-size: rclamp(16, 20, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(24, 30, 375, 1440); /* 150% */
+}
+
+.p-top-works__title {
+    font-size: rclamp(16, 18, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(24, 27, 375, 1440); /* 150% */
+}
+
+.p-top-works__button {
+    margin-block-start: rclamp(40, 52, 375, 1440);
+    text-align: center;
+}
+
+.p-top-works__cta {
+    position: relative;
+    transform: skew(-20deg);
+    padding: 20px 20px 20px 66px;
+    border: 3px solid $color-rd;
+    box-shadow: 0px 4px 4px 0px rgba(34, 34, 34, 0.25);
+
+    svg {
+        display: block;
+    }
+
+    @include mq(lg) {
+      padding: 16px 20px 16px 51px;
+    }
+}
+
+.p-top-works__cta-inner {
+    transform: skew(20deg); // ← 逆方向で補正
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
