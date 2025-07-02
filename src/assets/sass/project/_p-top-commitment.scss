@@ -25,8 +25,8 @@
     line-height: rclamp(21, 24, 375, 1440); /* 150% */
     @include mq(sm-down) {
         text-align: left;    /* テキストだけ左揃え */
-        max-width: 500px;    /* 横幅制限（任意） */
-        width: 100%;
+        max-inline-size: 500px;    /* 横幅制限（任意） */
+        inline-size: 100%;
         margin-inline:auto;
     }
 }

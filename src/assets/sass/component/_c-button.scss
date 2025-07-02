@@ -7,7 +7,6 @@
 }
 
 .c-button__text {
-    // font-size: min(20px, 1.3888888888vw);
     color: $color-rd;
     font-size: rclamp(16, 20, 375, 1440);
     font-weight: 700;

@@ -26,6 +26,14 @@
     }
 }
 
+.l-section__inner--lg {
+    @include mq(lg) {
+        inline-size: min(calc(800px + 20px * 2), 100%);
+        padding-inline: 20px;
+        margin-inline: auto;
+    }
+}
+
 .l-main {
 
 }

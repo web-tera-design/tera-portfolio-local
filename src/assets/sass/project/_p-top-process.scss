@@ -1,0 +1,106 @@
+@use '../global' as *;
+
+.p-top-process {
+    padding-block: rclamp(56, 120, 375, 1440)
+}
+
+.p-top-process__inner {
+
+}
+
+.p-top-process__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.p-top-process__heading-lead {
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+}
+
+.p-top-process__steps {
+    margin-block-start:  rclamp(40, 64, 375, 1440);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.p-top-process__step {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rclamp(12, 36, 375, 1440);
+    
+    @include mq(lg) {
+      grid-template-columns: calc(180 / 800 * 100%) calc(584 / 800 * 100%);
+    }
+}
+
+.p-top-process__icon-wrapper {
+    position: relative;
+    inline-size: rclamp(100, 180, 375, 1440);
+    block-size: auto;
+    aspect-ratio: 1;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.p-top-process__icon-bg {
+    position: absolute;
+    inset: 0;
+    img {
+        inline-size: 100%;
+        block-size: auto;
+        object-fit: cover;
+    }
+}
+
+.p-top-process__icon {
+    inline-size: rclamp(47, 83, 375, 1440);
+    margin-inline: auto;
+    img {
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+        object-fit: cover;
+    }
+}
+
+.p-top-process__content {
+    text-align: center;
+    @include mq(lg) {
+      text-align: left;
+    }
+}
+
+.p-top-process__number {
+    color: $color-rd;
+    font-family: $font-sub;
+    font-size: rclamp(14, 20, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(21, 30, 375, 1440); /* 85.714% */
+}
+
+.p-top-process__title {
+    font-size: rclamp(20, 24, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(30, 36, 375, 1440); /* 150% */
+    letter-spacing: rclamp(1, 2, 375, 1440);
+}
+
+.p-top-process__step-desc {
+    text-align: left;
+    inline-size: 100%;
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+
+    @include mq(lg) {
+      margin-block-start: 12px;
+    }
+}
+

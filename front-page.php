@@ -169,7 +169,7 @@
                 <li class="p-top-works__item">
                     <a href="" class="p-top-works__link">
                         <div class="p-top-works__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/maruyama-koumutenn.webp" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-koumuten.webp" alt="">
                         </div>
                         <span class="p-top-works__detail">詳細を見る
                             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
@@ -202,6 +202,114 @@
             </div>
         </div>
     </section>
+
+    <section class="p-top-service">
+        <div class="p-top-service__inner l-section__inner l-section__inner--narrow">
+            <div class="c-section-heading">
+                <p class="c-heading--en" aria-hidden="true">Services</p>
+                <h2 class="c-heading--title"><span class="u-red">提</span>供サービス</h2>
+            </div>
+            <ul class="p-top-service__list">
+                <li class="p-top-service__item">
+                    <div class="p-top-service__heading">
+                        <div class="p-top-service__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-coding.svg" alt="">
+                        </div>
+                        <h3 class="p-top-service__title">コーディング</h3>
+                    </div>
+                    <p class="p-top-service__text">FLOCSSやBEMといった設計ルールに沿い、保守性・再利用性の高いコーディングを行います。命名の一貫性や可読性を重視し、デザインの意図を正確に反映できるよう努めています。</p>
+                </li>
+                <li class="p-top-service__item">
+                    <div class="p-top-service__heading">
+                        <div class="p-top-service__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/service-wordpress.svg" alt="">
+                        </div>
+                        <h3 class="p-top-service__title">WordPress構築</h3>
+                    </div>
+                    <p class="p-top-service__text">ACFを用い、シンプルで運用しやすい管理画面を設計・実装します。カスタム投稿やカスタムフィールドの設計、既存テーマの改修にも柔軟に対応。編集者の使いやすさを大切に、無駄のない構成にします。</p>
+                </li>
+                <li class="p-top-service__item">
+                    <div class="p-top-service__heading">
+                        <div class="p-top-service__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-animation.svg" alt="">
+                        </div>
+                        <h3 class="p-top-service__title">アニメーション実装</h3>
+                    </div>
+                    <p class="p-top-service__text">GSAPやScrollTriggerを使い、視線誘導やUX向上に効果的な動きを実装します。過剰な演出は避け、見る人にとって心地よい動きを意識。デバイス差や表示負荷にも配慮し、適切な場面に最適なアニメーションを提案します。</p>
+                </li>
+                <li class="p-top-service__item">
+                    <div class="p-top-service__heading">
+                        <div class="p-top-service__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-spot.svg" alt="">
+                        </div>
+                        <h3 class="p-top-service__title">修正対応・スポット作業</h3>
+                    </div>
+                    <p class="p-top-service__text">文字・画像・リンク修正など、軽微な修正にも柔軟に対応します。「ここだけ直したい」といったスポットのご依頼も歓迎です。お急ぎの場合、可能な範囲で即日対応します。タスクの優先度や緊急度に応じて、全体進行に支障が出ないよう対応します。</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="p-top-process">
+        <div class="p-top-process__inner l-section__inner--lg l-section__inner--narrow">
+            <div class="p-top-process__heading">
+                <div class="c-section-heading">
+                    <p class="c-heading--en" aria-hidden="true">Process</p>
+                    <h2 class="c-heading--title"><span class="u-red">ご</span>依頼までの流れ</h2>
+                </div>
+                <p class="p-top-process__heading-lead">説明テキストがはいります説明テキストがはいります説明
+                    テキストがはいります説明テキストがはいります説明テキストがはいります</p>
+            </div>
+            <ul class="p-top-process__steps">
+                <li class="p-top-process__step">
+                    <div class="p-top-process__icon-wrapper">
+                        <div class="p-top-process__icon-bg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="">
+                        </div>
+                        <div class="p-top-process__icon" aria-hidden="true">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step1.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="p-top-process__content">
+                        <span class="p-top-process__number">STEP 01</span>
+                        <h3 class="p-top-process__title">お問い合わせ・ヒアリング</h3>
+                        <p class="p-top-process__step-desc">メールやフォームから気軽にご連絡ください。ご希望内容や予算、スケジュールをお聞きします。</p>
+                    </div>
+                </li>
+                <li class="p-top-process__step">
+                    <div class="p-top-process__icon-wrapper">
+                        <div class="p-top-process__icon-bg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="">
+                        </div>
+                        <div class="p-top-process__icon" aria-hidden="true">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step2.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="p-top-process__content">
+                        <span class="p-top-process__number">STEP 02</span>
+                        <h3 class="p-top-process__title">お見積もり・スケジュール提示</h3>
+                        <p class="p-top-process__step-desc">内容をもとに見積もりと納期をご提示。納得いただければ正式に依頼成立です。</p>
+                    </div>
+                </li>
+                <li class="p-top-process__step">
+                    <div class="p-top-process__icon-wrapper">
+                        <div class="p-top-process__icon-bg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="">
+                        </div>
+                        <div class="p-top-process__icon" aria-hidden="true">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step3.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="p-top-process__content">
+                        <span class="p-top-process__number">STEP 03</span>
+                        <h3 class="p-top-process__title">作業開始</h3>
+                        <p class="p-top-process__step-desc">必要に応じてデザインカンプや資料を共有いただき、スムーズに制作をスタートします。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
 </main>
 
 <?php get_footer(); ?>
