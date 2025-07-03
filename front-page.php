@@ -184,8 +184,8 @@
                 </li>
             </ul>
             <div class="p-top-works__button">
-                <a href="" class="c-button p-top-works__cta">
-                    <span class="p-top-works__cta-inner">
+                <a href="" class="c-button c-button__skew-wrapper">
+                    <span class="c-button__skew-inner">
                         <span class="c-button__icon" aria-hidden="true">
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
                                 <path d="M19.5 7.58984L19.5 21.5898H1.5L1.5 7.58984H19.5ZM3.5 16.9902L7.90039 12.5898L14.9004 19.5898H17.5V9.58984H3.5L3.5 16.9902ZM3.72754 19.5898H12.0703L7.90039 15.418L3.72754 19.5898ZM23.5 17.5898H21.5L21.5 5.58984H7.5L7.5 3.58984H23.5L23.5 17.5898ZM14 11.5898C14.3978 11.5898 14.7792 11.748 15.0605 12.0293C15.3419 12.3106 15.5 12.692 15.5 13.0898C15.5 13.4877 15.3419 13.8691 15.0605 14.1504C14.7792 14.4317 14.3978 14.5898 14 14.5898C13.6022 14.5898 13.2208 14.4317 12.9395 14.1504C12.6581 13.8691 12.5 13.4877 12.5 13.0898C12.5 12.692 12.6581 12.3106 12.9395 12.0293C13.2208 11.748 13.6022 11.5898 14 11.5898Z" fill="#FB0000" />
@@ -342,18 +342,19 @@
         <div class="p-top-contact__inner l-section__inner--lg l-section__inner--narrow">
             <div class="p-top-contact__heading">
                 <div class="c-section-heading">
-                    <p class="c-heading--en" aria-hidden="true">My story</p>
-                    <h2 class="c-heading--title"><span class="u-red">私</span>について</h2>
+                    <p class="c-heading--en" aria-hidden="true">Contact</p>
+                    <h2 class="c-heading--title"><span class="u-red">ご</span>相談はこちら</h2>
                 </div>
-                <p class="p-top-contact__description"></p>
+                <p class="p-top-contact__description">1営業日以内に必ずご返信します！（5:00〜21:00対応）
+                    お気軽にお問い合わせください。</p>
             </div>
             <form action="" class="p-top-contact__form" method="post" autocomplete="off" enctype="multipart/form-data">
                 <ul class="p-top-contact__list">
                     <!-- 会社情報 -->
                     <li class="p-top-contact__row">
-                        <label for="company" class="p-top-contact__head"><span>会社名</span></label>
+                        <label for="company" class="p-top-contact__head"><span>会社名（個人の方は不要です）</span></label>
                         <div class="p-top-contact__data">
-                            <input type="text" id="company" name="company" placeholder="例：株式会社サンプル">
+                            <input type="text" id="company" name="company" placeholder="例：株式会社xxxxx">
                         </div>
                     </li>
                     <!-- 氏名 -->
@@ -377,25 +378,44 @@
                             <textarea id="message" name="message" placeholder="ご相談内容をご記入ください"></textarea>
                         </div>
                     </li>
+                    <li class="p-top-contact__row p-top-contact__privacy-policy">
+                        <div class="p-top-contact__privacy-block">
+                            <p class="p-top-contact__privacy-heading">
+                                プライバシーポリシー
+                            </p>
+                            <p class="p-top-contact__privacy-text">
+                                当サイトでは、お問い合わせ時にいただいた個人情報（名前、メールアドレスなど）を、ご相談への対応や連絡のためにのみ使用いたします。お預かりした情報は厳重に管理し、第三者に開示・提供することはありません。安心してご利用いただけるよう、個人情報保護に努めてまいります。ご不明な点があれば、お気軽にお問い合わせください。
+                            </p>
+                        </div>
+                    </li>
                     <!-- プライバシーポリシー同意 -->
                     <li class="p-top-contact__acceptance p-top-contact__data-checkbox">
                         <label for="acceptance">
                             <input type="checkbox" id="acceptance" name="acceptance" value="accepted" required>
-                            <span><a href="/privacy-policy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する</span>
+                            <span>プライバシーポリシーに同意の上、送信します</span>
                         </label>
                     </li>
                     <!-- 送信ボタン -->
                     <li class="p-top-contact__submit">
-                        <button type="submit" class="p-top-contact__button">送信する</button>
+                        <button type="submit" class="c-button c-button__skew-wrapper">
+                            <span class="c-button__skew-inner">
+                                <span class="c-button__icon" aria-hidden="true">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+                                        <path d="M19.5 7.58984L19.5 21.5898H1.5L1.5 7.58984H19.5ZM3.5 16.9902L7.90039 12.5898L14.9004 19.5898H17.5V9.58984H3.5L3.5 16.9902ZM3.72754 19.5898H12.0703L7.90039 15.418L3.72754 19.5898ZM23.5 17.5898H21.5L21.5 5.58984H7.5L7.5 3.58984H23.5L23.5 17.5898ZM14 11.5898C14.3978 11.5898 14.7792 11.748 15.0605 12.0293C15.3419 12.3106 15.5 12.692 15.5 13.0898C15.5 13.4877 15.3419 13.8691 15.0605 14.1504C14.7792 14.4317 14.3978 14.5898 14 14.5898C13.6022 14.5898 13.2208 14.4317 12.9395 14.1504C12.6581 13.8691 12.5 13.4877 12.5 13.0898C12.5 12.692 12.6581 12.3106 12.9395 12.0293C13.2208 11.748 13.6022 11.5898 14 11.5898Z" fill="#FB0000" />
+                                    </svg>
+                                </span>
+                                <span class="c-button__text">内容を確認する</span>
+                                <span class="c-button__arrow" aria-hidden="true">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+                                        <path d="M16.7263 5.14307L14.9439 6.93429L19.0746 11.046L1.88867 11.0625L1.8912 13.5889L19.0304 13.5724L14.9692 17.6526L16.7591 19.4337L23.8887 12.2713L16.7263 5.14307Z" fill="#FB0000" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </button>
                     </li>
                 </ul>
             </form>
         </div>
-
-
-
-
-
     </section>
 
 </main>

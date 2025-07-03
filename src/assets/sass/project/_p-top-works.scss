@@ -51,26 +51,4 @@
     text-align: center;
 }
 
-.p-top-works__cta {
-    position: relative;
-    transform: skew(-20deg);
-    padding: 20px 20px 20px 66px;
-    border: 3px solid $color-rd;
-    box-shadow: 0px 4px 4px 0px rgba(34, 34, 34, 0.25);
-
-    svg {
-        display: block;
-    }
-
-    @include mq(lg) {
-      padding: 16px 20px 16px 51px;
-    }
-}
-
-.p-top-works__cta-inner {
-    transform: skew(20deg); // ← 逆方向で補正
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 

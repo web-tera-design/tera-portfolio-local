@@ -1,0 +1,153 @@
+@use '../global' as *;
+
+.p-top-contact {
+    @include mq(lg) {
+      padding-block: rclamp(56, 120, 375, 1440) rclamp(24, 120, 375, 1440)
+    }
+}
+
+.p-top-contact__inner {
+
+}
+
+.p-top-contact__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.p-top-contact__description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.64px;
+}
+
+.p-top-contact__form {
+    margin-block-start: 64px;
+}
+
+.p-top-contact__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.p-top-contact__row {
+    textarea {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.p-top-contact__head {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.64px;
+}
+
+.p-top-contact__data {
+    margin-block-start: 10px;
+    padding: 20px 20px;
+    border: 1px solid  #f0f0f0;
+    background: #f0f0f0;
+}
+
+.p-top-contact__required {
+    margin-inline-start: 6px;
+    padding: 4px 8px;
+    background: $color-rd;
+    color: $color-wt;
+    font-size: rclamp(12, 14, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(18, 21, 375, 1440); /* 150% */
+}
+
+.p-top-contact__privacy-policy {
+
+}
+
+.p-top-contact__privacy-block {
+    margin-block-start: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.p-top-contact__privacy-heading {
+    text-align: center;
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+}
+
+
+.p-top-contact__privacy-text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    letter-spacing: 0.56px;
+}
+
+.p-top-contact__acceptance {
+    text-align: center;
+}
+
+.p-top-contact__data-checkbox {
+    span {
+        padding-inline-start: 35px;
+        font-size: rclamp(14, 16, 375, 1440);
+        font-weight: 700;
+        line-height: rclamp(21, 24, 375, 1440); /* 150% */
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+
+        //frame
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 24px;
+          height: 24px;
+          border: 2px solid $color-bk;
+        }
+        //active
+        &::after {
+          content: '';
+          position: absolute;
+          top: 3px;
+          left: 7px;
+          width: 8px;
+          height: 14px;
+          rotate: 45deg;
+          border-right: 3px solid $color-bk;
+          border-bottom: 3px solid $color-bk;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+    }
+}
+
+.p-top-contact__submit {
+    text-align: center;
+    margin-block-start: 16px;
+}
+
+input[type=checkbox] {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+  //チェックボックスカスタマイズ ====================
+  //チェックされた時の挙動
+  input[type=checkbox]:checked + span {
+    &::after {
+      opacity: 1;
+    }
+  }
