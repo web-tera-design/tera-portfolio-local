@@ -273,7 +273,7 @@
                     <div class="p-top-process__content">
                         <span class="p-top-process__number">STEP 01</span>
                         <h3 class="p-top-process__title">お問い合わせ・ヒアリング</h3>
-                        <p class="p-top-process__step-desc">メールやフォームから気軽にご連絡ください。ご希望内容や予算、スケジュールをお聞きします。</p>
+                        <p class="p-top-process__step-description">メールやフォームから気軽にご連絡ください。ご希望内容や予算、スケジュールをお聞きします。</p>
                     </div>
                 </li>
                 <li class="p-top-process__step">
@@ -288,7 +288,7 @@
                     <div class="p-top-process__content">
                         <span class="p-top-process__number">STEP 02</span>
                         <h3 class="p-top-process__title">お見積もり・スケジュール提示</h3>
-                        <p class="p-top-process__step-desc">内容をもとに見積もりと納期をご提示。納得いただければ正式に依頼成立です。</p>
+                        <p class="p-top-process__step-description">内容をもとに見積もりと納期をご提示。納得いただければ正式に依頼成立です。</p>
                     </div>
                 </li>
                 <li class="p-top-process__step">
@@ -303,7 +303,7 @@
                     <div class="p-top-process__content">
                         <span class="p-top-process__number">STEP 03</span>
                         <h3 class="p-top-process__title">作業開始</h3>
-                        <p class="p-top-process__step-desc">必要に応じてデザインカンプや資料を共有いただき、スムーズに制作をスタートします。</p>
+                        <p class="p-top-process__step-description">必要に応じてデザインカンプや資料を共有いただき、スムーズに制作をスタートします。</p>
                     </div>
                 </li>
             </ul>
@@ -323,19 +323,79 @@
             <ul class="p-top-profile__career">
                 <li class="p-top-profile__career-item">
                     <h3 class="p-top-profile__career-title">バイクレーサー時代</h3>
-                    <p class="p-top-profile__career-desc">極限の集中力と冷静さ、0.01秒の判断が問われる世界で鍛えられました。</p>
+                    <p class="p-top-profile__career-description">極限の集中力と冷静さ、0.01秒の判断が問われる世界で鍛えられました。</p>
                 </li>
                 <li class="p-top-profile__career-item">
                     <h3 class="p-top-profile__career-title">通信会社のSV時代</h3>
-                    <p class="p-top-profile__career-desc">店舗やスタッフ、お客様との調整役。どんなトラブルも冷静に対応。</p>
+                    <p class="p-top-profile__career-description">店舗やスタッフ、お客様との調整役。どんなトラブルも冷静に対応。</p>
                 </li>
                 <li class="p-top-profile__career-item">
                     <h3 class="p-top-profile__career-title">大型トレーラー運転手時代</h3>
-                    <p class="p-top-profile__career-desc">ミスが命取りになる現場で、視野の広さ・安全確認・丁寧さが自然と習慣に。</p>
+                    <p class="p-top-profile__career-description">ミスが命取りになる現場で、視野の広さ・安全確認・丁寧さが自然と習慣に。</p>
                 </li>
             </ul>
             <p class="p-top-profile__current">そして現在、「デザインの意図を崩さず、安心して任せてもらえるコーディング」をモットーにWeb制作をしています。</p>
         </div>
+    </section>
+
+    <section class="p-top-contact">
+        <div class="p-top-contact__inner l-section__inner--lg l-section__inner--narrow">
+            <div class="p-top-contact__heading">
+                <div class="c-section-heading">
+                    <p class="c-heading--en" aria-hidden="true">My story</p>
+                    <h2 class="c-heading--title"><span class="u-red">私</span>について</h2>
+                </div>
+                <p class="p-top-contact__description"></p>
+            </div>
+            <form action="" class="p-top-contact__form" method="post" autocomplete="off" enctype="multipart/form-data">
+                <ul class="p-top-contact__list">
+                    <!-- 会社情報 -->
+                    <li class="p-top-contact__row">
+                        <label for="company" class="p-top-contact__head"><span>会社名</span></label>
+                        <div class="p-top-contact__data">
+                            <input type="text" id="company" name="company" placeholder="例：株式会社サンプル">
+                        </div>
+                    </li>
+                    <!-- 氏名 -->
+                    <li class="p-top-contact__row">
+                        <label for="name" class="p-top-contact__head"><span>お名前</span><span class="p-top-contact__required">必須</span></label>
+                        <div class="p-top-contact__data">
+                            <input type="text" id="name" name="name" placeholder="例：山田 太郎" required>
+                        </div>
+                    </li>
+                    <!-- 連絡先 -->
+                    <li class="p-top-contact__row">
+                        <label for="email" class="p-top-contact__head"><span>メールアドレス</span><span class="p-top-contact__required">必須</span></label>
+                        <div class="p-top-contact__data">
+                            <input type="email" id="email" name="email" placeholder="例：aaa@xxx.co.jp" required>
+                        </div>
+                    </li>
+                    <!-- お問い合わせ内容 -->
+                    <li class="p-top-contact__row">
+                        <label for="message" class="p-top-contact__head"><span>お問い合わせ内容</span></label>
+                        <div class="p-top-contact__data">
+                            <textarea id="message" name="message" placeholder="ご相談内容をご記入ください"></textarea>
+                        </div>
+                    </li>
+                    <!-- プライバシーポリシー同意 -->
+                    <li class="p-top-contact__acceptance p-top-contact__data-checkbox">
+                        <label for="acceptance">
+                            <input type="checkbox" id="acceptance" name="acceptance" value="accepted" required>
+                            <span><a href="/privacy-policy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する</span>
+                        </label>
+                    </li>
+                    <!-- 送信ボタン -->
+                    <li class="p-top-contact__submit">
+                        <button type="submit" class="p-top-contact__button">送信する</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+
+
+
+
     </section>
 
 </main>
