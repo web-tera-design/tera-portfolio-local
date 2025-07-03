@@ -1,0 +1,61 @@
+@use '../global' as *;
+
+.p-top-profile {
+    background: url(../img/commitment-story-bg-image.webp) no-repeat center center / cover;
+    padding-block: rclamp(56, 120, 375, 1440)
+}
+
+.p-top-profile__inner {
+
+}
+
+.p-top-profile__lead {
+    margin-block-start: rclamp(40, 52, 375, 1440);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.p-top-profile__lead-main {
+    font-size: rclamp(20, 24, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(30, 36, 375, 1440); /* 150% */
+    letter-spacing: rclamp(1, 2, 375, 1440);
+}
+
+.p-top-profile__lead-sub {
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+}
+
+.p-top-profile__career {
+    margin-block-start: rclamp(16, 24, 375, 1440);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.p-top-profile__career-item {
+
+}
+
+.p-top-profile__career-title {
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+}
+
+.p-top-profile__career-desc {
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(21, 24, 375, 1440);
+}
+
+.p-top-profile__current {
+    margin-block-start: rclamp(16, 24, 375, 1440);
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+}
+

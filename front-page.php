@@ -80,7 +80,7 @@
         </div>
     </section>
 
-    <section class="p-top-works">
+    <section id="works" class="p-top-works">
         <div class="p-top-works__inner l-section__inner l-section__inner--narrow">
             <div class="c-section-heading">
                 <p class="c-heading--en" aria-hidden="true">Works</p>
@@ -203,7 +203,7 @@
         </div>
     </section>
 
-    <section class="p-top-service">
+    <section id="service" class="p-top-service">
         <div class="p-top-service__inner l-section__inner l-section__inner--narrow">
             <div class="c-section-heading">
                 <p class="c-heading--en" aria-hidden="true">Services</p>
@@ -250,7 +250,7 @@
         </div>
     </section>
 
-    <section class="p-top-process">
+    <section id="process" class="p-top-process">
         <div class="p-top-process__inner l-section__inner--lg l-section__inner--narrow">
             <div class="p-top-process__heading">
                 <div class="c-section-heading">
@@ -307,6 +307,34 @@
                     </div>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <section id="profile" class="p-top-profile">
+        <div class="p-top-profile__inner l-section__inner--lg l-section__inner--narrow">
+            <div class="c-section-heading">
+                <p class="c-heading--en" aria-hidden="true">My story</p>
+                <h2 class="c-heading--title"><span class="u-red">私</span>について</h2>
+            </div>
+            <div class="p-top-profile__lead">
+                <p class="p-top-profile__lead-main">元バイクレーサーのWEBコーダー<br>高速かつ確実に、品質を追求する プロフェッショナル。</p>
+                <p class="p-top-profile__lead-sub">はじめまして、千葉在住のWebコーダーです。ちょっと変わった経歴ですが、すべての経験が今の強みになっています。</p>
+            </div>
+            <ul class="p-top-profile__career">
+                <li class="p-top-profile__career-item">
+                    <h3 class="p-top-profile__career-title">バイクレーサー時代</h3>
+                    <p class="p-top-profile__career-desc">極限の集中力と冷静さ、0.01秒の判断が問われる世界で鍛えられました。</p>
+                </li>
+                <li class="p-top-profile__career-item">
+                    <h3 class="p-top-profile__career-title">通信会社のSV時代</h3>
+                    <p class="p-top-profile__career-desc">店舗やスタッフ、お客様との調整役。どんなトラブルも冷静に対応。</p>
+                </li>
+                <li class="p-top-profile__career-item">
+                    <h3 class="p-top-profile__career-title">大型トレーラー運転手時代</h3>
+                    <p class="p-top-profile__career-desc">ミスが命取りになる現場で、視野の広さ・安全確認・丁寧さが自然と習慣に。</p>
+                </li>
+            </ul>
+            <p class="p-top-profile__current">そして現在、「デザインの意図を崩さず、安心して任せてもらえるコーディング」をモットーにWeb制作をしています。</p>
         </div>
     </section>
 
