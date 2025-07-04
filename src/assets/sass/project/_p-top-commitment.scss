@@ -11,12 +11,24 @@
 }
 
 
-.p-top-commitment__messages {
+.p-top-commitment__list {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-block-start: rclamp(40, 52, 375, 1440);
     gap: rclamp(16, 24, 375, 1440);
+}
+
+.p-top-commitment__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.p-top-commitment__title {
+    font-size: rclamp(16, 18, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(24, 27, 375, 1440);
 }
 
 .p-top-commitment__message {
@@ -31,3 +43,6 @@
     }
 }
 
+.p-top-commitment__link {
+    text-decoration: underline;
+}

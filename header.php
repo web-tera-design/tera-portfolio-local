@@ -76,7 +76,7 @@
                 </ul>
                 <a href="" class="c-button p-header__button">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt="">
-                    <span class="p-header__button-text">ご相談はこちら</span>
+                    <span class="p-header__button-text">お問い合わせ</span>
                 </a>
             </nav>
         </div>
@@ -105,6 +105,6 @@
             </ul>
             <a href="" class="c-button c-drawer__button u-mt56">
                 <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt="">
-                ご相談はこちら</a>
+                お問い合わせ</a>
         </div>
     </div>
