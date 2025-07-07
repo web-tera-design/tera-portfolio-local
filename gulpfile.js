@@ -60,6 +60,15 @@ function copyImages() {
     .pipe(gulp.dest("./dist/assets/img"));
 }
 
+// 動画ファイルをdistにコピー
+function copyVideos() {
+  return gulp
+    .src(["./src/assets/video/**/*.{mp4,webm,mov,ogg}", "!./src/assets/video/**/.DS_Store"], { encoding: false })
+    .pipe(newer("./dist/assets/video"))
+    .pipe(plumber({ errorHandler: notify.onError("Video Copy Error: <%= error.message %>") }))
+    .pipe(gulp.dest("./dist/assets/video"));
+}
+
 // 画像変換
 function convertToWebp() {
   return gulp
@@ -135,6 +144,7 @@ function watchFiles() {
     "./src/assets/img/**/*.{jpg,jpeg,png,svg,webp}",
     gulp.series(copyImages, convertToWebp, reload) // ← ここでWebPも同時に
   );
+  gulp.watch("./src/assets/video/**/*.{mp4,webm,mov,ogg}", gulp.series(copyVideos, reload)); // ←追加
   gulp.watch("./src/**/*.html", gulp.series(copyHtml, reload)); // ★ここ！
   gulp.watch("./**/*.php", reload); // 今は "./*.php"
 }
@@ -144,10 +154,10 @@ exports.sass = compileSass;
 exports.js = compileJs;
 exports.default = gulp.series(
   generateIndexScss, // ← ここを追加
-  gulp.parallel(compileSass, compileJs, copyImages, convertToWebp, copyHtml), // 初回もWebP生成
+  gulp.parallel(compileSass, compileJs, copyImages, convertToWebp, copyHtml, copyVideos), // 初回もWebP生成
   serve,
   watchFiles
 );
 // exports.convertToWebp = convertToWebp;
 // exports.generateIndexScss = generateIndexScss;
-exports.build = gulp.series(generateIndexScss, gulp.parallel(compileSass, compileJs, copyImages, convertToWebp));
+exports.build = gulp.series(generateIndexScss, gulp.parallel(compileSass, compileJs, copyImages, convertToWebp, copyVideos));

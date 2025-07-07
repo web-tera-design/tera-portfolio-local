@@ -19,13 +19,12 @@
 }
 
 .p-top-works__item {
-
-}
-
-.p-top-works__link {
     display: flex;
     flex-direction: column;
     gap: rclamp(8, 12, 375, 1440);
+}
+
+.p-top-works__link {
 }
 
 .p-top-works__image {

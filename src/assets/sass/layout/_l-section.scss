@@ -12,6 +12,12 @@
     margin-inline: auto;
 }
 
+.l-section__inner--modal {
+    inline-size: min(calc(1200px + 20px * 2), 100%);
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
 .l-section__inner--mv {
     inline-size: min(calc(1220px + 80px * 2), 100%);
     padding-inline: 80px;

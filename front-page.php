@@ -8,7 +8,7 @@
                 <h2 class="p-top-mv__title">Tera’s portfolio</h2>
                 <div class="p-top-mv__copy">
                     <p class="p-top-mv__lead">納期を破るくらいなら、<br class="u-br--sp">寝ません。</p>
-                    <p class="p-top-mv__sub">ご依頼に、全力で真摯に取り組みます。</p>
+                    <!-- <p class="p-top-mv__sub">ご依頼に、全力で真摯に取り組みます。</p> -->
                 </div>
             </div>
             <div class="p-top__image-wrapper">
@@ -46,8 +46,10 @@
                         「安心して任せられる」対応力
                     </h3>
                     <p class="p-top-commitment__message">
-                        朝5時から夜9時まで、年中無休で対応。<br>即レス・即対応で、やり取りのストレスをなくし、進捗は
-                        <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート</a>
+                        朝5時から夜9時まで、年中無休で対応。<br>即レス・即対応でやり取りのストレスをなくし、<br>進捗は
+                        <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
+                            <span class="p-top-commitment__tooltip">よろしければ情報共有シートを<br>ご覧ください</span>
+                        </a>
                         でいつでも確認可能。<br>安心してお任せいただける体制を整えています。
                     </p>
                 </li>
@@ -110,100 +112,122 @@
                 <h2 class="c-heading--title"><span class="u-red">実</span>績紹介</h2>
             </div>
             <ul class="p-top-works__list">
-                <li class="p-top-works__item">
-                    <a href="" class="p-top-works__link">
-                        <div class="p-top-works__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp" alt="">
-                        </div>
-                        <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span>
-                        <h3 class="p-top-works__title">BLUE SKY（サンプル）</h3>
-                        <ul class="c-tags">
-                            <li class="c-tag">LP</li>
-                            <li class="c-tag">Figma</li>
-                            <li class="c-tag">FLOCSS</li>
-                        </ul>
-                    </a>
+                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal1">
+                    <div class="p-top-works__image p-top-mockup-container">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                        <video
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
+                            width="100%"
+                            height="auto">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky.webm" type="video/webm">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
+                    </div>
+                    <span class="p-top-works__detail">詳細を見る
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                    </span>
+                    <h3 class="p-top-works__title">BLUE SKY（サンプル）</h3>
+                    <ul class="c-tags">
+                        <li class="c-tag">LP</li>
+                        <li class="c-tag">Figma</li>
+                        <li class="c-tag">FLOCSS</li>
+                    </ul>
                 </li>
-                <li class="p-top-works__item">
-                    <a href="" class="p-top-works__link">
-                        <div class="p-top-works__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp" alt="">
-                        </div>
-                        <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span>
-                        <h3 class="p-top-works__title">クリニックサイト（サンプル）</h3>
-                        <ul class="c-tags">
-                            <li class="c-tag">Wordpress</li>
-                            <li class="c-tag">Figma</li>
-                            <li class="c-tag">FLOCSS</li>
-                        </ul>
-                    </a>
+                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal2">
+                    <!-- <a href="" class="p-top-works__link"> -->
+                    <div class="p-top-works__image p-top-mockup-container">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                        <video
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
+                            width="100%"
+                            height="auto">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic.webm" type="video/webm">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
+                    </div>
+                    <span class="p-top-works__detail">詳細を見る
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                    </span>
+                    <h3 class="p-top-works__title">クリニックサイト（サンプル）</h3>
+                    <ul class="c-tags">
+                        <li class="c-tag">Wordpress</li>
+                        <li class="c-tag">Figma</li>
+                        <li class="c-tag">FLOCSS</li>
+                    </ul>
+                    <!-- </a> -->
                 </li>
-                <li class="p-top-works__item">
-                    <a href="" class="p-top-works__link">
-                        <div class="p-top-works__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="">
-                        </div>
-                        <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span>
-                        <h3 class="p-top-works__title">サンプル</h3>
-                        <ul class="c-tags">
-                            <li class="c-tag">LP</li>
-                            <li class="c-tag">Figma</li>
-                            <li class="c-tag">BEM</li>
-                        </ul>
-                    </a>
+                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal5">
+                    <!-- <a href="" class="p-top-works__link"> -->
+                    <div class="p-top-works__image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp" alt="">
+                    </div>
+                    <span class="p-top-works__detail">詳細を見る
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                    </span>
+                    <h3 class="p-top-works__title">ポモドーロタイマー</h3>
+                    <ul class="c-tags">
+                        <li class="c-tag">その他</li>
+                        <li class="c-tag">BEM</li>
+                    </ul>
+                    <!-- </a> -->
                 </li>
-                <li class="p-top-works__item">
-                    <a href="" class="p-top-works__link">
-                        <div class="p-top-works__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="">
-                        </div>
-                        <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span>
-                        <h3 class="p-top-works__title">sobolon（サンプル）</h3>
-                        <ul class="c-tags">
-                            <li class="c-tag">LP</li>
-                            <li class="c-tag">Figma</li>
-                            <li class="c-tag">BEM</li>
-                        </ul>
-                    </a>
+                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal3">
+                    <!-- <a href="" class="p-top-works__link"> -->
+                    <div class="p-top-works__image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="">
+                    </div>
+                    <span class="p-top-works__detail">詳細を見る
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                    </span>
+                    <h3 class="p-top-works__title">サンプル</h3>
+                    <ul class="c-tags">
+                        <li class="c-tag">LP</li>
+                        <li class="c-tag">Figma</li>
+                        <li class="c-tag">BEM</li>
+                    </ul>
+                    <!-- </a> -->
                 </li>
-                <li class="p-top-works__item">
-                    <a href="" class="p-top-works__link">
-                        <div class="p-top-works__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp" alt="">
-                        </div>
-                        <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span>
-                        <h3 class="p-top-works__title">ポモドーロタイマー</h3>
-                        <ul class="c-tags">
-                            <li class="c-tag">その他</li>
-                            <li class="c-tag">BEM</li>
-                        </ul>
-                    </a>
+                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal4">
+                    <!-- <a href="" class="p-top-works__link"> -->
+                    <div class="p-top-works__image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="">
+                    </div>
+                    <span class="p-top-works__detail">詳細を見る
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                    </span>
+                    <h3 class="p-top-works__title">sobolon（サンプル）</h3>
+                    <ul class="c-tags">
+                        <li class="c-tag">LP</li>
+                        <li class="c-tag">Figma</li>
+                        <li class="c-tag">BEM</li>
+                    </ul>
+                    <!-- </a> -->
                 </li>
-                <li class="p-top-works__item">
-                    <a href="" class="p-top-works__link">
-                        <div class="p-top-works__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-koumuten.webp" alt="">
-                        </div>
-                        <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span>
-                        <h3 class="p-top-works__title">工務店Webサイト</h3>
-                        <ul class="c-tags">
-                            <li class="c-tag">LP</li>
-                            <li class="c-tag">Figma</li>
-                            <li class="c-tag">FLOCSS</li>
-                        </ul>
-                    </a>
+                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal6">
+                    <!-- <a href="" class="p-top-works__link"> -->
+                    <div class="p-top-works__image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-koumuten.webp" alt="">
+                    </div>
+                    <span class="p-top-works__detail">詳細を見る
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                    </span>
+                    <h3 class="p-top-works__title">工務店Webサイト</h3>
+                    <ul class="c-tags">
+                        <li class="c-tag">LP</li>
+                        <li class="c-tag">Figma</li>
+                        <li class="c-tag">FLOCSS</li>
+                    </ul>
+                    <!-- </a> -->
                 </li>
             </ul>
             <div class="p-top-works__button">

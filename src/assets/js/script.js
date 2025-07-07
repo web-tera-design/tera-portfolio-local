@@ -129,3 +129,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const dialogs = document.querySelectorAll("dialog");
+const open = document.querySelectorAll(".p-modal__open-btn");
+const close = document.querySelectorAll(".p-modal__close-btn");
+
+// モーダルを開く
+open.forEach((button) => {
+  button.addEventListener("click", () => {
+    const dialogId = button.getAttribute("data-dialog");
+    const dialog = document.getElementById(dialogId);
+    dialog.showModal();
+    dialog.classList.add("js-show");
+    document.body.style.overflow = "hidden"; // 背景スクロール防止
+  });
+});
+
+// 閉じるボタンでモーダルを閉じる
+document.querySelectorAll(".p-top-modal__close-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    const dialog = button.closest("dialog");
+    if (dialog) {
+      dialog.classList.remove("js-show");
+      dialog.close();
+      document.body.style.overflow = ""; // スクロール復活
+    }
+  });
+});
+
+// モーダルの背景クリックで閉じる
+document.querySelectorAll("dialog").forEach((dialog) => {
+  dialog.addEventListener("click", (e) => {
+    const inner = dialog.querySelector(".p-top-modal__inner");
+    if (!inner.contains(e.target)) {
+      dialog.classList.remove("js-show");
+      dialog.close();
+      document.body.style.overflow = "";
+    }
+  });
+});

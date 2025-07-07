@@ -1,0 +1,212 @@
+@use '../global' as *;
+
+
+/* 初期設定 */
+button {
+    background: none;
+  }
+  :where(dialog) {
+    width: unset;
+    max-width: unset;
+    // height: unset;
+    // max-height: unset;
+    padding: unset;
+    color: unset;
+    background-color: unset;
+    border: unset;
+    overflow: unset;
+  }
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+  
+
+  /* モーダルのスタイル ============ */
+dialog {
+    &::backdrop {
+      opacity: 0;
+      transition: background 0.3s ease-in-out;
+    }
+    &.js-show {
+      &.p-requirements-modal__content {
+        opacity: 1;
+      }
+      &::backdrop {
+        opacity: 1;
+        /* 背景画像 */
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(6px);
+      }
+    }
+  }
+  
+  .p-top-modal__content {
+    position: fixed;
+    margin: auto;
+    max-height: 80svh;
+    padding-inline: 20px;
+  }
+
+  .p-top-modal__close-btn {
+    position: absolute;
+    font-size: 0;
+    top: 10px;
+    right: 20px;
+    inline-size: 32px;
+    block-size: 32px;
+    z-index: 10;
+    background: #e7e2e2;
+    border-radius: 100vmax;
+
+    &::before, &::after { /* 共通設定 */
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px; /* 棒の幅（太さ） */
+      height: 20px; /* 棒の高さ */
+      background: $color-bk;
+    }
+
+    &::before {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  
+  
+.p-top-modal__inner {
+  padding: 50.5px 22px 22px 22px;
+  block-size: inherit;
+  max-block-size: inherit;
+  overflow-y: scroll;
+  position: relative;
+  background: $color-wt;
+  box-shadow: 0px 4px 4px 5px rgba(20, 66, 114, 0.20);
+
+}
+
+.p-top-modal__content {
+
+}
+
+.p-top-modal__inner {
+
+}
+
+.p-top-modal__title {
+  background: linear-gradient(271deg, rgba(255, 255, 120, 0.8) 0.98%, rgba(255, 80, 80, 0.8) 99.02%);
+  padding-block: rclamp(8, 20, 375, 1440);
+  font-size: rclamp(20, 32, 375, 1440);
+  font-weight: 700;
+  line-height: rclamp(30, 48, 375, 1440); /* 150% */
+  letter-spacing: rclamp(1, 2, 375, 1440);
+  text-align: center;
+}
+
+.p-top-modal__body {
+  margin-block-start: 32px;
+}
+
+.p-top-modal__left {
+
+}
+
+.p-top-modal__image {
+  margin-inline: auto;
+  max-width: 600px;
+}
+
+
+
+.p-top-modal__right {
+  margin-block-start: 25px;
+}
+
+.p-top-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.p-top-modal__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p-top-modal__heading {
+    position: relative;
+    padding-inline-start: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 1px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      inline-size: 24px;
+      block-size: 24px;
+      background: url(../img/modal-check.svg) no-repeat center center / cover;
+    }
+}
+
+.p-top-modal__sublist {
+
+}
+
+.p-top-modal__subitem {
+  position: relative;
+  padding-inline-start: 16px;
+  &::before {
+    position: absolute;
+    content: "・";
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 3px;
+    block-size: 3px;
+  }
+}
+
+.p-top-modal__message {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 1px;
+}
+
+.p-top-modal__link-body {
+  position: sticky;
+  bottom: 0;
+  padding-block: 20px;
+  background: $color-wt;
+  z-index: 10;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05); /* 上部に薄い影をつけると区切り感UP */  text-align: center;
+}
+
+.p-top-modal__link {
+  display: inline-block;
+  gap: 8px;
+    font-size: rclamp(18, 20, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(27, 30, 375, 1440); /* 150% */
+    letter-spacing: rclamp(1, 2, 375, 1440);
+}
+
+.p-top-modal__link-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $color-bk;
+}

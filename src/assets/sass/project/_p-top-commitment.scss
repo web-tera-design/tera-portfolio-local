@@ -36,7 +36,7 @@
     font-weight: 400;
     line-height: rclamp(21, 24, 375, 1440); /* 150% */
     @include mq(sm-down) {
-        text-align: left;    /* テキストだけ左揃え */
+        // text-align: left;    /* テキストだけ左揃え */
         max-inline-size: 500px;    /* 横幅制限（任意） */
         inline-size: 100%;
         margin-inline:auto;
@@ -45,4 +45,60 @@
 
 .p-top-commitment__link {
     text-decoration: underline;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
+
+/* Tooltip base style */
+.p-top-commitment__tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background: $color-rd;
+    color: $color-wt;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 4px 4px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 135%;
+    transform: translateX(-50%) scale(0.98);
+    transition: opacity 0.28s cubic-bezier(.4,0,.2,1), transform 0.28s cubic-bezier(.4,0,.2,1);
+    font-size: rclamp(14, 16, 375, 1440);
+    pointer-events: none;
+    min-inline-size: 240px;
+    z-index: 10;
+    white-space: pre-line;
+  }
+  
+  /* Tooltip arrow */
+  .p-top-commitment__tooltip::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent $color-rd transparent;
+  }
+  
+  /* Show tooltip on hover */
+  .p-top-commitment__link:hover .p-top-commitment__tooltip,
+  .p-top-commitment__link:focus .p-top-commitment__tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  
+//   /* Optional: Responsive for mobile */
+//   @media (max-width: 600px) {
+//     .p-top-commitment__tooltip {
+//       font-size: 0.95em;
+//       min-width: 140px;
+//       max-width: 90vw;
+//       padding: 8px 10px;
+//     }
+//   }
