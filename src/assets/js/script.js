@@ -169,3 +169,19 @@ document.querySelectorAll("dialog").forEach((dialog) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll(".js-click-video");
+
+  videos.forEach((video) => {
+    video.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        video.classList.remove("is-paused");
+      } else {
+        video.pause();
+        video.classList.add("is-paused");
+      }
+    });
+  });
+});

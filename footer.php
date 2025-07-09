@@ -48,6 +48,7 @@
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
                     <video
+                        class="c-video js-click-video"
                         autoplay
                         loop
                         muted
@@ -148,6 +149,7 @@
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
                     <video
+                        class="c-video js-click-video"
                         autoplay
                         loop
                         muted
@@ -245,6 +247,7 @@
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
                     <video
+                        class="c-video js-click-video"
                         autoplay
                         loop
                         muted

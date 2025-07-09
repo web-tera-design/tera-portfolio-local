@@ -1,0 +1,19 @@
+@use '../global' as *;
+
+.c-video.is-paused {
+    filter: brightness(0.6);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .c-video.is-paused::after {
+    content: "▶";
+    position: absolute;
+    z-index: 2;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+  }
+  

@@ -13,7 +13,8 @@
             </div>
             <div class="p-top__image-wrapper">
                 <div class="p-top-mv__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-bg.webp" alt="">
+
                 </div>
             </div>
         </div>
@@ -129,8 +130,8 @@
                         </video>
                     </div>
                     <!-- <span class="p-top-works__detail">詳細を見る
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span> -->
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                        </span> -->
                     <h3 class="p-top-works__title">求人サイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
@@ -156,8 +157,8 @@
                         </video>
                     </div>
                     <!-- <span class="p-top-works__detail">詳細を見る
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span> -->
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                        </span> -->
                     <h3 class="p-top-works__title">クリニックサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">Wordpress</li>
@@ -184,8 +185,8 @@
                         </video>
                     </div>
                     <!-- <span class="p-top-works__detail">詳細を見る
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span> -->
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                        </span> -->
                     <h3 class="p-top-works__title">自作ポモドーロタイマー</h3>
                     <ul class="c-tags">
                         <li class="c-tag">その他</li>
@@ -200,8 +201,8 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="">
                     </div>
                     <!-- <span class="p-top-works__detail">詳細を見る
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span> -->
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                        </span> -->
                     <h3 class="p-top-works__title">キャンペーンサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
@@ -216,8 +217,8 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="">
                     </div>
                     <!-- <span class="p-top-works__detail">詳細を見る
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span> -->
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                        </span> -->
                     <h3 class="p-top-works__title">美容サイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>

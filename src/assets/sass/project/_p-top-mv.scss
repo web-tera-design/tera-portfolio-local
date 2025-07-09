@@ -109,11 +109,20 @@
         inset-block-start: 0;
         inline-size: min(748px, 51.9444vw);
     }
-    img {
+    img, svg {
+        position: absolute;
+        top: 0;
+        left: 0;
         inline-size: 100%;
         block-size: 100%;
         aspect-ratio:  115 / 100 ;
         object-fit: cover;
+        display: block;
     }
+
 }
+
+
+
+
 
