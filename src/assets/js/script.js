@@ -185,3 +185,107 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const lead = document.querySelector(".p-top-mv__lead");
+const text = lead.textContent.trim().split("");
+
+lead.innerHTML = text.map((char) => `<span class="is-glowIn">${char}</span>`).join("");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll(".p-top-mv__label, .p-top-mv__title, .p-top-mv__lead");
+
+  targets.forEach((el) => {
+    const chars = el.textContent.trim().split("");
+
+    // アニメーション用のクラス付け
+    el.innerHTML = chars.map((char) => `<span class="is-glowIn">${char}</span>`).join("");
+  });
+
+  // ブラウザの次の描画タイミングで表示
+  requestAnimationFrame(() => {
+    targets.forEach((el) => {
+      el.style.visibility = "visible";
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll(".p-top-mv__label, .p-top-mv__title, .p-top-mv__lead");
+
+  targets.forEach((el) => {
+    const chars = el.textContent.trim().split("");
+    el.innerHTML = chars.map((char) => `<span class="is-flame">${char}</span>`).join("");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lead = document.querySelector(".p-top-mv__lead");
+  const chars = lead.querySelectorAll(".is-flame");
+
+  setInterval(() => {
+    const indexes = Array.from({ length: chars.length }, (_, i) => i);
+    const pick = indexes.sort(() => 0.5 - Math.random()).slice(0, 2);
+
+    pick.forEach((i) => {
+      const el = chars[i];
+      el.classList.add("is-flash");
+
+      setTimeout(() => {
+        el.classList.remove("is-flash");
+      }, 100); // 点滅時間
+    });
+  }, 100); // 実行間隔
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+const navLinks = document.querySelectorAll(".c-global-nav__link, .p-header__button");
+const pulseAnimations = new Map(); // 各リンクに対応するアニメーションを管理
+
+navLinks.forEach((link) => {
+  const sectionId = link.dataset.section;
+  const section = document.getElementById(sectionId);
+
+  if (section) {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => animateLink(link),
+      onEnterBack: () => animateLink(link),
+      onLeave: () => resetLink(link),
+      onLeaveBack: () => resetLink(link),
+    });
+  }
+});
+
+function animateLink(link) {
+  if (pulseAnimations.has(link)) return; // すでにアニメしてたらスキップ
+
+  const tween = gsap.to(link, {
+    color: "#ff4500",
+    textShadow: "0 0 10px #ff6347, 0 0 20px #ffa07a",
+    duration: 0.6,
+    ease: "power1.inOut",
+    yoyo: true,
+    repeat: -1,
+  });
+
+  pulseAnimations.set(link, tween);
+}
+
+function resetLink(link) {
+  const tween = pulseAnimations.get(link);
+  if (tween) {
+    tween.kill(); // 鼓動アニメ停止
+    pulseAnimations.delete(link);
+  }
+
+  gsap.to(link, {
+    scale: 1,
+    color: "#fff",
+    textShadow: "0 0 0px transparent",
+    duration: 0.3,
+    ease: "power1.inOut",
+  });
+}

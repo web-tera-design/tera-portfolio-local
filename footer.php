@@ -6,7 +6,7 @@
             </div>
             <ul class="l-footer__list">
                 <li class="l-footer__item">
-                    <a href="" class="l-footer__link">実績一覧</a>
+                    <a href="" class="l-footer__link">実績紹介</a>
                 </li>
                 <li class="l-footer__item">
                     <a href="" class="l-footer__link">提供サービス</a>
@@ -18,7 +18,7 @@
                     <a href="" class="l-footer__link">私について</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="" class="l-footer__link">ご相談はこちら</a>
+                    <a href="" class="l-footer__link">お問い合わせ</a>
                 </li>
                 <li class="l-footer__item">
                     <a href="https://x.com/BR5J6DXbuz70037" target="_blank" class="l-footer__sns-link" rel="noopener" aria-label="X（旧Twitter）">

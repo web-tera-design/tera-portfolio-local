@@ -8,13 +8,11 @@
                 <h2 class="p-top-mv__title">Tera’s portfolio</h2>
                 <div class="p-top-mv__copy">
                     <p class="p-top-mv__lead">納期を破るくらいなら、<br class="u-br--sp">寝ません。</p>
-                    <!-- <p class="p-top-mv__sub">ご依頼に、全力で真摯に取り組みます。</p> -->
                 </div>
             </div>
             <div class="p-top__image-wrapper">
                 <div class="p-top-mv__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-bg.webp" alt="">
-
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="">
                 </div>
             </div>
         </div>
@@ -49,7 +47,7 @@
                     <p class="p-top-commitment__message">
                         朝5時から夜9時まで、年中無休で対応。<br>即レス・即対応でやり取りのストレスをなくし、<br>進捗は
                         <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
-                            <span class="p-top-commitment__tooltip">よろしければ情報共有シートを<br>ご覧ください</span>
+                            <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
                         </a>
                         でいつでも確認可能。<br>安心してお任せいただける体制を整えています。
                     </p>
@@ -74,32 +72,34 @@
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">緊急対応・仕様変更への柔軟な対応</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li class="p-top-assurance__text">空きがあれば、当日・翌日の緊急案件にも対応。</li>
-                        <li class="p-top-assurance__text">修正・仕様変更に柔軟に対応。事前確認で、戻しを最小限に。</li>
+                        <li><p class="p-top-assurance__text">ご相談いただければ、当日・翌日の緊急案件にもできる限り対応します。</p></li>
+                        <li><p class="p-top-assurance__text">修正のご依頼は、完了までにかかる日数をすぐにご案内し、安心してお任せいただけるよう努めています。</p></li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
-                    <h3 class="p-top-assurance__title">納品ルールの順守と品質の担保</h3>
+                    <h3 class="p-top-assurance__title">納品ルールの遵守と品質の担保</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li class="p-top-assurance__text">FLOCSSやBEMなどの一般的設計、プロジェクト固有ルールも対応。</li>
-                        <li class="p-top-assurance__text">WebP変換と画像圧縮で軽量化し、表示速度を改善。</li>
-                        <li class="p-top-assurance__text">進捗シートで進行管理、品質チェックシートで納品前に確認。</li>
+                        <li><p class="p-top-assurance__text">FLOCSSやBEMなどの一般的な設計はもちろん、プロジェクト固有ルールにも対応します。</p></li>
+                        <li><p class="p-top-assurance__text">意味に合ったHTMLタグを適切に使い分け、構造的なマークアップを行うことで、SEOやアクセシビリティにも配慮した設計を心がけています。</p></li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">スムーズな進行管理と報連相</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li class="p-top-assurance__text">こまめな報告・連絡・相談で進行の不安を解消。</li>
-                        <li class="p-top-assurance__text">GitHubでのチーム開発に対応</li>
+                    <li><p class="p-top-assurance__text">
+                    <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
+                            <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
+                            </a>を使って、進捗情報を共有・可視化しています。</p></li>
+                    <li><p class="p-top-assurance__text">どんな内容でも当日中に必ずご返信します。対応の早さで、安心と信頼をお届けします。</p></li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">使用ツール・環境への柔軟な対応</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li class="p-top-assurance__text">対応カンプ： Figma / XD / Photoshop / Illustrator</li>
-                        <li class="p-top-assurance__text">対応ツール： Zeplin / Backlog / Git</li>
-                        <li class="p-top-assurance__text">対応ブラウザ： Safari / Chrome / Firefox / Edge</li>
-                        <li class="p-top-assurance__text">対応OS： Mac / Windows / iPhone / Android</li>
+                        <li><p class="p-top-assurance__text">対応カンプ： Figma / XD / Photoshop / Illustrator</p></li>
+                        <li><p class="p-top-assurance__text">対応ツール： Zeplin / Backlog / Git</p></li>
+                        <li><p class="p-top-assurance__text">対応ブラウザ： Safari / Chrome / Firefox / Edge</p></li>
+                        <li><p class="p-top-assurance__text">対応OS： Mac / Windows / iPhone / Android</p></li>
                     </ul>
                 </li>
             </ul>
@@ -298,10 +298,11 @@
             <div class="p-top-process__heading">
                 <div class="c-section-heading">
                     <p class="c-heading--en" aria-hidden="true">Process</p>
-                    <h2 class="c-heading--title"><span class="u-red">ご</span>依頼までの流れ</h2>
+                    <h2 class="c-heading--title"><span class="u-red">ご</span>依頼の流れ</h2>
                 </div>
-                <p class="p-top-process__heading-lead">説明テキストがはいります説明テキストがはいります説明
-                    テキストがはいります説明テキストがはいります説明テキストがはいります</p>
+                <p class="p-top-process__heading-lead">
+
+                </p>
             </div>
             <ul class="p-top-process__steps">
                 <li class="p-top-process__step">
@@ -316,7 +317,8 @@
                     <div class="p-top-process__content">
                         <span class="p-top-process__number">STEP 01</span>
                         <h3 class="p-top-process__title">お問い合わせ・ヒアリング</h3>
-                        <p class="p-top-process__step-description">メールやフォームから気軽にご連絡ください。ご希望内容や予算、スケジュールをお聞きします。</p>
+                        <p class="p-top-process__step-description">まずはお気軽に、お問い合わせフォームやX（旧Twitter）のDMからご連絡ください。
+                        ご希望の内容やご予算、スケジュールなどをざっくりでも構いませんので、お聞かせください。</p>
                     </div>
                 </li>
                 <li class="p-top-process__step">
@@ -331,7 +333,8 @@
                     <div class="p-top-process__content">
                         <span class="p-top-process__number">STEP 02</span>
                         <h3 class="p-top-process__title">お見積もり・スケジュール提示</h3>
-                        <p class="p-top-process__step-description">内容をもとに見積もりと納期をご提示。納得いただければ正式に依頼成立です。</p>
+                        <p class="p-top-process__step-description">内容をもとに、お見積もりとスケジュールをご提案いたします。あわせて、サーバーやドメインの有無も確認し、必要であれば取得支援も可能です。
+                        公開方法（納品形式やアップロードの有無）についても、このタイミングで擦り合わせます。</p>
                     </div>
                 </li>
                 <li class="p-top-process__step">
@@ -346,7 +349,7 @@
                     <div class="p-top-process__content">
                         <span class="p-top-process__number">STEP 03</span>
                         <h3 class="p-top-process__title">作業開始</h3>
-                        <p class="p-top-process__step-description">必要に応じてデザインカンプや資料を共有いただき、スムーズに制作をスタートします。</p>
+                        <p class="p-top-process__step-description">共有いただいた資料やご要望に沿って、制作をスタートいたします。進行中も適宜ご連絡を差し上げ、ご確認いただきながら進めますので、はじめての方でも安心してご依頼いただけます。</p>
                     </div>
                 </li>
             </ul>
@@ -383,7 +386,7 @@
         </div>
     </section>
 
-    <section class="p-top-contact">
+    <section id="contact" class="p-top-contact" data-section="contact">
         <div class="p-top-contact__inner l-section__inner--lg l-section__inner--narrow">
             <div class="p-top-contact__heading">
                 <div class="c-section-heading">

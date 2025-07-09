@@ -62,19 +62,19 @@
             <nav class="l-header__nav">
                 <ul class="c-global-nav u-mr30">
                     <li class="c-global-nav__item">
-                        <a href="" class="c-global-nav__link">実績一覧</a>
+                        <a href="" class="c-global-nav__link" data-section="works">実績紹介</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="" class="c-global-nav__link">提供サービス</a>
+                        <a href="" class="c-global-nav__link" data-section="service">提供サービス</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="" class="c-global-nav__link">ご依頼の流れ</a>
+                        <a href="" class="c-global-nav__link" data-section="process">ご依頼の流れ</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="" class="c-global-nav__link">私について</a>
+                        <a href="" class="c-global-nav__link" data-section="profile">私について</a>
                     </li>
                 </ul>
-                <a href="" class="c-button p-header__button">
+                <a href="" class="c-button p-header__button" data-section="contact">
                     <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt=""> -->
                     <span class="p-header__button-text">お問い合わせ</span>
                 </a>
