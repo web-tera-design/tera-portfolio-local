@@ -123,15 +123,15 @@
                             poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky.webm" type="video/webm">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top.webm" type="video/webm">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
-                    <span class="p-top-works__detail">詳細を見る
+                    <!-- <span class="p-top-works__detail">詳細を見る
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span>
-                    <h3 class="p-top-works__title">BLUE SKY（サンプル）</h3>
+                    </span> -->
+                    <h3 class="p-top-works__title">求人サイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
                         <li class="c-tag">Figma</li>
@@ -147,7 +147,7 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp"
                             width="100%"
                             height="auto">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.mp4" type="video/mp4">
@@ -155,9 +155,9 @@
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
-                    <span class="p-top-works__detail">詳細を見る
+                    <!-- <span class="p-top-works__detail">詳細を見る
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span>
+                    </span> -->
                     <h3 class="p-top-works__title">クリニックサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">Wordpress</li>
@@ -166,46 +166,43 @@
                     </ul>
                     <!-- </a> -->
                 </li>
-                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal5">
-                    <!-- <a href="" class="p-top-works__link"> -->
-                    <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp" alt="">
-                    </div>
-                    <span class="p-top-works__detail">詳細を見る
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span>
-                    <h3 class="p-top-works__title">ポモドーロタイマー</h3>
-                    <ul class="c-tags">
-                        <li class="c-tag">その他</li>
-                        <li class="c-tag">BEM</li>
-                    </ul>
-                    <!-- </a> -->
-                </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal3">
                     <!-- <a href="" class="p-top-works__link"> -->
-                    <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="">
+                    <div class="p-top-works__image p-top-mockup-container">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                        <video
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
+                            width="100%"
+                            height="auto">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro-top.webm" type="video/webm">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
                     </div>
-                    <span class="p-top-works__detail">詳細を見る
+                    <!-- <span class="p-top-works__detail">詳細を見る
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span>
-                    <h3 class="p-top-works__title">サンプル</h3>
+                    </span> -->
+                    <h3 class="p-top-works__title">自作ポモドーロタイマー</h3>
                     <ul class="c-tags">
-                        <li class="c-tag">LP</li>
-                        <li class="c-tag">Figma</li>
-                        <li class="c-tag">BEM</li>
+                        <li class="c-tag">その他</li>
+                        <li class="c-tag">Javascript</li>
+                        <li class="c-tag">GSAP</li>
                     </ul>
                     <!-- </a> -->
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal4">
                     <!-- <a href="" class="p-top-works__link"> -->
                     <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="">
                     </div>
-                    <span class="p-top-works__detail">詳細を見る
+                    <!-- <span class="p-top-works__detail">詳細を見る
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                    </span>
-                    <h3 class="p-top-works__title">sobolon（サンプル）</h3>
+                    </span> -->
+                    <h3 class="p-top-works__title">キャンペーンサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
                         <li class="c-tag">Figma</li>
@@ -213,15 +210,30 @@
                     </ul>
                     <!-- </a> -->
                 </li>
-                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal6">
+                <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal5">
+                    <!-- <a href="" class="p-top-works__link"> -->
+                    <div class="p-top-works__image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="">
+                    </div>
+                    <!-- <span class="p-top-works__detail">詳細を見る
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                    </span> -->
+                    <h3 class="p-top-works__title">美容サイト（サンプル）</h3>
+                    <ul class="c-tags">
+                        <li class="c-tag">LP</li>
+                        <li class="c-tag">Figma</li>
+                        <li class="c-tag">BEM</li>
+                    </ul>
+                    <!-- </a> -->
+                </li>
+                <li class="p-top-works__item p-top-works__item--disabled p-modal__open-btn js-modal__open-btn" data-dialog="modal6">
                     <!-- <a href="" class="p-top-works__link"> -->
                     <div class="p-top-works__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-koumuten.webp" alt="">
                     </div>
-                    <span class="p-top-works__detail">詳細を見る
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
+                    <span class="p-top-works__detail">このページは近日公開予定です。
                     </span>
-                    <h3 class="p-top-works__title">工務店Webサイト</h3>
+                    <h3 class="p-top-works__title"></h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
                         <li class="c-tag">Figma</li>
@@ -230,23 +242,6 @@
                     <!-- </a> -->
                 </li>
             </ul>
-            <div class="p-top-works__button">
-                <a href="" class="c-button c-button__skew-wrapper">
-                    <span class="c-button__skew-inner">
-                        <span class="c-button__icon" aria-hidden="true">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
-                                <path d="M19.5 7.58984L19.5 21.5898H1.5L1.5 7.58984H19.5ZM3.5 16.9902L7.90039 12.5898L14.9004 19.5898H17.5V9.58984H3.5L3.5 16.9902ZM3.72754 19.5898H12.0703L7.90039 15.418L3.72754 19.5898ZM23.5 17.5898H21.5L21.5 5.58984H7.5L7.5 3.58984H23.5L23.5 17.5898ZM14 11.5898C14.3978 11.5898 14.7792 11.748 15.0605 12.0293C15.3419 12.3106 15.5 12.692 15.5 13.0898C15.5 13.4877 15.3419 13.8691 15.0605 14.1504C14.7792 14.4317 14.3978 14.5898 14 14.5898C13.6022 14.5898 13.2208 14.4317 12.9395 14.1504C12.6581 13.8691 12.5 13.4877 12.5 13.0898C12.5 12.692 12.6581 12.3106 12.9395 12.0293C13.2208 11.748 13.6022 11.5898 14 11.5898Z" fill="#FB0000" />
-                            </svg>
-                        </span>
-                        <span class="c-button__text">制作物一覧を見る</span>
-                        <span class="c-button__arrow" aria-hidden="true">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
-                                <path d="M16.7263 5.14307L14.9439 6.93429L19.0746 11.046L1.88867 11.0625L1.8912 13.5889L19.0304 13.5724L14.9692 17.6526L16.7591 19.4337L23.8887 12.2713L16.7263 5.14307Z" fill="#FB0000" />
-                            </svg>
-                        </span>
-                    </span>
-                </a>
-            </div>
         </div>
     </section>
 

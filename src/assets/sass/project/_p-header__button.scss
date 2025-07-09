@@ -1,11 +1,11 @@
 @use '../global' as *;
 
 .p-header__button {
-    display: flex;
-    flex-direction: column;
-    padding: min(17px, 1.1805555555vw) min(20px, 1.3888888888vw);
-    background: linear-gradient(271deg, #FFF800 0.98%, #FB0000 99.02%);
-    gap: min(8px, 0.5555555555vw); // アイコンとテキストの間
+    // display: flex;
+    // flex-direction: column;
+    // padding: min(17px, 1.1805555555vw) min(20px, 1.3888888888vw);
+    // background: linear-gradient(271deg, #FFF800 0.98%, #FB0000 99.02%);
+    // gap: min(8px, 0.5555555555vw); // アイコンとテキストの間
 }
 
 .p-header__button-text {

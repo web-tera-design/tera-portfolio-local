@@ -121,7 +121,12 @@ dialog {
 
 .p-top-modal__image {
   margin-inline: auto;
-  max-width: 600px;
+  max-inline-size: 800px;
+  img {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+  }
 }
 
 
@@ -186,9 +191,9 @@ dialog {
 }
 
 .p-top-modal__link-body {
+  padding-block: 10px;
   position: sticky;
   bottom: 0;
-  padding-block: 20px;
   background: $color-wt;
   z-index: 10;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.05); /* 上部に薄い影をつけると区切り感UP */  text-align: center;

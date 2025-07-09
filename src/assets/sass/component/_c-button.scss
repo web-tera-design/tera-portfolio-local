@@ -18,13 +18,14 @@
 }
 
 .c-button__arrow {
-    margin-inline-start: rclamp(28, 12, 375, 1440);
+    // margin-inline-start: rclamp(28, 12, 375, 1440);
+    margin-inline-start: 0;
 }
 
 .c-button__skew-wrapper {
     position: relative;
     transform: skew(-20deg);
-    padding: 20px 20px 20px 66px;
+    padding: 10px 20px 10px 25px;
     border: 3px solid $color-rd;
     box-shadow: 0px 4px 4px 0px rgba(34, 34, 34, 0.25);
 
@@ -33,7 +34,7 @@
     }
 
     @include mq(lg) {
-      padding: 16px 20px 16px 51px;
+      padding: 10px 20px 10px 25px;
     }
 }
 

@@ -42,7 +42,7 @@
         <button class="p-top-modal__close-btn">
             閉じる
         </button>
-        <h3 id="modal-head1" class="p-top-modal__title">BLUE SKY（サンプル）</h3>
+        <h3 id="modal-head1" class="p-top-modal__title">求人サイト（サンプル）</h3>
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
@@ -122,16 +122,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="p-top-modal__link-body">
-        <a href="" class="p-top-modal__link">
-            <span class="p-top-modal__link-inner">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
-                サイトを見る
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
-            </span>
-        </a>
-    </div> -->
-    <div class="p-top-modal__link-body">
+    <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
         <a href="" class="c-button c-button__skew-wrapper">
             <span class="c-button__skew-inner">
                 <span class="c-button__icon" aria-hidden="true">
@@ -145,6 +136,356 @@
         </a>
     </div>
 </dialog>
+
+<dialog id="modal2" aria-labelledby="modal-head2" aria-describedby="modal-text2" class="p-top-modal__content">
+    <div class="p-top-modal__inner l-section__inner--narrow l-section__inner--modal">
+        <button class="p-top-modal__close-btn">
+            閉じる
+        </button>
+        <h3 id="modal-head2" class="p-top-modal__title">クリニックサイト（サンプル）</h3>
+        <div class="p-top-modal__body">
+            <div class="p-top-modal__left">
+                <div class="p-top-modal__image p-top-modal-mockup-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                    <video
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp"
+                        width="100%"
+                        height="auto">
+                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic-modal.mp4" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic-modal.webm" type="video/webm">
+                        お使いのブラウザでは動画を再生できません。
+                    </video>
+                </div>
+                <!-- <ul class="c-tags u-mt14">
+                    <li class="c-tag">LP</li>
+                    <li class="c-tag">Figma</li>
+                    <li class="c-tag">BEM</li>
+                </ul> -->
+            </div>
+            <div class="p-top-modal__right">
+                <ul class="p-top-modal__list">
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">担当範囲</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">コーディング</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">サイト概要</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">Wordpressで構築した架空のクリニックサイトです。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">カスタム投稿（例：お知らせ、スタッフ紹介、事例など）を導入し、クライアントが迷わず管理できる構成です。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">カスタムフィールド（ACF）を用いた柔軟な入力フォームの構築です。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">アーカイブページ、タクソノミー、ページネーションの動的生成にも対応しました。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">実装の工夫</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">トップページのファーストビューには、GSAPによる立体的なスライドアクションを採用しました。<br>テキストは一文字ずつ上下にアニメーションさせながら表示し、印象的かつメッセージ性の高い演出を実現しています。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">お問い合わせフォームは、自動フォーカスやカナ変換、電話番号補正など入力支援機能をJavascriptで実装しました。<br>ラジオ・チェックボックスもTab操作時に強調表示しています。
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：１ヶ月</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">製作費：１０万円</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
+        <a href="" class="c-button c-button__skew-wrapper">
+            <span class="c-button__skew-inner">
+                <span class="c-button__icon" aria-hidden="true">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
+                </span>
+                <span class="c-button__text">サイトを見る</span>
+                <span class="c-button__arrow" aria-hidden="true">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
+                </span>
+            </span>
+        </a>
+    </div>
+</dialog>
+
+<dialog id="modal3" aria-labelledby="modal-head3" aria-describedby="modal-text3" class="p-top-modal__content">
+    <div class="p-top-modal__inner l-section__inner--narrow l-section__inner--modal">
+        <button class="p-top-modal__close-btn">
+            閉じる
+        </button>
+        <h3 id="modal-head3" class="p-top-modal__title">自作ポモドーロタイマー</h3>
+        <div class="p-top-modal__body">
+            <div class="p-top-modal__left">
+                <div class="p-top-modal__image p-top-modal-mockup-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                    <video
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
+                        width="100%"
+                        height="auto">
+                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro.mp4" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro.webm" type="video/webm">
+                        お使いのブラウザでは動画を再生できません。
+                    </video>
+                </div>
+                <!-- <ul class="c-tags u-mt14">
+                    <li class="c-tag">LP</li>
+                    <li class="c-tag">Figma</li>
+                    <li class="c-tag">BEM</li>
+                </ul> -->
+            </div>
+            <div class="p-top-modal__right">
+                <ul class="p-top-modal__list">
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">担当範囲</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">企画・設計・デザイン・フロントエンド実装（HTML / SCSS / JavaScript）まで、すべて個人で制作しました。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">サイト概要</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">自作のポモドーロタイマーです。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">現在の時刻に応じて自動的に作業用・休憩用・昼休み用のYouTube動画を再生することで、集中力を高めつつ、自然な時間管理ができるツールです。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">動画再生にはYouTube IFrame APIを利用しており、Javascript上で動画IDを指定するだけで切り替え可能な仕組みを構築しました。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">実装の工夫</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">小さな演出や制御もすべてJavaScriptとGSAPで実装しています。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">現在の時刻に連動し、毎時00分〜50分を「作業時間」、50分〜00分を「休憩時間」、12時台は「昼休憩」として、それぞれ自動で動画が切り替わるよう実装しました。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">画面上のセレクトボックスからアラーム音を選択できるほか、フリー音声ファイルをHTMLとJavaScriptに記述することで、リストに任意のアラーム音を追加することも可能です。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">音量調整には自作のスライダーUIを実装し、アラームとYouTube動画の音量はそれぞれ個別に設定可能です。<br>各音量設定はローカルストレージに保存され、次回以降も同じデバイスでタイマーを開くと、前回の設定が自動で反映されるようになっています。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：３日</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">製作費：応相談</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
+        <a href="" class="c-button c-button__skew-wrapper">
+            <span class="c-button__skew-inner">
+                <span class="c-button__icon" aria-hidden="true">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
+                </span>
+                <span class="c-button__text">サイトを見る</span>
+                <span class="c-button__arrow" aria-hidden="true">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
+                </span>
+            </span>
+        </a>
+    </div>
+</dialog>
+
+<dialog id="modal4" aria-labelledby="modal-head4" aria-describedby="modal-text4" class="p-top-modal__content">
+    <div class="p-top-modal__inner l-section__inner--narrow l-section__inner--modal">
+        <button class="p-top-modal__close-btn">
+            閉じる
+        </button>
+        <h3 id="modal-head4" class="p-top-modal__title">キャンペーンサイト（サンプル）</h3>
+        <div class="p-top-modal__body">
+            <div class="p-top-modal__left">
+                <div class="p-top-modal__image p-top-modal-mockup-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="">
+                </div>
+                <!-- <ul class="c-tags u-mt14">
+                    <li class="c-tag">LP</li>
+                    <li class="c-tag">Figma</li>
+                    <li class="c-tag">BEM</li>
+                </ul> -->
+            </div>
+            <div class="p-top-modal__right">
+                <ul class="p-top-modal__list">
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">担当範囲</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">コーディング</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">サイト概要</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">架空のキャンペーンランディングページです。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">スライダー（Swiper）、モーダル、アコーディオン、テーブルレイアウト、問い合わせフォームなど、実務でよく使われる要素を網羅したキャンペーンサイトのサンプルです。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">実装の工夫</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">CSSや構造の理解を深めることを目的としました。細かなレスポンシブ対応や擬似要素の調整など、基本の積み上げを意識しました。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：１週間</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">製作費：３万円</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
+        <a href="" class="c-button c-button__skew-wrapper">
+            <span class="c-button__skew-inner">
+                <span class="c-button__icon" aria-hidden="true">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
+                </span>
+                <span class="c-button__text">サイトを見る</span>
+                <span class="c-button__arrow" aria-hidden="true">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
+                </span>
+            </span>
+        </a>
+    </div>
+</dialog>
+
+<dialog id="modal5" aria-labelledby="modal-head5" aria-describedby="modal-text5" class="p-top-modal__content">
+    <div class="p-top-modal__inner l-section__inner--narrow l-section__inner--modal">
+        <button class="p-top-modal__close-btn">
+            閉じる
+        </button>
+        <h3 id="modal-head5" class="p-top-modal__title">美容サイト（サンプル）</h3>
+        <div class="p-top-modal__body">
+            <div class="p-top-modal__left">
+                <div class="p-top-modal__image p-top-modal-mockup-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="">
+                </div>
+                <!-- <ul class="c-tags u-mt14">
+                    <li class="c-tag">LP</li>
+                    <li class="c-tag">Figma</li>
+                    <li class="c-tag">BEM</li>
+                </ul> -->
+            </div>
+            <div class="p-top-modal__right">
+                <ul class="p-top-modal__list">
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">担当範囲</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">コーディング</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">サイト概要</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">架空のランディングページです。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">カード型のセクションを多用したシンプルなLPです。レスポンシブ対応も行い、複数デバイスでの表示を想定して制作しています。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">実装の工夫</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">擬似要素やFlexboxを用いた要素の整列、画像比率の維持、レスポンシブ対応など、見た目にシンプルでも破綻しない設計を意識しました。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：１日</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">製作費：１万円</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
+        <a href="" class="c-button c-button__skew-wrapper">
+            <span class="c-button__skew-inner">
+                <span class="c-button__icon" aria-hidden="true">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
+                </span>
+                <span class="c-button__text">サイトを見る</span>
+                <span class="c-button__arrow" aria-hidden="true">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
+                </span>
+            </span>
+        </a>
+    </div>
+</dialog>
+
 <?php wp_footer(); ?>
 </body>
 

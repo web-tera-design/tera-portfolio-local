@@ -75,7 +75,7 @@
                     </li>
                 </ul>
                 <a href="" class="c-button p-header__button">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt="">
+                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt=""> -->
                     <span class="p-header__button-text">お問い合わせ</span>
                 </a>
             </nav>

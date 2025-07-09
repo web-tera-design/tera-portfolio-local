@@ -161,7 +161,8 @@ document.querySelectorAll(".p-top-modal__close-btn").forEach((button) => {
 document.querySelectorAll("dialog").forEach((dialog) => {
   dialog.addEventListener("click", (e) => {
     const inner = dialog.querySelector(".p-top-modal__inner");
-    if (!inner.contains(e.target)) {
+    const linkBody = dialog.querySelector(".p-top-modal__link-body");
+    if (!inner.contains(e.target) && !linkBody.contains(e.target)) {
       dialog.classList.remove("js-show");
       dialog.close();
       document.body.style.overflow = "";
