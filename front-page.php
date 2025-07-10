@@ -1,5 +1,10 @@
 <?php get_header(); ?>
-
+<div class="p-top-loading" id="js-loading">
+    <video class="p-top-loading__bg" src="<?php echo get_template_directory_uri(); ?>/src/assets/video/loading-bg3.mp4" autoplay muted loop></video>
+    <h1 class="p-top-loading__text">
+        <span>Tera’s portfolio</span>
+    </h1>
+</div>
 <main class="l-main">
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-section__inner--mv">
@@ -72,34 +77,55 @@
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">緊急対応・仕様変更への柔軟な対応</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li><p class="p-top-assurance__text">ご相談いただければ、当日・翌日の緊急案件にもできる限り対応します。</p></li>
-                        <li><p class="p-top-assurance__text">修正のご依頼は、完了までにかかる日数をすぐにご案内し、安心してお任せいただけるよう努めています。</p></li>
+                        <li>
+                            <p class="p-top-assurance__text">ご相談いただければ、当日・翌日の緊急案件にもできる限り対応します。</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">修正のご依頼は、完了までにかかる日数をすぐにご案内し、安心してお任せいただけるよう努めています。</p>
+                        </li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">納品ルールの遵守と品質の担保</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li><p class="p-top-assurance__text">FLOCSSやBEMなどの一般的な設計はもちろん、プロジェクト固有ルールにも対応します。</p></li>
-                        <li><p class="p-top-assurance__text">意味に合ったHTMLタグを適切に使い分け、構造的なマークアップを行うことで、SEOやアクセシビリティにも配慮した設計を心がけています。</p></li>
+                        <li>
+                            <p class="p-top-assurance__text">FLOCSSやBEMなどの一般的な設計はもちろん、プロジェクト固有ルールにも対応します。</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">意味に合ったHTMLタグを適切に使い分け、構造的なマークアップを行うことで、SEOやアクセシビリティにも配慮した設計を心がけています。</p>
+                        </li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">スムーズな進行管理と報連相</h3>
                     <ul class="p-top-assurance__sublist">
-                    <li><p class="p-top-assurance__text">
-                    <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
-                            <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
-                            </a>を使って、進捗情報を共有・可視化しています。</p></li>
-                    <li><p class="p-top-assurance__text">どんな内容でも当日中に必ずご返信します。対応の早さで、安心と信頼をお届けします。</p></li>
+                        <li>
+                            <p class="p-top-assurance__text">
+                                <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
+                                    <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
+                                </a>を使って、進捗情報を共有・可視化しています。
+                            </p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">どんな内容でも当日中に必ずご返信します。対応の早さで、安心と信頼をお届けします。</p>
+                        </li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">使用ツール・環境への柔軟な対応</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li><p class="p-top-assurance__text">対応カンプ： Figma / XD / Photoshop / Illustrator</p></li>
-                        <li><p class="p-top-assurance__text">対応ツール： Zeplin / Backlog / Git</p></li>
-                        <li><p class="p-top-assurance__text">対応ブラウザ： Safari / Chrome / Firefox / Edge</p></li>
-                        <li><p class="p-top-assurance__text">対応OS： Mac / Windows / iPhone / Android</p></li>
+                        <li>
+                            <p class="p-top-assurance__text">対応カンプ： Figma / XD / Photoshop / Illustrator</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">対応ツール： Zeplin / Backlog / Git</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">対応ブラウザ： Safari / Chrome / Firefox / Edge</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">対応OS： Mac / Windows / iPhone / Android</p>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -318,7 +344,7 @@
                         <span class="p-top-process__number">STEP 01</span>
                         <h3 class="p-top-process__title">お問い合わせ・ヒアリング</h3>
                         <p class="p-top-process__step-description">まずはお気軽に、お問い合わせフォームやX（旧Twitter）のDMからご連絡ください。
-                        ご希望の内容やご予算、スケジュールなどをざっくりでも構いませんので、お聞かせください。</p>
+                            ご希望の内容やご予算、スケジュールなどをざっくりでも構いませんので、お聞かせください。</p>
                     </div>
                 </li>
                 <li class="p-top-process__step">
@@ -334,7 +360,7 @@
                         <span class="p-top-process__number">STEP 02</span>
                         <h3 class="p-top-process__title">お見積もり・スケジュール提示</h3>
                         <p class="p-top-process__step-description">内容をもとに、お見積もりとスケジュールをご提案いたします。あわせて、サーバーやドメインの有無も確認し、必要であれば取得支援も可能です。
-                        公開方法（納品形式やアップロードの有無）についても、このタイミングで擦り合わせます。</p>
+                            公開方法（納品形式やアップロードの有無）についても、このタイミングで擦り合わせます。</p>
                     </div>
                 </li>
                 <li class="p-top-process__step">

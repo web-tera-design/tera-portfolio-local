@@ -1,0 +1,36 @@
+@use '../global' as *;
+
+.p-top-loading {
+    position: fixed; /* ← absoluteからfixedに変更するとより確実 */
+    z-index: 9999;
+    inline-size: 100%;
+    block-size: 100svh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.p-top-loading video,
+.p-top-loading h1 {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+.p-top-loading video {
+    object-fit: cover;
+}
+
+.p-top-loading__text {
+    background: $color-wt;
+    font-size: 16vw;
+    text-align: center;
+    line-height: 100vh;
+    font-family: "impact", sans-serif;
+    mix-blend-mode: screen;
+}
+
+
