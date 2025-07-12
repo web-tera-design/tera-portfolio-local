@@ -264,13 +264,79 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loadingEl = document.getElementById("js-loading");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const startTime = Date.now();
+//   window.addEventListener("load", function () {
+//     const minTime = 4000; // 最低表示したい時間（ミリ秒）
+//     const elapsed = Date.now() - startTime;
+//     const remain = minTime - elapsed;
 
-  // 2秒後にローディングを非表示に
-  setTimeout(() => {
-    loadingEl.classList.add("is-hide");
-    // 完全に消すなら以下も追加
-    // setTimeout(() => loadingEl.remove(), 1000);
-  }, 2000);
+//     setTimeout(
+//       function () {
+//         const loading = document.getElementById("js-loading");
+//         loading.classList.add("is-hide"); // フェードアウト
+//         setTimeout(function () {
+//           loading.style.display = "none";
+//           document.body.classList.remove("loading");
+//         }, 600); // フェードアウトの秒数（CSSと合わせる）
+//       },
+//       remain > 0 ? remain : 0
+//     );
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const chars = document.querySelectorAll(".p-top-loading__char");
+  const portfolio = document.querySelector(".p-top-loading__portfolio");
+
+  gsap.set(portfolio, { opacity: 0 });
+
+  function bounceChar(index) {
+    if (index >= chars.length) {
+      gsap.to(portfolio, { opacity: 1, duration: 0.5, delay: 0.05 });
+      return;
+    }
+    const char = chars[index];
+    char.style.display = "block";
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        let dur = index === 0 ? 0.2 : 0.3; // 最初だけ短く
+        gsap.fromTo(
+          char,
+          {
+            scale: 1,
+            opacity: 1,
+            filter: "blur(0px)",
+            z: 0,
+            color: "#fff",
+            textShadow: "0 0 4px #ff2400, 0 0 8px #ff4500",
+          },
+          {
+            scale: 8,
+            opacity: 0,
+            filter: "blur(8px)",
+            z: 400,
+            color: "#ffeb3b", // 拡大中に炎色で発光
+            textShadow: "0 0 48px #ffeb3b, 0 0 80px #ff6347",
+            duration: 0.22,
+            ease: "expo.in",
+            onComplete: function () {
+              // フラッシュ色へ一瞬だけ切り替え
+              gsap.to(char, {
+                color: "#ff4444", // フラッシュ色
+                textShadow: "0 0 64px #ff4444, 0 0 120px #ff9999",
+                duration: 0.08,
+                ease: "power1.out",
+                onComplete: function () {
+                  char.style.display = "none";
+                  bounceChar(index + 1);
+                },
+              });
+            },
+          }
+        );
+      });
+    });
+  }
+  bounceChar(0);
 });

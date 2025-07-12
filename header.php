@@ -51,7 +51,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('loading'); ?>>
     <header class="l-header">
         <div class="l-header__inner l-section__inner--wide">
             <h1 class="l-header__logo">

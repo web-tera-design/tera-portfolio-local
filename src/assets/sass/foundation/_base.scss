@@ -12,6 +12,11 @@ body {
     height: 100%;
     overflow: hidden;
   }
+
+  body.loading .l-header {
+    display: none;
+}
+
   
   html {
     // scroll-behavior: smooth;

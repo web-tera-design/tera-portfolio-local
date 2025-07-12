@@ -1,8 +1,15 @@
 <?php get_header(); ?>
 <div class="p-top-loading" id="js-loading">
-    <video class="p-top-loading__bg" src="<?php echo get_template_directory_uri(); ?>/src/assets/video/loading-bg3.mp4" autoplay muted loop></video>
     <h1 class="p-top-loading__text">
-        <span>Tera’s portfolio</span>
+        <span class="p-top-loading__tera">
+            <span class="p-top-loading__char">T</span>
+            <span class="p-top-loading__char">e</span>
+            <span class="p-top-loading__char">r</span>
+            <span class="p-top-loading__char">a</span>
+            <!-- <span class="p-top-loading__char">’</span>
+            <span class="p-top-loading__char">s</span> -->
+        </span>
+        <span class="p-top-loading__portfolio">Tera’s portfolio</span>
     </h1>
 </div>
 <main class="l-main">
