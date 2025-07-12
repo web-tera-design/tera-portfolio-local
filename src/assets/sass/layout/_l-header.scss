@@ -2,12 +2,17 @@
 
 .l-header {
     position: fixed;
+    opacity: 0;
     z-index: 100;
     inset-block-start: 0;
     inset-inline-start: 0;
     inline-size: 100%;
     block-size: auto;
-    background: $color-bk
+    background-color: $color-bk;
+    transition: translate 0.2s ease;
+    &.js-slide-up {
+        translate: 0 -100%;
+    }
 }
 
 .l-header__inner {

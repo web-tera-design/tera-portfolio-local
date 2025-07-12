@@ -1,6 +1,7 @@
 @use '../global' as *;
 
 .p-top-contact {
+    background-color: $color-wt;
       padding-block: rclamp(56, 120, 375, 1440) rclamp(24, 120, 375, 1440);
 }
 

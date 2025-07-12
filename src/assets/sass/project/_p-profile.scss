@@ -2,7 +2,8 @@
 
 .p-top-profile {
     background: url(../img/commitment-story-bg-image.webp) no-repeat center center / cover;
-    padding-block: rclamp(56, 120, 375, 1440)
+    padding-block: rclamp(56, 120, 375, 1440);
+    background-color: $color-wt;
 }
 
 .p-top-profile__inner {

@@ -1,7 +1,8 @@
 @use '../global' as *;
 
 .p-top-service {
-    background: linear-gradient(271deg, rgba(255, 248, 0, 0.10) 0.98%, rgba(251, 0, 0, 0.10) 99.02%);;
+    background-color: $color-wt;
+    // background: linear-gradient(271deg, rgba(255, 248, 0, 0.10) 0.98%, rgba(251, 0, 0, 0.10) 99.02%);;
     padding-block: rclamp(56, 120, 375, 1440)
 }
 

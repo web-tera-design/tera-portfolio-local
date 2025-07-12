@@ -1,6 +1,7 @@
 @use '../global' as *;
 
 .p-top-assurance {
+    background-color: $color-wt;
     padding-block: rclamp(56, 120, 375, 1440)
 }
 

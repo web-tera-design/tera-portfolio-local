@@ -11,8 +11,10 @@
         </span>
         <span class="p-top-loading__portfolio">Tera’s portfolio</span>
     </h1>
+    <div class="p-top-loading-blackout"></div>
+
 </div>
-<main class="l-main">
+<main id="mv" class="l-main">
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-section__inner--mv">
             <div class="p-top-mv__content">
@@ -27,115 +29,6 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="">
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="p-top-commitment">
-        <div class="p-top-commitment__inner l-section__inner">
-            <div class="c-section-heading">
-                <p class="c-heading--en" aria-hidden="true">Commitment</p>
-                <h2 class="c-heading--title"><span class="u-red">信</span>念とこだわり</h2>
-            </div>
-            <ul class="p-top-commitment__list">
-                <li class="p-top-commitment__item">
-                    <h3 class="p-top-commitment__title">
-                        信頼は、誠実な積み重ねから
-                    </h3>
-                    <p class="p-top-commitment__message">
-                        どんなに良いものを作っても、やりとりに不安があれば信頼は生まれません。<br>ひとつひとつのご依頼に対して、誠実に、丁寧に向き合うこと。<br>それが、成果以上に大切だと考えています。
-                    </p>
-                </li>
-                <li class="p-top-commitment__item">
-                    <h3 class="p-top-commitment__title">
-                        ニュアンスまで汲み取る実装力
-                    </h3>
-                    <p class="p-top-commitment__message">
-                        「意図通りに動かない」「思った通りの実装にならない」そんな不安を感じさせないように。<br>デザインの設計意図や細かなニュアンスを丁寧に読み取り、<br>再現性と安定感のあるコーディングで、“伝わる体験”をかたちにします。
-                    </p>
-                </li>
-                <li class="p-top-commitment__item">
-                    <h3 class="p-top-commitment__title">
-                        「安心して任せられる」対応力
-                    </h3>
-                    <p class="p-top-commitment__message">
-                        朝5時から夜9時まで、年中無休で対応。<br>即レス・即対応でやり取りのストレスをなくし、<br>進捗は
-                        <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
-                            <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
-                        </a>
-                        でいつでも確認可能。<br>安心してお任せいただける体制を整えています。
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="p-top-assurance">
-        <div class="p-top-assurance__inner l-section__inner l-section__inner--narrow">
-            <div class="p-top-assurance__heading">
-                <div class="c-section-heading">
-                    <p class="c-heading--en" aria-hidden="true">Assurance</p>
-                    <h2 class="c-heading--title"><span class="u-red">安</span>心してご依頼いただくために</h2>
-                </div>
-                <p class="p-top-assurance__lead">お客様に心からご満足いただけるよう、細部までこだわった安心の体制を整えています。</p>
-                <div class="p-top-assurance__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/assurance-image.webp" alt="">
-                </div>
-            </div>
-            <ul class="p-top-assurance__list">
-                <li class="p-top-assurance__item">
-                    <h3 class="p-top-assurance__title">緊急対応・仕様変更への柔軟な対応</h3>
-                    <ul class="p-top-assurance__sublist">
-                        <li>
-                            <p class="p-top-assurance__text">ご相談いただければ、当日・翌日の緊急案件にもできる限り対応します。</p>
-                        </li>
-                        <li>
-                            <p class="p-top-assurance__text">修正のご依頼は、完了までにかかる日数をすぐにご案内し、安心してお任せいただけるよう努めています。</p>
-                        </li>
-                    </ul>
-                </li>
-                <li class="p-top-assurance__item">
-                    <h3 class="p-top-assurance__title">納品ルールの遵守と品質の担保</h3>
-                    <ul class="p-top-assurance__sublist">
-                        <li>
-                            <p class="p-top-assurance__text">FLOCSSやBEMなどの一般的な設計はもちろん、プロジェクト固有ルールにも対応します。</p>
-                        </li>
-                        <li>
-                            <p class="p-top-assurance__text">意味に合ったHTMLタグを適切に使い分け、構造的なマークアップを行うことで、SEOやアクセシビリティにも配慮した設計を心がけています。</p>
-                        </li>
-                    </ul>
-                </li>
-                <li class="p-top-assurance__item">
-                    <h3 class="p-top-assurance__title">スムーズな進行管理と報連相</h3>
-                    <ul class="p-top-assurance__sublist">
-                        <li>
-                            <p class="p-top-assurance__text">
-                                <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
-                                    <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
-                                </a>を使って、進捗情報を共有・可視化しています。
-                            </p>
-                        </li>
-                        <li>
-                            <p class="p-top-assurance__text">どんな内容でも当日中に必ずご返信します。対応の早さで、安心と信頼をお届けします。</p>
-                        </li>
-                    </ul>
-                </li>
-                <li class="p-top-assurance__item">
-                    <h3 class="p-top-assurance__title">使用ツール・環境への柔軟な対応</h3>
-                    <ul class="p-top-assurance__sublist">
-                        <li>
-                            <p class="p-top-assurance__text">対応カンプ： Figma / XD / Photoshop / Illustrator</p>
-                        </li>
-                        <li>
-                            <p class="p-top-assurance__text">対応ツール： Zeplin / Backlog / Git</p>
-                        </li>
-                        <li>
-                            <p class="p-top-assurance__text">対応ブラウザ： Safari / Chrome / Firefox / Edge</p>
-                        </li>
-                        <li>
-                            <p class="p-top-assurance__text">対応OS： Mac / Windows / iPhone / Android</p>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
         </div>
     </section>
 
@@ -278,6 +171,118 @@
             </ul>
         </div>
     </section>
+
+    <section class="p-top-commitment">
+        <div class="p-top-commitment__inner l-section__inner">
+            <div class="c-section-heading">
+                <p class="c-heading--en" aria-hidden="true">Commitment</p>
+                <h2 class="c-heading--title"><span class="u-red">信</span>念とこだわり</h2>
+            </div>
+            <ul class="p-top-commitment__list">
+                <li class="p-top-commitment__item">
+                    <h3 class="p-top-commitment__title">
+                        信頼は、誠実な積み重ねから
+                    </h3>
+                    <p class="p-top-commitment__message">
+                        どんなに良いものを作っても、やりとりに不安があれば信頼は生まれません。<br>ひとつひとつのご依頼に対して、誠実に、丁寧に向き合うこと。<br>それが、成果以上に大切だと考えています。
+                    </p>
+                </li>
+                <li class="p-top-commitment__item">
+                    <h3 class="p-top-commitment__title">
+                        ニュアンスまで汲み取る実装力
+                    </h3>
+                    <p class="p-top-commitment__message">
+                        「意図通りに動かない」「思った通りの実装にならない」そんな不安を感じさせないように。<br>デザインの設計意図や細かなニュアンスを丁寧に読み取り、<br>再現性と安定感のあるコーディングで、“伝わる体験”をかたちにします。
+                    </p>
+                </li>
+                <li class="p-top-commitment__item">
+                    <h3 class="p-top-commitment__title">
+                        「安心して任せられる」対応力
+                    </h3>
+                    <p class="p-top-commitment__message">
+                        朝5時から夜9時まで、年中無休で対応。<br>即レス・即対応でやり取りのストレスをなくし、<br>進捗は
+                        <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
+                            <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
+                        </a>
+                        でいつでも確認可能。<br>安心してお任せいただける体制を整えています。
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="p-top-assurance">
+        <div class="p-top-assurance__inner l-section__inner l-section__inner--narrow">
+            <div class="p-top-assurance__heading">
+                <div class="c-section-heading">
+                    <p class="c-heading--en" aria-hidden="true">Assurance</p>
+                    <h2 class="c-heading--title"><span class="u-red">安</span>心してご依頼いただくために</h2>
+                </div>
+                <p class="p-top-assurance__lead">お客様に心からご満足いただけるよう、細部までこだわった安心の体制を整えています。</p>
+                <div class="p-top-assurance__image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/assurance-image.webp" alt="">
+                </div>
+            </div>
+            <ul class="p-top-assurance__list">
+                <li class="p-top-assurance__item">
+                    <h3 class="p-top-assurance__title">緊急対応・仕様変更への柔軟な対応</h3>
+                    <ul class="p-top-assurance__sublist">
+                        <li>
+                            <p class="p-top-assurance__text">ご相談いただければ、当日・翌日の緊急案件にもできる限り対応します。</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">修正のご依頼は、完了までにかかる日数をすぐにご案内し、安心してお任せいただけるよう努めています。</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="p-top-assurance__item">
+                    <h3 class="p-top-assurance__title">納品ルールの遵守と品質の担保</h3>
+                    <ul class="p-top-assurance__sublist">
+                        <li>
+                            <p class="p-top-assurance__text">FLOCSSやBEMなどの一般的な設計はもちろん、プロジェクト固有ルールにも対応します。</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">意味に合ったHTMLタグを適切に使い分け、構造的なマークアップを行うことで、SEOやアクセシビリティにも配慮した設計を心がけています。</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="p-top-assurance__item">
+                    <h3 class="p-top-assurance__title">スムーズな進行管理と報連相</h3>
+                    <ul class="p-top-assurance__sublist">
+                        <li>
+                            <p class="p-top-assurance__text">
+                                <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
+                                    <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
+                                </a>を使って、進捗情報を共有・可視化しています。
+                            </p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">どんな内容でも当日中に必ずご返信します。対応の早さで、安心と信頼をお届けします。</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="p-top-assurance__item">
+                    <h3 class="p-top-assurance__title">使用ツール・環境への柔軟な対応</h3>
+                    <ul class="p-top-assurance__sublist">
+                        <li>
+                            <p class="p-top-assurance__text">対応カンプ： Figma / XD / Photoshop / Illustrator</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">対応ツール： Zeplin / Backlog / Git</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">対応ブラウザ： Safari / Chrome / Firefox / Edge</p>
+                        </li>
+                        <li>
+                            <p class="p-top-assurance__text">対応OS： Mac / Windows / iPhone / Android</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
 
     <section id="service" class="p-top-service">
         <div class="p-top-service__inner l-section__inner l-section__inner--narrow">

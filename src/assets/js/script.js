@@ -28,6 +28,26 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
+const header = document.querySelector(".l-header"); // 対象となる要素
+const nextContent = document.querySelectorAll(".p-top-works"); // 対象となる要素
+
+nextContent.forEach((item) => {
+  ScrollTrigger.create({
+    trigger: item, // 発火させるタイミングを測る要素
+    start: "top top", // 発火させるタイミング1
+    onEnter: () => {
+      // スクロール位置が「start」を超えて前方にスクロールしたときに発火
+      header.classList.add("js-active");
+    },
+    onLeaveBack: () => {
+      // スクロール位置が「start」を超えて後方にスクロールされたときに発火
+      header.classList.remove("js-active");
+    },
+  });
+});
+
 // l-mainのmargin-block-startをl-headerの高さに合わせる
 function setMainMargin() {
   const header = document.querySelector(".l-header");
@@ -213,11 +233,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, 100);
 
-  // スクロール連動ナビエフェクト
-  const navLinks = document.querySelectorAll(".c-global-nav__link, .p-header__button");
+  const navLinks = Array.from(document.querySelectorAll(".c-global-nav__link, .p-header__button"));
   const pulseAnimations = new Map();
 
-  navLinks.forEach((link) => {
+  const contactIndex = navLinks.findIndex((link) => link.dataset.section === "contact");
+
+  navLinks.forEach((link, i) => {
     const sectionId = link.dataset.section;
     const section = document.getElementById(sectionId);
 
@@ -226,20 +247,25 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: section,
         start: "top center",
         end: "bottom center",
-        onEnter: () => animateLink(link),
-        onEnterBack: () => animateLink(link),
+        onEnter: () => animateLink(link, i),
+        onEnterBack: () => animateLink(link, i),
         onLeave: () => resetLink(link),
         onLeaveBack: () => resetLink(link),
       });
     }
   });
 
-  function animateLink(link) {
+  function animateLink(link, i) {
     if (pulseAnimations.has(link)) return;
+    const base = 0.1; // Contactの速さ
+    const step = 0.2;
+    const duration = base + step * Math.abs(contactIndex - i);
+
     const tween = gsap.to(link, {
       color: "#ff4500",
       textShadow: "0 0 10px #ff6347, 0 0 20px #ffa07a",
-      duration: 0.6,
+      scale: 1.05,
+      duration: duration,
       ease: "power1.inOut",
       yoyo: true,
       repeat: -1,
@@ -254,89 +280,241 @@ document.addEventListener("DOMContentLoaded", () => {
       pulseAnimations.delete(link);
     }
 
+    const header = document.querySelector(".l-header");
+    const isActive = header && header.classList.contains("js-active");
+
     gsap.to(link, {
       scale: 1,
-      color: "#fff",
+      color: isActive ? "#222" : "#fff", // js-active時は黒、通常は白
       textShadow: "0 0 0px transparent",
       duration: 0.3,
       ease: "power1.inOut",
     });
   }
-});
+  function updateHeaderColors() {
+    const header = document.querySelector(".l-header");
+    const isActive = header && header.classList.contains("js-active");
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const startTime = Date.now();
-//   window.addEventListener("load", function () {
-//     const minTime = 4000; // 最低表示したい時間（ミリ秒）
-//     const elapsed = Date.now() - startTime;
-//     const remain = minTime - elapsed;
+    // 背景色
+    gsap.to(header, {
+      backgroundColor: isActive ? "#fff" : "#222", // isActiveなら白、通常は#222
+      duration: 0.3,
+      overwrite: "auto",
+    });
 
-//     setTimeout(
-//       function () {
-//         const loading = document.getElementById("js-loading");
-//         loading.classList.add("is-hide"); // フェードアウト
-//         setTimeout(function () {
-//           loading.style.display = "none";
-//           document.body.classList.remove("loading");
-//         }, 600); // フェードアウトの秒数（CSSと合わせる）
-//       },
-//       remain > 0 ? remain : 0
-//     );
-//   });
-// });
+    // ロゴ
+    gsap.to(".l-header__logo-link", {
+      color: isActive ? "#222" : "#fff",
+      duration: 0.3,
+      overwrite: "auto",
+    });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const chars = document.querySelectorAll(".p-top-loading__char");
-  const portfolio = document.querySelector(".p-top-loading__portfolio");
+    // グローバルナビ
+    document.querySelectorAll(".c-global-nav__link").forEach((link) => {
+      gsap.to(link, {
+        color: isActive ? "#222" : "#fff",
+        duration: 0.3,
+        overwrite: "auto",
+      });
+    });
 
-  gsap.set(portfolio, { opacity: 0 });
-
-  function bounceChar(index) {
-    if (index >= chars.length) {
-      gsap.to(portfolio, { opacity: 1, duration: 0.5, delay: 0.05 });
-      return;
-    }
-    const char = chars[index];
-    char.style.display = "block";
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        let dur = index === 0 ? 0.2 : 0.3; // 最初だけ短く
-        gsap.fromTo(
-          char,
-          {
-            scale: 1,
-            opacity: 1,
-            filter: "blur(0px)",
-            z: 0,
-            color: "#fff",
-            textShadow: "0 0 4px #ff2400, 0 0 8px #ff4500",
-          },
-          {
-            scale: 8,
-            opacity: 0,
-            filter: "blur(8px)",
-            z: 400,
-            color: "#ffeb3b", // 拡大中に炎色で発光
-            textShadow: "0 0 48px #ffeb3b, 0 0 80px #ff6347",
-            duration: 0.22,
-            ease: "expo.in",
-            onComplete: function () {
-              // フラッシュ色へ一瞬だけ切り替え
-              gsap.to(char, {
-                color: "#ff4444", // フラッシュ色
-                textShadow: "0 0 64px #ff4444, 0 0 120px #ff9999",
-                duration: 0.08,
-                ease: "power1.out",
-                onComplete: function () {
-                  char.style.display = "none";
-                  bounceChar(index + 1);
-                },
-              });
-            },
-          }
-        );
+    // ボタン
+    document.querySelectorAll(".p-header__button").forEach((btn) => {
+      gsap.to(btn, {
+        color: isActive ? "#222" : "#fff",
+        duration: 0.3,
+        overwrite: "auto",
       });
     });
   }
-  bounceChar(0);
+  // 例: ScrollTriggerでヘッダーの状態を切り替える
+  ScrollTrigger.create({
+    trigger: ".p-top-mv",
+    start: "bottom top",
+    onEnter: () => {
+      document.querySelector(".l-header").classList.add("js-active");
+      updateHeaderColors();
+    },
+    onLeaveBack: () => {
+      document.querySelector(".l-header").classList.remove("js-active");
+      updateHeaderColors();
+    },
+  });
+});
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (!sessionStorage.getItem("loadingPlayed")) {
+//     // 初回のみローディング演出
+//     startLoadingAnimation();
+//     sessionStorage.setItem("loadingPlayed", "1");
+//   } else {
+//     // 2回目以降はローディングをスキップ
+//     document.body.classList.remove("loading");
+//     document.querySelector(".p-top-loading").style.display = "none";
+//     document.querySelector(".l-header").style.opacity = 1;
+//     document.querySelector(".l-header").style.transform = "translateY(0)";
+//     setMainMargin();
+//   }
+// });
+
+// function startLoadingAnimation() {
+// ここに今までのローディング演出の処理を入れる
+const chars = document.querySelectorAll(".p-top-loading__char");
+const portfolio = document.querySelector(".p-top-loading__portfolio");
+
+gsap.set(portfolio, { opacity: 0 });
+
+function showPortfolioRipple() {
+  if (!portfolio.querySelector(".portfolio-char")) {
+    const text = portfolio.textContent;
+    portfolio.textContent = "";
+    for (let i = 0; i < text.length; i++) {
+      const span = document.createElement("span");
+      span.className = "portfolio-char";
+      span.textContent = text[i];
+      portfolio.appendChild(span);
+    }
+  }
+  const rippleChars = portfolio.querySelectorAll(".portfolio-char");
+
+  gsap.set(portfolio, { opacity: 0, scale: 0, filter: "blur(8px)" });
+  gsap.set(rippleChars, {
+    color: "#fff",
+    textShadow: `
+        0 0 4px #ff2400,
+        0 0 8px #ff4500,
+        0 0 12px #ff6347,
+        0 0 16px #cc1100,
+        0 0 20px rgba(204, 0, 0, 0.3)
+      `,
+  });
+
+  const tl = gsap.timeline();
+
+  tl.to(portfolio, {
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)",
+    duration: 1,
+    delay: 0,
+    ease: "expo.out",
+  });
+
+  tl.fromTo(
+    rippleChars,
+    { y: 100 },
+    {
+      y: 0,
+      color: "#fff",
+      textShadow: `
+          0 0 4px #ff0033,
+          0 0 8px #d4002a,
+          0 0 12px #a80028,
+          0 0 16px #ff3366,
+          0 0 24px #ff6699,
+          0 0 32px #ffb3c6
+        `,
+      duration: 0.3,
+      delay: 0,
+      ease: "power1.out",
+    },
+    ">"
+  );
+
+  tl.to(".p-top-loading-blackout", {
+    opacity: 1,
+    duration: 1,
+    ease: "power1.in",
+  })
+    .to(
+      ".p-top-loading",
+      {
+        opacity: 0,
+        duration: 1,
+        ease: "power1.in",
+        onStart: function () {
+          document.body.classList.remove("loading");
+          setMainMargin();
+        },
+      },
+      "-=0.1"
+    )
+    .to(
+      ".l-header",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0,
+        ease: "none",
+      },
+      ">"
+    )
+    .to(
+      ".p-top-loading",
+      {
+        opacity: 0,
+        duration: 1,
+        ease: "power1.in",
+        onComplete: function () {
+          document.querySelector(".p-top-loading").style.display = "none";
+        },
+      },
+      "-=0.1"
+    );
+}
+
+function bounceChar(index) {
+  if (index >= chars.length) {
+    showPortfolioRipple();
+    return;
+  }
+  const char = chars[index];
+  char.style.display = "block";
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      gsap.fromTo(
+        char,
+        {
+          scale: 1,
+          opacity: 1,
+          filter: "blur(0px)",
+          z: 0,
+          color: "#fff",
+          textShadow: "0 0 4px #ff2400, 0 0 8px #ff4500",
+        },
+        {
+          scale: 8,
+          opacity: 0,
+          filter: "blur(8px)",
+          z: 400,
+          color: "#ffeb3b",
+          textShadow: "0 0 48px #ffeb3b, 0 0 80px #ff6347",
+          duration: 0.2,
+          ease: "expo.in",
+          onComplete: function () {
+            gsap.to(char, {
+              color: "#ff4444",
+              textShadow: "0 0 64px #ff4444, 0 0 120px #ff9999",
+              duration: 0.08,
+              ease: "power1.out",
+              onComplete: function () {
+                char.style.display = "none";
+                bounceChar(index + 1);
+              },
+            });
+          },
+        }
+      );
+    });
+  });
+}
+bounceChar(0);
+// }
+
+gsap.to(document.querySelector(".l-footer__bg-image img"), {
+  filter: "brightness(0.4)",
+  duration: 1,
+  yoyo: true,
+  repeat: -1, // 無限ループ
+  ease: "power1.inOut",
 });

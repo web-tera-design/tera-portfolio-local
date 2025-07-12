@@ -62,3 +62,15 @@
   font-family: "impact", sans-serif;
   transition: opacity 0.4s;
 }
+
+.p-top-loading-blackout {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: $color-bk;      /* 黒 */
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transition: none;
+}
+

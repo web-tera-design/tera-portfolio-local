@@ -3,15 +3,16 @@
 .c-global-nav {
     display: flex;
     align-items: center;
+    color: inherit;
     gap: min(30px, 2.0833333333vw);
 }
 
 .c-global-nav__item {
-
+    color: inherit;
 }
 
 .c-global-nav__link {
-    color: $color-wt;
+    color: inherit;
     font-size: min(20px, 1.3888888888vw);
     font-weight: 400;
     line-height: var(--Font-Line-Height-Navigation, 24px); /* 150% */
