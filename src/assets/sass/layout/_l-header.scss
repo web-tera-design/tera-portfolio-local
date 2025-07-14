@@ -31,6 +31,8 @@
 }
 
 .l-header__logo-link {
+    position: relative;
+    display: inline-block;
     color: $color-wt;
     font-family: $font-sub;
     font-size: 30px;
@@ -38,6 +40,22 @@
     font-weight: 700;
     line-height: 100%; /* 24px */
     letter-spacing: 1.2px;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        inset-inline-start: 0;
+        inset-block-end: -5px;
+        inline-size: 100%;
+        block-size: 2px;
+        background: #fff;
+        transform: scaleX(0);
+        transform-origin: inline-start;
+        transition: none; /* JSで制御するのでtransitionは不要 */
+        pointer-events: none;
+    }
+
 }
 
 .l-header__nav {

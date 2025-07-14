@@ -2,7 +2,9 @@
     <div class="l-footer__inner l-section__inner l-section__inner--narrow">
         <div class="l-footer__container">
             <div class="l-footer__heading">
-                <h2 class="l-footer__logo">Tera’s portfolio</h2>
+                <h2 class="l-footer__logo">
+                    <a href="" class="l-footer__logo-link">Tera’s portfolio</a>
+                </h2>
             </div>
             <ul class="l-footer__list">
                 <li class="l-footer__item">
@@ -19,6 +21,11 @@
                 </li>
                 <li class="l-footer__item">
                     <a href="" class="l-footer__link">お問い合わせ</a>
+                </li>
+                <li class="l-footer__item">
+                    <a href="mailto:info@web-tera-design.com" class="l-footer__sns-link">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/email-icon.webp" alt="">
+                    </a>
                 </li>
                 <li class="l-footer__item">
                     <a href="https://x.com/BR5J6DXbuz70037" target="_blank" class="l-footer__sns-link" rel="noopener" aria-label="X（旧Twitter）">
@@ -124,7 +131,7 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="" class="c-button c-button__skew-wrapper">
+        <a href="https://bluesky.web-tera-design.com/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
             <span class="c-button__skew-inner">
                 <span class="c-button__icon" aria-hidden="true">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
@@ -222,7 +229,7 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="" class="c-button c-button__skew-wrapper">
+        <a href="https://tera-corporate.web-tera-design.com/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
             <span class="c-button__skew-inner">
                 <span class="c-button__icon" aria-hidden="true">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
@@ -323,7 +330,7 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="" class="c-button c-button__skew-wrapper">
+        <a href="https://web-tera-design.com/youtube-timer/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
             <span class="c-button__skew-inner">
                 <span class="c-button__icon" aria-hidden="true">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
@@ -399,7 +406,7 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="" class="c-button c-button__skew-wrapper">
+        <a href="https://web-tera-design.com/tera_onomichi/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
             <span class="c-button__skew-inner">
                 <span class="c-button__icon" aria-hidden="true">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
@@ -475,7 +482,7 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="" class="c-button c-button__skew-wrapper">
+        <a href="https://web-tera-design.com/tera_sobolon/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
             <span class="c-button__skew-inner">
                 <span class="c-button__icon" aria-hidden="true">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">

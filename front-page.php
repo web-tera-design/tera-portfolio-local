@@ -404,23 +404,36 @@
                 <p class="p-top-profile__lead-main">寺川裕介<span class="p-top-profile__furigana">（てらかわ ゆうすけ）</span> </p>
                 <p class="p-top-profile__lead-sub">千葉在住のフリーランスWebコーダーです。</p>
             </div>
-            <ul class="p-top-profile__career">
-                <li class="p-top-profile__career-item">
-                    <h3 class="p-top-profile__career-title">バイクレーサー時代</h3>
-                    <p class="p-top-profile__career-description">真夏のレースでは、路面温度は60℃を超え、ヘルメット内の体感温度は40℃近くに達します。<br>汗が止まらない過酷な環境の中、0.01秒単位の判断を繰り返しながら、数時間にわたって走り抜く──<br>限りなく限界に近い状態で集中力と持久力を維持し続ける訓練を積んできました。<br>この経験は、限界に近い環境でも思考を止めず、高速かつ持続的に課題を解決し続ける力として、Web制作に直結しています。</p>
+            <ul class="p-top-profile__timeline">
+                <div class="p-top-profile__timeline-lines"></div>
+                <li class="p-top-profile__timeline-item">
+                    <div class="p-top-profile__timeline-content">
+                        <h3 class="p-top-profile__career-title">バイクレーサー時代</h3>
+                        <p class="p-top-profile__career-description">真夏のレースでは、路面温度は60℃を超え、ヘルメット内の体感温度は40℃近くに達します。<br>汗が止まらない過酷な環境の中、0.01秒単位の判断を繰り返しながら、数時間にわたって走り抜く──<br>限りなく限界に近い状態で集中力と持久力を維持し続ける訓練を積んできました。<br>この経験は、限界に近い環境でも思考を止めず、高速かつ持続的に課題を解決し続ける力として、Web制作に直結しています。</p>
+                    </div>
                 </li>
-                <li class="p-top-profile__career-item">
-                    <h3 class="p-top-profile__career-title">通信会社のSV時代</h3>
-                    <p class="p-top-profile__career-description">店舗スタッフ・お客様・本部、それぞれの立場や事情が異なる中、<br>「今、この状況で最も良い着地は何か」を冷静に見極め、調整し、行動する力を磨いてきました。<br>この経験は、Web制作でも関係者の意見を読み取り、状況に応じて判断しながら、制作を前に進める「巻き取り力」として活かされています。
-
-                    </p>
+                <li class="p-top-profile__timeline-item">
+                    <div class="p-top-profile__timeline-content">
+                        <h3 class="p-top-profile__career-title">通信会社のSV時代</h3>
+                        <p class="p-top-profile__career-description">店舗スタッフ・お客様・本部、それぞれの立場や事情が異なる中、<br>「今、この状況で最も良い着地は何か」を冷静に見極め、調整し、行動する力を磨いてきました。<br>この経験は、Web制作でも関係者の意見を読み取り、状況に応じて判断しながら、制作を前に進める「巻き取り力」として活かされています。</p>
+                    </div>
                 </li>
-                <li class="p-top-profile__career-item">
-                    <h3 class="p-top-profile__career-title">大型トレーラー運転手時代</h3>
-                    <p class="p-top-profile__career-description">真夜中でも20時間を超える稼働があるトレーラー運転では、周囲の変化を見逃さず、集中力を切らさずに運転し続ける力が求められます。<br>そのために日々の体調管理や天候リスクへの備えを徹底し、安定したコンディションを維持することが必要でした。<br>この経験は、バイクレーサー時代の「瞬発力」とは対照的に、長期的に成果を積み重ねる冷静さと持久力として、Web制作にも活かされています。</p>
+                <li class="p-top-profile__timeline-item">
+                    <div class="p-top-profile__timeline-content">
+                        <h3 class="p-top-profile__career-title">大型トレーラー運転手時代</h3>
+                        <p class="p-top-profile__career-description">真夜中でも20時間を超える稼働があるトレーラー運転では、周囲の変化を見逃さず、集中力を切らさずに運転し続ける力が求められます。<br>そのために日々の体調管理や天候リスクへの備えを徹底し、安定したコンディションを維持することが必要でした。<br>この経験は、バイクレーサー時代の「瞬発力」とは対照的に、長期的に成果を積み重ねる冷静さと持久力として、Web制作にも活かされています。</p>
+                    </div>
+                </li>
+                <li class="p-top-profile__timeline-item is-current u-shine-target">
+                    <div class="p-top-profile__timeline-content">
+                        <p class="p-top-profile__current">
+                            限界への挑戦、現場を俯瞰する視点、地道な準備と調整。<br>
+                            異なる仕事で培ってきたこれらの力は、Web制作においても大きな武器になっています。
+                        </p>
+                        <span class="u-shine"></span>
+                    </div>
                 </li>
             </ul>
-            <p class="p-top-profile__current">限界への挑戦、現場を俯瞰する視点、地道な準備と調整。<br>異なる仕事で培ってきたこれらの力は、Web制作においても大きな武器になっています。</p>
         </div>
     </section>
 
@@ -432,6 +445,20 @@
                     <h2 class="c-heading--title"><span class="u-red">お</span>問い合わせ</h2>
                 </div>
                 <p class="p-top-contact__description">1営業日以内に必ずご返信します！<br class="u-br--sp">（5:00〜21:00対応）<br>お気軽にお問い合わせください。</p>
+                <div class="p-top-contact__links">
+                    <a href="mailto:info@web-tera-design.com" class="c-button c-button--mail">
+                        <span class="c-button__wrapper">
+                            <span class="c-button__link-text">メールで連絡する</span>
+                        </span>
+                    </a>
+                    <a href=" https://x.com/BR5J6DXbuz70037" target="_blank" rel="nofollow noopener" class="c-button c-button--x" aria-label="X（旧Twitter）">
+                        <span class="c-button__wrapper c-button__wrapper--x">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo.webp" class="c-button__logo-normal" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo-wt.webp" class="c-button__logo-hover" alt="">
+                            <span class="c-button__link-text">で連絡する</span>
+                        </span>
+                    </a>
+                </div>
             </div>
             <form action="" class="p-top-contact__form" method="post" autocomplete="off" enctype="multipart/form-data">
                 <ul class="p-top-contact__list">
@@ -482,20 +509,8 @@
                     </li>
                     <!-- 送信ボタン -->
                     <li class="p-top-contact__submit">
-                        <button type="submit" class="c-button c-button__skew-wrapper">
-                            <span class="c-button__skew-inner">
-                                <span class="c-button__icon" aria-hidden="true">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
-                                        <path d="M19.5 7.58984L19.5 21.5898H1.5L1.5 7.58984H19.5ZM3.5 16.9902L7.90039 12.5898L14.9004 19.5898H17.5V9.58984H3.5L3.5 16.9902ZM3.72754 19.5898H12.0703L7.90039 15.418L3.72754 19.5898ZM23.5 17.5898H21.5L21.5 5.58984H7.5L7.5 3.58984H23.5L23.5 17.5898ZM14 11.5898C14.3978 11.5898 14.7792 11.748 15.0605 12.0293C15.3419 12.3106 15.5 12.692 15.5 13.0898C15.5 13.4877 15.3419 13.8691 15.0605 14.1504C14.7792 14.4317 14.3978 14.5898 14 14.5898C13.6022 14.5898 13.2208 14.4317 12.9395 14.1504C12.6581 13.8691 12.5 13.4877 12.5 13.0898C12.5 12.692 12.6581 12.3106 12.9395 12.0293C13.2208 11.748 13.6022 11.5898 14 11.5898Z" fill="#FB0000" />
-                                    </svg>
-                                </span>
-                                <span class="c-button__text">内容を確認する</span>
-                                <span class="c-button__arrow" aria-hidden="true">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
-                                        <path d="M16.7263 5.14307L14.9439 6.93429L19.0746 11.046L1.88867 11.0625L1.8912 13.5889L19.0304 13.5724L14.9692 17.6526L16.7591 19.4337L23.8887 12.2713L16.7263 5.14307Z" fill="#FB0000" />
-                                    </svg>
-                                </span>
-                            </span>
+                        <button type="submit" class="c-button c-button__wrapper">
+                            <span class="c-button__link-text">内容を確認する</span>
                         </button>
                     </li>
                 </ul>

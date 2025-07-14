@@ -24,7 +24,37 @@
     font-weight: 700;
     line-height: rclamp(30, 36, 375, 1440); /* 150% */
     letter-spacing: rclamp(1, 2, 375, 1440);
+
 }
+
+.l-footer__logo-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset-inline-start: 0;      // 左端（論理プロパティ）
+    inset-block-end: -5px;         // 下端（論理プロパティ）
+    inline-size: 100%;          // 横幅（論理プロパティ）
+    block-size: 2px;            // 太さ（論理プロパティ）
+    background: $color-wt;      // 白い下線
+    transform: scaleX(0);
+    transform-origin: inline-start; // 左から
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    pointer-events: none;
+  }
+
+  @media (any-hover: hover) {
+    &:hover::after {
+      transform: scaleX(1); // ホバー時に左から右へ
+    }
+  }
+}
+
+
 
 .l-footer__list {
     margin-block-start: rclamp(56, 12, 375, 1440);
@@ -38,7 +68,8 @@
 }
 
 .l-footer__item {
-  
+  display: flex;
+  align-items: flex-end;
 }
 
 .l-footer__link {
@@ -47,18 +78,67 @@
     font-weight: 400;
     line-height: rclamp(21, 24, 375, 1440); /* 150% */
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+     transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset-inline-start: 0;      // 左端（論理プロパティ）
+    inset-block-end: -5px;         // 下端（論理プロパティ）
+    inline-size: 100%;          // 横幅（論理プロパティ）
+    block-size: 2px;            // 太さ（論理プロパティ）
+    background: $color-wt;      // 白い下線
+    transform: scaleX(0);
+    transform-origin: inline-start; // 左から
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    pointer-events: none;
+  }
+
+  @media (any-hover: hover) {
+    &:hover::after {
+      transform: scaleX(1); // ホバー時に左から右へ
+    }
+  }
 }
 
+
+
 .l-footer__sns-link {
-    display: inline-block;
-    inline-size: 32px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
-    img {
-        inline-size: 100%;
-        block-size: auto;
-        object-fit: cover;
+  display: inline-block;
+  position: relative; // これを追加！
+  inline-size: 32px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-end: -5px;
+    inline-size: 100%;
+    block-size: 2px;
+    background: $color-wt;
+    transform: scaleX(0);
+    transform-origin: inline-start;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    pointer-events: none;
+  }
+
+  @media (any-hover: hover) {
+    &:hover::after {
+      transform: scaleX(1);
     }
+  }
+
+  img {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+  }
 }
+
 
 .l-footer__copyright {
     text-align: center;

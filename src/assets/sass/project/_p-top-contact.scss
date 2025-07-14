@@ -24,6 +24,12 @@
     letter-spacing: 0.64px;
 }
 
+.p-top-contact__links {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+}
+
 .p-top-contact__form {
     margin-block-start: 64px;
 }

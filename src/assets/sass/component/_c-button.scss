@@ -9,7 +9,7 @@
 .c-button__text {
     color: $color-rd;
     font-size: rclamp(16, 20, 375, 1440);
-    font-weight: 700;
+    font-weight: 500;
     line-height: rclamp(24, 30, 375, 1440); /* 150% */
 }
 
@@ -24,17 +24,13 @@
 
 .c-button__skew-wrapper {
     position: relative;
-    transform: skew(-20deg);
     padding: 10px 20px 10px 25px;
-    border: 3px solid $color-rd;
-    box-shadow: 0px 4px 4px 0px rgba(34, 34, 34, 0.25);
+    border: 2px solid $color-rd;
     transition: transform 0.3s ease;
 
     @media (any-hover: hover) {
       &:hover {
-        transform: skew(20deg);
         .c-button__skew-inner {
-            transform: skew(-20deg);
         }
       }
     }
@@ -49,9 +45,104 @@
 }
 
 .c-button__skew-inner {
-    transform: skew(20deg); // ← 逆方向で補正
+    // transform: skew(20deg); // ← 逆方向で補正
     display: flex;
     align-items: center;
     gap: 8px;
     transition: transform 0.3s ease;
+}
+
+// ボタン本体
+.c-button--mail,
+.c-button--x {
+  position: relative;
+//   transition: 
+//     transform 0.3s cubic-bezier(.4,0,.2,1);
+
+//   @media (any-hover: hover) {
+//     &:hover {
+
+//       // テキスト色も赤に
+//       .c-button__wrapper {
+//         color: $color-rd;
+//       }
+//     }
+//   }
+}
+
+// 共通ボタンラッパー
+.c-button__wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: $color-bk;
+  background: $color-wt;
+  padding: 10px 20px;
+  border: 2px solid $color-rd;
+  min-block-size: 56px;
+  min-inline-size: 180px;
+  overflow: hidden;
+  transition: color 0.3s cubic-bezier(.4,1.6,.5,1);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-wt;
+
+      &::before {
+        transform: scaleX(1);
+      }
+      .c-button__link-text {
+        color: $color-wt;
+      }
+    }
+  }
+
+  img {
+    position: relative;
+    z-index: 2;
+    inline-size: 32px;
+    block-size: 32px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 100%;
+    background: $color-rd;
+    z-index: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s cubic-bezier(.4,1.6,.5,1);
+  }
+}
+
+.c-button__wrapper--x {
+    @media (any-hover: hover) {
+      &:hover {
+        .c-button__logo-normal {
+            display: none;
+        }
+
+        .c-button__logo-hover {
+            display: inline-block;
+        }
+      }
+    }
+}
+
+.c-button__logo-normal {
+
+}
+
+.c-button__logo-hover {
+    display: none;
+}
+
+.c-button__link-text {
+  position: relative;
+  z-index: 2;
+  color: $color-rd;
+  transition: color 0.3s cubic-bezier(.4,1.6,.5,1) 0.15s;
 }

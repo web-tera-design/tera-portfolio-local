@@ -12,12 +12,13 @@
 }
 
 .c-global-nav__link {
+    display: inline-block;
     color: inherit;
     font-size: min(20px, 1.3888888888vw);
     font-weight: 400;
     line-height: var(--Font-Line-Height-Navigation, 24px); /* 150% */
     letter-spacing: var(--Font-Letter-Spacing-Navigation, 1px);
     transition: color 0.3s;
-
+        
 }
 

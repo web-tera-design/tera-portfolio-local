@@ -62,22 +62,21 @@
             <nav class="l-header__nav">
                 <ul class="c-global-nav u-mr30">
                     <li class="c-global-nav__item">
-                        <a href="" class="c-global-nav__link" data-section="works">実績紹介</a>
+                        <a href="#works" class="c-global-nav__link" data-section="works">実績紹介</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="" class="c-global-nav__link" data-section="service">提供サービス</a>
+                        <a href="#service" class="c-global-nav__link" data-section="service">提供サービス</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="" class="c-global-nav__link" data-section="process">ご依頼の流れ</a>
+                        <a href="#process" class="c-global-nav__link" data-section="process">ご依頼の流れ</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="" class="c-global-nav__link" data-section="profile">私について</a>
+                        <a href="#profile" class="c-global-nav__link" data-section="profile">私について</a>
+                    </li>
+                    <li class="c-global-nav__item">
+                        <a href="#contact" class="c-global-nav__link" data-section="contact">お問い合わせ</a>
                     </li>
                 </ul>
-                <a href="" class="c-button p-header__button" data-section="contact">
-                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt=""> -->
-                    <span class="p-header__button-text">お問い合わせ</span>
-                </a>
             </nav>
         </div>
     </header>
@@ -91,20 +90,20 @@
         <div class="c-drawer__content">
             <ul class="c-drawer__list">
                 <li class="c-drawer__item">
-                    <a href="" class="c-drawer__link">実績一覧</a>
+                    <a href="#works" class="c-drawer__link">実績一覧</a>
                 </li>
                 <li class="c-drawer__item">
-                    <a href="" class="c-drawer__link">提供サービス</a>
+                    <a href="#service" class="c-drawer__link">提供サービス</a>
                 </li>
                 <li class="c-drawer__item">
-                    <a href="" class="c-drawer__link">ご依頼の流れ</a>
+                    <a href="#process" class="c-drawer__link">ご依頼の流れ</a>
                 </li>
                 <li class="c-drawer__item">
-                    <a href="" class="c-drawer__link">私について</a>
+                    <a href="#profile" class="c-drawer__link">私について</a>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="#contact" class="c-drawer__link">お問い合わせ</a>
                 </li>
             </ul>
-            <a href="" class="c-button c-drawer__button u-mt56">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/header-button.svg" alt="">
-                お問い合わせ</a>
         </div>
     </div>

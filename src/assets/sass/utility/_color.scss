@@ -1,5 +1,6 @@
 @use '../global' as *;
 
 .u-red {
+    display: inline-block;
     color: $color-rd;
 }

@@ -27,6 +27,9 @@
 
 //メニューが開いている時 ========
 .c-drawer-icon.js-show {
+  .c-drawer-icon__bar {
+    background-color: $color-wt !important;
+  }
     .c-drawer-icon__bar:nth-of-type(1) {
       rotate: 45deg;
       translate: 0 6px;
@@ -101,24 +104,13 @@
     color: $color-wt;
     font-size: clamp(14px, 3.7333333333vw, 20px);
     font-weight: 400;
-}
-
-.c-drawer__button {
-    position: relative;
-    display: flex;
-    margin-inline: auto;
-    align-items: center;
-    inline-size: fit-content;
-    padding: 10px 32px;
-    color: $color-wt;
-    background: linear-gradient(271deg, #FFF800 0.98%, #FB0000 99.02%);
-
-    transition: all 0.3s ease;
+    transition: transform 0.3s, color 0.3s ease;
 
     @media (any-hover: hover) {
-        &:hover {
-
-        }
+      &:hover {
+        transform: scale(1.1);
+        color: $color-rd;
       }
+    }
 }
 

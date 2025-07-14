@@ -37,12 +37,50 @@
     line-height: rclamp(21, 24, 375, 1440); /* 150% */
 }
 
-.p-top-profile__career {
+.p-top-profile__timeline {
     margin-block-start: rclamp(16, 24, 375, 1440);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    position: relative;
 }
+
+
+.p-top-profile__timeline-item {
+  margin-block-end: 150px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.10);   // 透明度10%（かなり透ける）
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  padding: 32px 24px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+  backdrop-filter: blur(14px);              // グラスモーフィズム効果
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.22); // 境界も薄く
+  overflow: hidden;
+}
+
+
+
+.p-top-profile__timeline-item.is-current {
+  margin-block-end: 0;
+}
+
+
+
+
+.p-top-profile__timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: $color-rd;
+  z-index: 2;
+  transition: height 0.6s;
+  /* height, topはJSで動的に指定 */
+}
+
+
+
 
 .p-top-profile__career-item {
 
@@ -62,9 +100,8 @@
 }
 
 .p-top-profile__current {
-    margin-block-start: rclamp(16, 24, 375, 1440);
-    font-size: rclamp(14, 16, 375, 1440);
-    font-weight: 400;
-    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+    font-size: rclamp(20, 24, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(30, 36, 375, 1440); /* 150% */
 }
 

@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, 100);
 
-  const navLinks = Array.from(document.querySelectorAll(".c-global-nav__link, .p-header__button"));
+  const navLinks = Array.from(document.querySelectorAll(".c-global-nav__link, .l-header__logo-link"));
   const pulseAnimations = new Map();
 
   const contactIndex = navLinks.findIndex((link) => link.dataset.section === "contact");
@@ -298,6 +298,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 背景色
     gsap.to(header, {
       backgroundColor: isActive ? "#fff" : "#222", // isActiveなら白、通常は#222
+      boxShadow: isActive
+        ? "0 4px 8px rgba(0,0,0,0.2)" // 例: アクティブ時に影を出す
+        : "none",
       duration: 0.3,
       overwrite: "auto",
     });
@@ -326,6 +329,15 @@ document.addEventListener("DOMContentLoaded", () => {
         overwrite: "auto",
       });
     });
+
+    // ドロワーアイコンバー（追加）
+    document.querySelectorAll(".c-drawer-icon__bar").forEach((bar) => {
+      gsap.to(bar, {
+        backgroundColor: isActive ? "#222" : "#fff",
+        duration: 0.3,
+        overwrite: "auto",
+      });
+    });
   }
   // 例: ScrollTriggerでヘッダーの状態を切り替える
   ScrollTrigger.create({
@@ -342,174 +354,218 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   if (!sessionStorage.getItem("loadingPlayed")) {
-//     // 初回のみローディング演出
-//     startLoadingAnimation();
-//     sessionStorage.setItem("loadingPlayed", "1");
-//   } else {
-//     // 2回目以降はローディングをスキップ
-//     document.body.classList.remove("loading");
-//     document.querySelector(".p-top-loading").style.display = "none";
-//     document.querySelector(".l-header").style.opacity = 1;
-//     document.querySelector(".l-header").style.transform = "translateY(0)";
-//     setMainMargin();
-//   }
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".l-header__logo-link, .c-global-nav__link");
+  navLinks.forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      gsap.to(link, { scale: 1.1, duration: 0.3 });
+    });
+    link.addEventListener("mouseleave", () => {
+      gsap.to(link, { scale: 1, duration: 0.3 });
+    });
+  });
+});
 
-// function startLoadingAnimation() {
-// ここに今までのローディング演出の処理を入れる
-const chars = document.querySelectorAll(".p-top-loading__char");
-const portfolio = document.querySelector(".p-top-loading__portfolio");
-
-gsap.set(portfolio, { opacity: 0 });
-
-function showPortfolioRipple() {
-  if (!portfolio.querySelector(".portfolio-char")) {
-    const text = portfolio.textContent;
-    portfolio.textContent = "";
-    for (let i = 0; i < text.length; i++) {
-      const span = document.createElement("span");
-      span.className = "portfolio-char";
-      span.textContent = text[i];
-      portfolio.appendChild(span);
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  if (!sessionStorage.getItem("loadingPlayed")) {
+    // 初回のみローディング演出
+    startLoadingAnimation();
+    sessionStorage.setItem("loadingPlayed", "1");
+  } else {
+    // 2回目以降はローディングをスキップ
+    document.body.classList.remove("loading");
+    document.querySelector(".p-top-loading").style.display = "none";
+    document.querySelector(".l-header").style.opacity = 1;
+    document.querySelector(".l-header").style.transform = "translateY(0)";
+    setMainMargin();
   }
-  const rippleChars = portfolio.querySelectorAll(".portfolio-char");
+});
 
-  gsap.set(portfolio, { opacity: 0, scale: 0, filter: "blur(8px)" });
-  gsap.set(rippleChars, {
-    color: "#fff",
-    textShadow: `
+function startLoadingAnimation() {
+  // ここに今までのローディング演出の処理を入れる
+  const chars = document.querySelectorAll(".p-top-loading__char");
+  const portfolio = document.querySelector(".p-top-loading__portfolio");
+
+  gsap.set(portfolio, { opacity: 0 });
+
+  function showPortfolioRipple() {
+    if (!portfolio.querySelector(".portfolio-char")) {
+      const text = portfolio.textContent;
+      portfolio.textContent = "";
+      for (let i = 0; i < text.length; i++) {
+        const span = document.createElement("span");
+        span.className = "portfolio-char";
+        span.textContent = text[i];
+        portfolio.appendChild(span);
+      }
+    }
+    const rippleChars = portfolio.querySelectorAll(".portfolio-char");
+
+    gsap.set(portfolio, { opacity: 0, scale: 0, filter: "blur(8px)" });
+    gsap.set(rippleChars, {
+      color: "#fff",
+      textShadow: `
         0 0 4px #ff2400,
         0 0 8px #ff4500,
         0 0 12px #ff6347,
         0 0 16px #cc1100,
         0 0 20px rgba(204, 0, 0, 0.3)
       `,
-  });
+    });
 
-  const tl = gsap.timeline();
+    const tl = gsap.timeline();
 
-  tl.to(portfolio, {
-    opacity: 1,
-    scale: 1,
-    filter: "blur(0px)",
-    duration: 1,
-    delay: 0,
-    ease: "expo.out",
-  });
-
-  tl.fromTo(
-    rippleChars,
-    { y: 100 },
-    {
-      y: 0,
-      color: "#fff",
-      textShadow: `
-          0 0 4px #ff0033,
-          0 0 8px #d4002a,
-          0 0 12px #a80028,
-          0 0 16px #ff3366,
-          0 0 24px #ff6699,
-          0 0 32px #ffb3c6
-        `,
-      duration: 0.3,
+    tl.to(portfolio, {
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)",
+      duration: 1,
       delay: 0,
-      ease: "power1.out",
-    },
-    ">"
-  );
+      ease: "expo.out",
+    });
 
-  tl.to(".p-top-loading-blackout", {
-    opacity: 1,
-    duration: 1,
-    ease: "power1.in",
-  })
-    .to(
-      ".p-top-loading",
+    tl.fromTo(
+      rippleChars,
+      { y: 0 },
       {
-        opacity: 0,
-        duration: 1,
-        ease: "power1.in",
-        onStart: function () {
-          document.body.classList.remove("loading");
-          setMainMargin();
-        },
-      },
-      "-=0.1"
-    )
-    .to(
-      ".l-header",
-      {
-        opacity: 1,
         y: 0,
-        duration: 0,
-        ease: "none",
+        color: "#fff",
+        textShadow: `
+      0 0 8px #fff,
+      0 0 16px #fff,
+      0 0 32px #ff2400,
+      0 0 64px #ff2400,
+      0 0 128px #fff,
+      0 0 256px #ff2400
+    `,
+        filter: "brightness(3)", // 一瞬だけ明度を上げる
+        duration: 0.12, // 短くして瞬間的に
+        ease: "power1.in",
+        stagger: {
+          amount: 0.08,
+          from: "random",
+        },
       },
       ">"
-    )
-    .to(
-      ".p-top-loading",
+    );
+    // 直後にbrightnessを戻す
+    tl.to(
+      rippleChars,
       {
-        opacity: 0,
-        duration: 1,
-        ease: "power1.in",
-        onComplete: function () {
-          document.querySelector(".p-top-loading").style.display = "none";
+        filter: "brightness(1)",
+        duration: 0.1,
+        ease: "power1.out",
+      },
+      ">"
+    );
+
+    tl.to(
+      rippleChars,
+      {
+        opacity: 0.3,
+        filter: "brightness(3)",
+        duration: 0.03,
+        delay: 1,
+        yoyo: true,
+        repeat: 3,
+        ease: "steps(1)",
+        stagger: {
+          amount: 0.12,
+          from: "random",
         },
       },
-      "-=0.1"
+      ">"
     );
-}
 
-function bounceChar(index) {
-  if (index >= chars.length) {
-    showPortfolioRipple();
-    return;
-  }
-  const char = chars[index];
-  char.style.display = "block";
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      gsap.fromTo(
-        char,
+    tl.to(".p-top-loading-blackout", {
+      opacity: 1,
+      duration: 1,
+      ease: "power1.in",
+    })
+      .to(
+        ".p-top-loading",
         {
-          scale: 1,
-          opacity: 1,
-          filter: "blur(0px)",
-          z: 0,
-          color: "#fff",
-          textShadow: "0 0 4px #ff2400, 0 0 8px #ff4500",
-        },
-        {
-          scale: 8,
           opacity: 0,
-          filter: "blur(8px)",
-          z: 400,
-          color: "#ffeb3b",
-          textShadow: "0 0 48px #ffeb3b, 0 0 80px #ff6347",
-          duration: 0.2,
-          ease: "expo.in",
-          onComplete: function () {
-            gsap.to(char, {
-              color: "#ff4444",
-              textShadow: "0 0 64px #ff4444, 0 0 120px #ff9999",
-              duration: 0.08,
-              ease: "power1.out",
-              onComplete: function () {
-                char.style.display = "none";
-                bounceChar(index + 1);
-              },
-            });
+          duration: 1,
+          ease: "power1.in",
+          onStart: function () {
+            document.body.classList.remove("loading");
+            setMainMargin();
           },
-        }
+        },
+        "-=0.1"
+      )
+      .to(
+        ".l-header",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0,
+          ease: "none",
+        },
+        ">"
+      )
+      .to(
+        ".p-top-loading",
+        {
+          opacity: 0,
+          duration: 1,
+          ease: "power1.in",
+          onComplete: function () {
+            document.querySelector(".p-top-loading").style.display = "none";
+          },
+        },
+        "-=0.1"
       );
+  }
+
+  function bounceChar(index) {
+    if (index >= chars.length) {
+      showPortfolioRipple();
+      return;
+    }
+    const char = chars[index];
+    char.style.display = "block";
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        gsap.fromTo(
+          char,
+          {
+            scale: 1,
+            opacity: 1,
+            filter: "blur(0px)",
+            z: 0,
+            color: "#fff",
+            textShadow: "0 0 4px #ff2400, 0 0 8px #ff4500",
+          },
+          {
+            scale: 8,
+            opacity: 0,
+            filter: "blur(8px)",
+            z: 400,
+            color: "#ffeb3b",
+            textShadow: "0 0 48px #ffeb3b, 0 0 80px #ff6347",
+            duration: 0.2,
+            ease: "expo.in",
+            onComplete: function () {
+              gsap.to(char, {
+                color: "#ff4444",
+                textShadow: "0 0 64px #ff4444, 0 0 120px #ff9999",
+                duration: 0.08,
+                ease: "power1.out",
+                onComplete: function () {
+                  char.style.display = "none";
+                  bounceChar(index + 1);
+                },
+              });
+            },
+          }
+        );
+      });
     });
-  });
+  }
+  bounceChar(0);
 }
-bounceChar(0);
-// }
 
 gsap.to(document.querySelector(".l-footer__bg-image img"), {
   filter: "brightness(0.4)",
@@ -517,4 +573,139 @@ gsap.to(document.querySelector(".l-footer__bg-image img"), {
   yoyo: true,
   repeat: -1, // 無限ループ
   ease: "power1.inOut",
+});
+
+// 1. 要素取得
+const ul = document.querySelector(".p-top-profile__timeline");
+const linesContainer = ul.querySelector(".p-top-profile__timeline-lines");
+const items = ul.querySelectorAll(".p-top-profile__timeline-item");
+
+let lineTriggers = [];
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    updateTimelineLines();
+  }, 100);
+});
+
+const resizeObserver = new ResizeObserver(() => {
+  updateTimelineLines();
+  ScrollTrigger.refresh();
+});
+
+window.addEventListener("resize", updateTimelineLines);
+resizeObserver.observe(ul);
+
+function updateTimelineLines() {
+  lineTriggers.forEach((trigger) => trigger.kill());
+  lineTriggers = [];
+  linesContainer.innerHTML = "";
+  const lines = [];
+  items.forEach((item, i) => {
+    if (i < items.length - 1) {
+      const line = document.createElement("div");
+      line.className = "p-top-profile__timeline-line";
+      line.style.position = "absolute";
+      line.style.left = "50%";
+      line.style.transform = "translateX(-50%)";
+      // 初期は0px
+      line.style.height = "0px";
+      linesContainer.appendChild(line);
+      lines.push({ line, item, i });
+    }
+  });
+
+  lines.forEach(({ line, item, i }) => {
+    // liのmargin-block-end値を取得
+    const style = window.getComputedStyle(item);
+    const marginEnd = parseFloat(style.marginBlockEnd);
+
+    const trigger = ScrollTrigger.create({
+      trigger: item,
+      start: () => "bottom 80%",
+      end: () => "bottom 60%",
+      scrub: true,
+      // markers: true,
+      onUpdate: (self) => {
+        const rect = item.getBoundingClientRect();
+        line.style.top = rect.bottom - ul.getBoundingClientRect().top + "px";
+        line.style.height = marginEnd * self.progress + "px";
+      },
+    });
+    lineTriggers.push(trigger);
+  });
+
+  ScrollTrigger.refresh();
+}
+
+// 5. アイテムアニメーション（これはそのままでOK）
+items.forEach((item, i) => {
+  if (i === items.length - 1) {
+    // 最後のliだけ「威厳ある」出現
+    gsap.fromTo(
+      item,
+      {
+        opacity: 0,
+        y: 60,
+        scale: 0.88,
+        filter: "blur(8px)",
+        textShadow: "0 12px 32px rgba(0,0,0,0.35)",
+        color: "#bfa046",
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        filter: "blur(0px)",
+        textShadow: "0 4px 16px rgba(191,160,70,0.4)",
+        color: "#222",
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "bottom 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      }
+    );
+  } else {
+    // 通常のliの出現
+    gsap.fromTo(
+      item,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "bottom 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      }
+    );
+  }
+});
+
+// 6. shineアニメーション（これもそのままでOK）
+const shine = document.querySelector(".u-shine");
+const shineTarget = document.querySelector(".u-shine-target");
+const targetWidth = shineTarget.offsetWidth;
+
+gsap.set(shine, { x: 0 });
+
+gsap.to(shine, {
+  x: targetWidth * 1.5,
+  duration: 1,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: ".p-top-profile__timeline-item.is-current",
+    start: "top 60%",
+    toggleActions: "play none none none",
+    // markers: true,
+  },
 });
