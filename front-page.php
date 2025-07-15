@@ -26,7 +26,7 @@
             </div>
             <div class="p-top__image-wrapper">
                 <div class="p-top-mv__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="" width="1401" height="1221">
                 </div>
             </div>
         </div>
@@ -55,9 +55,6 @@
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
-                    <!-- <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span> -->
                     <h3 class="p-top-works__title">求人サイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
@@ -66,7 +63,6 @@
                     </ul>
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal2">
-                    <!-- <a href="" class="p-top-works__link"> -->
                     <div class="p-top-works__image p-top-mockup-container">
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
                         <video
@@ -82,19 +78,14 @@
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
-                    <!-- <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span> -->
                     <h3 class="p-top-works__title">クリニックサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">Wordpress</li>
                         <li class="c-tag">Figma</li>
                         <li class="c-tag">FLOCSS</li>
                     </ul>
-                    <!-- </a> -->
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal3">
-                    <!-- <a href="" class="p-top-works__link"> -->
                     <div class="p-top-works__image p-top-mockup-container">
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
                         <video
@@ -110,53 +101,38 @@
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
-                    <!-- <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span> -->
                     <h3 class="p-top-works__title">自作ポモドーロタイマー</h3>
                     <ul class="c-tags">
                         <li class="c-tag">その他</li>
                         <li class="c-tag">Javascript</li>
                         <li class="c-tag">GSAP</li>
                     </ul>
-                    <!-- </a> -->
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal4">
-                    <!-- <a href="" class="p-top-works__link"> -->
                     <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="" width="672" height="449">
                     </div>
-                    <!-- <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span> -->
                     <h3 class="p-top-works__title">キャンペーンサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
                         <li class="c-tag">Figma</li>
                         <li class="c-tag">BEM</li>
                     </ul>
-                    <!-- </a> -->
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal5">
-                    <!-- <a href="" class="p-top-works__link"> -->
                     <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="" width="672" height="450">
                     </div>
-                    <!-- <span class="p-top-works__detail">詳細を見る
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/works-arrow.svg" alt="">
-                        </span> -->
                     <h3 class="p-top-works__title">美容サイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
                         <li class="c-tag">Figma</li>
                         <li class="c-tag">BEM</li>
                     </ul>
-                    <!-- </a> -->
                 </li>
                 <li class="p-top-works__item p-top-works__item--disabled p-modal__open-btn js-modal__open-btn" data-dialog="modal6">
-                    <!-- <a href="" class="p-top-works__link"> -->
                     <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-koumuten.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-koumuten.webp" alt="" width="672" height="450">
                     </div>
                     <span class="p-top-works__detail">このページは近日公開予定です。
                     </span>
@@ -166,7 +142,6 @@
                         <li class="c-tag">Figma</li>
                         <li class="c-tag">FLOCSS</li>
                     </ul>
-                    <!-- </a> -->
                 </li>
             </ul>
         </div>
@@ -220,7 +195,7 @@
                 </div>
                 <p class="p-top-assurance__lead">お客様に心からご満足いただけるよう、細部までこだわった安心の体制を整えています。</p>
                 <div class="p-top-assurance__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/assurance-image.webp" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/assurance-image.webp" alt="" width="780" height="620">
                 </div>
             </div>
             <ul class="p-top-assurance__list">
@@ -294,7 +269,7 @@
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
                         <div class="p-top-service__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-coding.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-coding.svg" alt="" width="61" height="61">
                         </div>
                         <h3 class="p-top-service__title">コーディング</h3>
                     </div>
@@ -303,7 +278,7 @@
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
                         <div class="p-top-service__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/service-wordpress.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-wordpress.svg" alt="" width="61" height="61">
                         </div>
                         <h3 class="p-top-service__title">WordPress構築</h3>
                     </div>
@@ -312,7 +287,7 @@
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
                         <div class="p-top-service__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-animation.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-animation.svg" alt="" width="61" height="61">
                         </div>
                         <h3 class="p-top-service__title">アニメーション実装</h3>
                     </div>
@@ -321,7 +296,7 @@
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
                         <div class="p-top-service__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-spot.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-spot.svg" alt="" width="61" height="60">
                         </div>
                         <h3 class="p-top-service__title">修正対応・スポット作業</h3>
                     </div>
@@ -346,10 +321,10 @@
                 <li class="p-top-process__step">
                     <div class="p-top-process__icon-wrapper">
                         <div class="p-top-process__icon-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101">
                         </div>
                         <div class="p-top-process__icon" aria-hidden="true">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step1.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step1.svg" alt="" width="57" height="57">
                         </div>
                     </div>
                     <div class="p-top-process__content">
@@ -362,10 +337,10 @@
                 <li class="p-top-process__step">
                     <div class="p-top-process__icon-wrapper">
                         <div class="p-top-process__icon-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101">
                         </div>
                         <div class="p-top-process__icon" aria-hidden="true">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step2.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step2.svg" alt="" width="57" height="57">
                         </div>
                     </div>
                     <div class="p-top-process__content">
@@ -378,10 +353,10 @@
                 <li class="p-top-process__step">
                     <div class="p-top-process__icon-wrapper">
                         <div class="p-top-process__icon-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101">
                         </div>
                         <div class="p-top-process__icon" aria-hidden="true">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step3.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step3.svg" alt="" width="53" height="45">
                         </div>
                     </div>
                     <div class="p-top-process__content">
@@ -453,8 +428,8 @@
                     </a>
                     <a href=" https://x.com/BR5J6DXbuz70037" target="_blank" rel="nofollow noopener" class="c-button c-button--x" aria-label="X（旧Twitter）">
                         <span class="c-button__wrapper c-button__wrapper--x">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo.webp" class="c-button__logo-normal" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo-wt.webp" class="c-button__logo-hover" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo.webp" class="c-button__logo-normal" alt="" width="2400" height="2453">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo-wt.webp" class="c-button__logo-hover" alt="" width="2400" height="2453">
                             <span class="c-button__link-text">で連絡する</span>
                         </span>
                     </a>

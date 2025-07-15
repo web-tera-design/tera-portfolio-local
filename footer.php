@@ -24,18 +24,18 @@
                 </li>
                 <li class="l-footer__item">
                     <a href="mailto:info@web-tera-design.com" class="l-footer__sns-link">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/email-icon.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/email-icon.webp" alt="" width="50" height="50">
                     </a>
                 </li>
                 <li class="l-footer__item">
                     <a href="https://x.com/BR5J6DXbuz70037" target="_blank" class="l-footer__sns-link" rel="noopener" aria-label="X（旧Twitter）">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo-wt.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo-wt.webp" alt="" width="2400" height="2453">
                     </a>
                 </li>
             </ul>
         </div>
         <div class="l-footer__bg-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="" width="1401" height="1221">
         </div>
     </div>
 </footer>
@@ -131,16 +131,8 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="https://bluesky.web-tera-design.com/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
-            <span class="c-button__skew-inner">
-                <span class="c-button__icon" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
-                </span>
-                <span class="c-button__text">サイトを見る</span>
-                <span class="c-button__arrow" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
-                </span>
-            </span>
+        <a href="https://bluesky.web-tera-design.com/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
+            <span class="c-button__link-text">サイトを見る</span>
         </a>
     </div>
 </dialog>
@@ -229,16 +221,8 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="https://tera-corporate.web-tera-design.com/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
-            <span class="c-button__skew-inner">
-                <span class="c-button__icon" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
-                </span>
-                <span class="c-button__text">サイトを見る</span>
-                <span class="c-button__arrow" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
-                </span>
-            </span>
+        <a href="https://tera-corporate.web-tera-design.com/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
+            <span class="c-button__link-text">サイトを見る</span>
         </a>
     </div>
 </dialog>
@@ -330,16 +314,8 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="https://web-tera-design.com/youtube-timer/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
-            <span class="c-button__skew-inner">
-                <span class="c-button__icon" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
-                </span>
-                <span class="c-button__text">サイトを見る</span>
-                <span class="c-button__arrow" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
-                </span>
-            </span>
+        <a href="https://web-tera-design.com/youtube-timer/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
+            <span class="c-button__link-text">サイトを見る</span>
         </a>
     </div>
 </dialog>
@@ -353,7 +329,7 @@
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="" width="672" height="449">
                 </div>
                 <!-- <ul class="c-tags u-mt14">
                     <li class="c-tag">LP</li>
@@ -406,16 +382,8 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="https://web-tera-design.com/tera_onomichi/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
-            <span class="c-button__skew-inner">
-                <span class="c-button__icon" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
-                </span>
-                <span class="c-button__text">サイトを見る</span>
-                <span class="c-button__arrow" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
-                </span>
-            </span>
+        <a href="https://web-tera-design.com/tera_onomichi/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
+            <span class="c-button__link-text">サイトを見る</span>
         </a>
     </div>
 </dialog>
@@ -429,7 +397,7 @@
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="" width="672" height="450">
                 </div>
                 <!-- <ul class="c-tags u-mt14">
                     <li class="c-tag">LP</li>
@@ -482,16 +450,8 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="https://web-tera-design.com/tera_sobolon/" target="_blank" rel="nofollow noopener" class="c-button c-button__skew-wrapper">
-            <span class="c-button__skew-inner">
-                <span class="c-button__icon" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-left.svg" alt="">
-                </span>
-                <span class="c-button__text">サイトを見る</span>
-                <span class="c-button__arrow" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/modal-right.svg" alt="">
-                </span>
-            </span>
+        <a href="https://web-tera-design.com/tera_sobolon/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
+            <span class="c-button__link-text">サイトを見る</span>
         </a>
     </div>
 </dialog>
