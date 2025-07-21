@@ -55,11 +55,14 @@ if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
   function setMainHeight() {
     const header = document.querySelector(".l-header");
     const footer = document.querySelector(".l-footer");
+    const footerBottom = document.querySelector(".l-footer__bottom");
     const main = document.querySelector(".l-main");
+
     if (header && footer && main) {
       const winH = window.innerHeight;
       const h = header.offsetHeight;
-      const f = footer.offsetHeight;
+      // l-footer__bottomはあれば加算、なければ0
+      const f = footer.offsetHeight + (footerBottom ? footerBottom.offsetHeight : 0);
       main.style.minHeight = winH - h - f + "px";
     }
   }

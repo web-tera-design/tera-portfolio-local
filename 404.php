@@ -10,7 +10,8 @@
             <a href="/" class="c-button p-error404__button">
                 <span class="c-button__wrapper">
                     <span class="c-button__link-text">TOPへ移動する</span>
-                </span></a>
+                </span>
+            </a>
         </div>
     </div>
 </main>

@@ -1,17 +1,13 @@
 @use '../global' as *;
 
-.p-error404 {
+.p-thanks {
     background: url(../img/commitment-story-bg-image.webp) no-repeat center center / cover;
     block-size: 100%;
     display: flex;
     align-items: center;
 }
 
-.p-error404__inner {
-
-}
-
-.l-section__inner {
+.p-thanks__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,41 +16,20 @@
     gap: 32px;
 }
 
-.l-section__inner--narrow {
-
-}
-
-.p-error404__heading {
-
-}
-
-.p-error404__title {
+.p-thanks__title {
     font-family: $font-sub;
     font-size: rclamp(48, 110, 375, 1440);
     font-weight: 700;
     line-height: 100%; /* 48px */
 }
 
-.p-error404__subtitle {
-    color: var(--Text-Default, #222);
-    font-family: inherit;
-    font-size: rclamp(26, 38, 375, 1440);
-    font-weight: 700;
-    line-height: 100%; /* 26px */
-}
-
-.p-error404__description {
+.p-thanks__description {
     font-size: rclamp(16, 24, 375, 1440);
     font-weight: 700;
     line-height: rclamp(24, 36, 375, 1440); /* 150% */
     letter-spacing: rclamp(1, 2, 375, 1440);
 }
 
-.c-button {
+.p-thanks__button {
 
 }
-
-.p-error404__button {
-
-}
-
