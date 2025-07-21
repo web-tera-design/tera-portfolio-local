@@ -35,3 +35,9 @@
   }
 }
 
+.u-br--sm-down {
+  display: none;
+  @include mq(sm-down) {
+    display: block;
+  }
+}

@@ -384,19 +384,30 @@
                 <li class="p-top-profile__timeline-item">
                     <div class="p-top-profile__timeline-content">
                         <h3 class="p-top-profile__career-title">バイクレーサー時代</h3>
-                        <p class="p-top-profile__career-description">真夏のレースでは、路面温度は60℃を超え、ヘルメット内の体感温度は40℃近くに達します。<br>汗が止まらない過酷な環境の中、0.01秒単位の判断を繰り返しながら、数時間にわたって走り抜く──<br>限りなく限界に近い状態で集中力と持久力を維持し続ける訓練を積んできました。<br>この経験は、限界に近い環境でも思考を止めず、高速かつ持続的に課題を解決し続ける力として、Web制作に直結しています。</p>
+                        <p class="p-top-profile__career-description">真夏のレースでは、路面温度は60℃を超え、ヘルメット内の体感温度は40℃近くに達します。<br>汗が止まらない過酷な環境の中、0.01秒単位でタイムを更新するために瞬時の判断を何度も繰り返しながら、数時間にわたって走り抜きます。<br>限りなく限界に近い状態で集中力と持久力を維持し続ける訓練を積んできました。<br>この経験は、限界に近い環境でも思考を止めず、高速かつ持続的に課題を解決し続ける力として、Web制作に直結しています。</p>
                     </div>
                 </li>
                 <li class="p-top-profile__timeline-item">
                     <div class="p-top-profile__timeline-content">
                         <h3 class="p-top-profile__career-title">通信会社のSV時代</h3>
-                        <p class="p-top-profile__career-description">店舗スタッフ・お客様・本部、それぞれの立場や事情が異なる中、<br>「今、この状況で最も良い着地は何か」を冷静に見極め、調整し、行動する力を磨いてきました。<br>この経験は、Web制作でも関係者の意見を読み取り、状況に応じて判断しながら、制作を前に進める「巻き取り力」として活かされています。</p>
+                        <p class="p-top-profile__career-description">
+                            店舗スタッフ・お客様・本部、それぞれの立場や事情が異なる中で、<br>
+                            「今、この状況で最も良い着地は何か」を冷静に見極め、丁寧に調整し、的確に行動する力を磨いてきました。<br>
+                            ときには利害がぶつかり合う場面でも、感情に流されず、相手の意図や背景を汲み取りながら合意形成を進めてきた経験があります。<br>
+                            この経験は、Web制作においても、関係者の意見や要望を的確に読み取り、状況に応じて最善の判断を下しながら、制作を着実に前に進める「巻き取り力」として活かされています。
+                        </p>
                     </div>
                 </li>
                 <li class="p-top-profile__timeline-item">
                     <div class="p-top-profile__timeline-content">
                         <h3 class="p-top-profile__career-title">大型トレーラー運転手時代</h3>
-                        <p class="p-top-profile__career-description">真夜中でも20時間を超える稼働があるトレーラー運転では、周囲の変化を見逃さず、集中力を切らさずに運転し続ける力が求められます。<br>そのために日々の体調管理や天候リスクへの備えを徹底し、安定したコンディションを維持することが必要でした。<br>この経験は、バイクレーサー時代の「瞬発力」とは対照的に、長期的に成果を積み重ねる冷静さと持久力として、Web制作にも活かされています。</p>
+                        <p class="p-top-profile__career-description">
+                            真夜中でも20時間を超える稼働があるトレーラー運転では、<br>
+                            周囲の変化を一瞬たりとも見逃さず、集中力を切らさずに運転し続ける力が求められます。<br>
+                            そのためには、日々の体調管理や天候リスクへの備え、ルートの確認など、事前準備を徹底し、常に安定したコンディションを維持することが不可欠でした。<br>
+                            この経験は、バイクレーサー時代に身につけた「瞬発力」とは対照的に、<br>
+                            長期的に成果を積み重ねていく冷静さと持久力として、Web制作の現場にも活かされています。
+                        </p>
                     </div>
                 </li>
                 <li class="p-top-profile__timeline-item is-current u-shine-target">
@@ -479,7 +490,7 @@
                     <li class="p-top-contact__acceptance p-top-contact__data-checkbox">
                         <label for="acceptance">
                             <input type="checkbox" id="acceptance" name="acceptance" value="accepted" required>
-                            <span>プライバシーポリシーに同意の上、送信します</span>
+                            <span>プライバシーポリシーに同意します</span>
                         </label>
                     </li>
                     <!-- 送信ボタン -->

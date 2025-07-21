@@ -28,6 +28,11 @@
     display: flex;
     gap: 20px;
     align-items: end;
+    @include mq(ct3) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
 }
 
 .p-top-contact__form {
@@ -104,7 +109,7 @@
 
 .p-top-contact__data-checkbox {
     span {
-        padding-inline-start: 35px;
+        padding-inline-start: 25px;
         font-size: rclamp(14, 16, 375, 1440);
         font-weight: 700;
         line-height: rclamp(21, 24, 375, 1440); /* 150% */
@@ -116,11 +121,10 @@
         &::before {
           content: '';
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
+          top: 0;
           left: 0;
-          width: 24px;
-          height: 24px;
+          width: 20px;
+          height: 20px;
           border: 2px solid $color-bk;
         }
         //active

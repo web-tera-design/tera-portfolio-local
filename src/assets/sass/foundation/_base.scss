@@ -17,12 +17,16 @@ body {
     display: none;
 }
 
-  
-  html {
-    // scroll-behavior: smooth;
-  }
-  
+html, body { 
+  height: 100%; 
+}
 
-  a {
-    // transition: color 0.3s;
-  }
+.l-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-main {
+  flex: 1 0 auto; 
+}

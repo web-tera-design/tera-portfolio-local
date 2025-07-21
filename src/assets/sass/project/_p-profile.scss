@@ -72,10 +72,9 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 2px;
+  width: 3px;
   background: $color-rd;
   z-index: 2;
-  transition: height 0.6s;
   /* height, topはJSで動的に指定 */
 }
 
