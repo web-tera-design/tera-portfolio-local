@@ -42,7 +42,7 @@
 .p-top-contact__list {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 30px;
 }
 
 .p-top-contact__row {
@@ -60,11 +60,25 @@
 }
 
 .p-top-contact__data {
+    position: relative;
     margin-block-start: 10px;
     padding: 20px 20px;
-    border: 1px solid  #f0f0f0;
+    border: 2px solid  #f0f0f0;
     background: #f0f0f0;
 }
+
+.p-top-contact__data .wpcf7-not-valid-tip {
+  position: absolute;
+  inset-inline-start: -20px;
+  inset-block-start: 45px;
+  inline-size: 100%;
+  /* ここでliの下に見えるようにレイアウト調整 */
+}
+
+.p-top-contact__data.is-focus {
+  border: 2px solid #0071bc;
+}
+
 
 .p-top-contact__required {
     margin-inline-start: 6px;
@@ -107,7 +121,7 @@
     text-align: center;
 }
 
-.p-top-contact__data-checkbox {
+.p-top-contact__data-checkbox label{
     span {
         padding-inline-start: 25px;
         font-size: rclamp(14, 16, 375, 1440);
@@ -121,7 +135,8 @@
         &::before {
           content: '';
           position: absolute;
-          top: 0;
+          inset-block-start: 50%;
+          translate: 0 -50%;
           left: 0;
           width: 20px;
           height: 20px;
@@ -166,3 +181,53 @@ input[type=checkbox] {
       opacity: 1;
     }
   }
+
+.p-top-contact__row .wpcf7-not-valid-tip {
+  display: block;
+  min-height: 1.2em;             /* エラーが無い時も高さを確保 */
+  margin-top: 4px;
+  color: #e74c3c;
+  font-size: 0.9em;
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+
+.p-top-contact__data-checkbox .wpcf7-not-valid-tip {
+    margin-block-start: 10px;
+}
+
+.p-top-contact__row .wpcf7-not-valid-tip.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.wpcf7-response-output {
+  margin-top: 1em;
+  background: $color-wt;
+  color: $color-rd;
+  border: 1px solid $color-rd;
+  padding: 0.8em 1em;
+  font-size: 0.875rem;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+    border-color: $color-rd;  /* エラー時の色 */
+    inline-size: fit-content;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.p-top-contact__button {
+}
+
+
+.wpcf7 form.invalid .p-top-contact__button {
+    border: 6px double $color-wt;
+    background: rgb(250, 123, 4);
+
+}
+
+.wpcf7 form.invalid .p-top-contact__link-text {
+    color: $color-wt;
+}

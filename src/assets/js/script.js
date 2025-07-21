@@ -629,3 +629,34 @@ if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     });
   }
 }
+
+document.querySelectorAll(".p-top-contact__data").forEach(function (parent) {
+  parent.addEventListener("focusin", function () {
+    parent.classList.add("is-focus");
+  });
+  parent.addEventListener("focusout", function () {
+    parent.classList.remove("is-focus");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Contact Form 7が複数の場合にも対応
+  var wpcf7Forms = document.querySelectorAll(".wpcf7-form");
+  wpcf7Forms.forEach(function (form) {
+    // 入力欄が変更されたらエラー文を消す
+    form.addEventListener("input", function () {
+      var responseOutput = form.querySelector(".wpcf7-response-output");
+      if (responseOutput) {
+        responseOutput.style.display = "none";
+      }
+    });
+
+    // 送信ボタンが押されたときは表示をリセット（エラーまたは成功時）
+    form.addEventListener("wpcf7submit", function () {
+      var responseOutput = form.querySelector(".wpcf7-response-output");
+      if (responseOutput) {
+        responseOutput.style.display = "";
+      }
+    });
+  });
+});

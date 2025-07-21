@@ -13,8 +13,16 @@
     }
 }
 
+.p-top-section-heading {
+    text-align: left;
+}
+
 .p-top-assurance__heading {
 
+}
+
+.p-top-assurance__heading-title {
+    text-align: left;
 }
 
 .p-top-assurance__lead {
@@ -22,6 +30,7 @@
     font-size: rclamp(14, 16, 375, 1440);
     font-weight: 400;
     line-height: rclamp(21, 24, 375, 1440); /* 150% */
+    text-align: left;
 }
 
 .p-top-assurance__image {
@@ -57,6 +66,7 @@
     font-weight: 700;
     line-height: rclamp(24, 36, 375, 1440); /* 150% */
     letter-spacing: rclamp(1, 2, 375, 1440);
+    text-align: left;
 }
 
 .p-top-assurance__sublist {
@@ -72,6 +82,7 @@
     font-weight: 400;
     line-height: rclamp(21, 24, 375, 1440); 
     padding-inline-start: 15px;/* 150% */
+    text-align: left;
 
     &::before {
         position: absolute;
