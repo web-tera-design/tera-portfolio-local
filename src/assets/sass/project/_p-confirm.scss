@@ -1,0 +1,75 @@
+@use '../global' as *;
+
+.p-confirm {
+    background: $color-wt;
+    block-size: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.p-confirm__inner {
+
+}
+
+.p-confirm__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.p-confirm__title {
+    font-size: rclamp(16, 40, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(24, 60, 375, 1440); /* 150% */
+    letter-spacing: rclamp(1, 2, 375, 1440);
+}
+
+.p-confirm__description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.64px;
+}
+
+.p-confirm-table {
+    inline-size: 100%;
+    margin-block-start: rclamp(53, 86, 375, 1440);
+}
+
+.p-confirm-table__row {
+    padding: rclamp(13.5, 24, 375, 1440) 16px;
+    border-bottom: 1px solid #e1e1e1;
+    @include mq(lg) {
+      display: grid;
+      grid-template-columns: minmax(265px, auto) 1fr;
+      gap: 55px;
+    }
+}
+
+.p-confirm-table__th {
+    font-size: rclamp(16, 18, 375, 1440);
+    font-weight: 700;
+    line-height: rclamp(24, 27, 375, 1440); /* 150% */
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.p-confirm-table__td {
+    font-size: rclamp(14, 16, 375, 1440);
+    font-weight: 400;
+    line-height: rclamp(21, 24, 375, 1440); /* 150% */
+    letter-spacing: 1px;
+}
+
+.p-confirm__action {
+
+}
+
+.p-confirm__back {
+
+}
+
+.p-confirm__submit {
+
+}
+
