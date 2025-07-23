@@ -70,21 +70,3 @@ function theme_enqueue_assets()
     );
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_assets');
-
-add_filter('wpcf7_form_elements', function ($content) {
-    // input type="submit"をbuttonタグに置換する例
-    $content = preg_replace_callback('/<input type="submit"(.*?)\/?>/', function ($matches) {
-        // inputタグの属性部分を解析
-        preg_match('/value="([^"]*)"/', $matches[1], $label);
-        preg_match('/class="([^"]*)"/', $matches[1], $class);
-        $label_text = $label[1] ?? '送信';
-        $class_attr = $class[1] ?? '';
-        // 独自HTMLとして構築
-        $button_html = '<button type="submit" class="' . esc_attr($class_attr) . '" aria-label="' . esc_attr($label_text) . '">';
-        $button_html .= '<span class="c-button__wrapper">';
-        $button_html .= '<span class="c-button__link-text">' . esc_html($label_text) . '</span>';
-        $button_html .= '</span></button>';
-        return $button_html;
-    }, $content);
-    return $content;
-});

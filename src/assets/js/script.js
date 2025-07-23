@@ -630,12 +630,18 @@ if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
   }
 }
 
-document.querySelectorAll(".p-top-contact__data").forEach(function (parent) {
-  parent.addEventListener("focusin", function () {
-    parent.classList.add("is-focus");
+// 例：フォーカス時にis-focusを付ける場合
+document.querySelectorAll(".p-top-contact__data").forEach((el) => {
+  el.addEventListener("focusin", (e) => {
+    // ラジオボタンの親 .p-top-contact__data--radio は除外する
+    if (!el.classList.contains("p-top-contact__data--radio")) {
+      el.classList.add("is-focus");
+    }
   });
-  parent.addEventListener("focusout", function () {
-    parent.classList.remove("is-focus");
+  el.addEventListener("focusout", (e) => {
+    if (!el.classList.contains("p-top-contact__data--radio")) {
+      el.classList.remove("is-focus");
+    }
   });
 });
 
@@ -660,3 +666,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener(
+  "wpcf7mailsent",
+  function (event) {
+    // 送信成功時のリダイレクト先URLを指定
+    window.location.href = "/thanks/";
+  },
+  false
+);

@@ -433,12 +433,12 @@
                 <p class="p-top-contact__description">1営業日以内に必ずご返信します！<br class="u-br--sp">（5:00〜21:00対応）<br>お気軽にお問い合わせください。</p>
                 <div class="p-top-contact__links">
                     <a href="mailto:info@web-tera-design.com" class="c-button c-button--mail">
-                        <span class="c-button__wrapper">
+                        <span class="c-button__wrapper p-top-contact__button-wrapper">
                             <span class="c-button__link-text">メールで連絡する</span>
                         </span>
                     </a>
                     <a href=" https://x.com/BR5J6DXbuz70037" target="_blank" rel="nofollow noopener" class="c-button c-button--x" aria-label="X（旧Twitter）">
-                        <span class="c-button__wrapper c-button__wrapper--x">
+                        <span class="c-button__wrapper c-button__wrapper--x p-top-contact__button-wrapper">
                             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo.webp" class="c-button__logo-normal" alt="" width="2400" height="2453">
                             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo-wt.webp" class="c-button__logo-hover" alt="" width="2400" height="2453">
                             <span class="c-button__link-text">で連絡する</span>
@@ -446,61 +446,7 @@
                     </a>
                 </div>
             </div>
-            <form action="" class="p-top-contact__form" method="post" autocomplete="off" enctype="multipart/form-data">
-                <ul class="p-top-contact__list">
-                    <!-- 会社情報 -->
-                    <li class="p-top-contact__row">
-                        <label for="company" class="p-top-contact__head"><span>会社名（個人の方は不要です）</span></label>
-                        <div class="p-top-contact__data">
-                            <input type="text" id="company" name="company" placeholder="例：株式会社xxxxx">
-                        </div>
-                    </li>
-                    <!-- 氏名 -->
-                    <li class="p-top-contact__row">
-                        <label for="name" class="p-top-contact__head"><span>お名前</span><span class="p-top-contact__required">必須</span></label>
-                        <div class="p-top-contact__data">
-                            <input type="text" id="name" name="name" placeholder="例：山田 太郎" required>
-                        </div>
-                    </li>
-                    <!-- 連絡先 -->
-                    <li class="p-top-contact__row">
-                        <label for="email" class="p-top-contact__head"><span>メールアドレス</span><span class="p-top-contact__required">必須</span></label>
-                        <div class="p-top-contact__data">
-                            <input type="email" id="email" name="email" placeholder="例：aaa@xxx.co.jp" required>
-                        </div>
-                    </li>
-                    <!-- お問い合わせ内容 -->
-                    <li class="p-top-contact__row">
-                        <label for="message" class="p-top-contact__head"><span>お問い合わせ内容</span></label>
-                        <div class="p-top-contact__data">
-                            <textarea id="message" name="message" placeholder="ご相談内容をご記入ください"></textarea>
-                        </div>
-                    </li>
-                    <li class="p-top-contact__row p-top-contact__privacy-policy">
-                        <div class="p-top-contact__privacy-block">
-                            <p class="p-top-contact__privacy-heading">
-                                プライバシーポリシー
-                            </p>
-                            <p class="p-top-contact__privacy-text">
-                                当サイトでは、お問い合わせ時にいただいた個人情報（名前、メールアドレスなど）を、ご相談への対応や連絡のためにのみ使用いたします。お預かりした情報は厳重に管理し、第三者に開示・提供することはありません。安心してご利用いただけるよう、個人情報保護に努めてまいります。ご不明な点があれば、お気軽にお問い合わせください。
-                            </p>
-                        </div>
-                    </li>
-                    <!-- プライバシーポリシー同意 -->
-                    <li class="p-top-contact__acceptance p-top-contact__data-checkbox">
-                        <label for="acceptance">
-                            <input type="checkbox" id="acceptance" name="acceptance" value="accepted" required>
-                            <span>プライバシーポリシーに同意します</span>
-                        </label>
-                    </li>
-                    <!-- 送信ボタン -->
-                    <li class="p-top-contact__submit">
-                        <button type="submit" class="c-button c-button__wrapper">
-                            <span class="c-button__link-text">内容を確認する</span>
-                        </button>
-                    </li>
-                </ul>
-            </form>
+            <?php echo do_shortcode('[contact-form-7 id="ab86973" title="お問い合わせフォーム"]'); ?>
         </div>
     </section>
 </main>
