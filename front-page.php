@@ -41,7 +41,7 @@
             <ul class="p-top-works__list">
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal1">
                     <div class="p-top-works__image p-top-mockup-container">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                         <video
                             autoplay
                             loop
@@ -64,7 +64,7 @@
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal2">
                     <div class="p-top-works__image p-top-mockup-container">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                         <video
                             autoplay
                             loop
@@ -87,7 +87,7 @@
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal3">
                     <div class="p-top-works__image p-top-mockup-container">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                         <video
                             autoplay
                             loop
@@ -432,11 +432,7 @@
                 </div>
                 <p class="p-top-contact__description">1営業日以内に必ずご返信します！<br class="u-br--sp">（5:00〜21:00対応）<br>お気軽にお問い合わせください。</p>
                 <div class="p-top-contact__links">
-                    <a href="mailto:info@web-tera-design.com" class="c-button c-button--mail">
-                        <span class="c-button__wrapper p-top-contact__button-wrapper">
-                            <span class="c-button__link-text">メールで連絡する</span>
-                        </span>
-                    </a>
+                    <span id="mail-link" class="c-button c-button--mail"></span>
                     <a href=" https://x.com/BR5J6DXbuz70037" target="_blank" rel="nofollow noopener" class="c-button c-button--x" aria-label="X（旧Twitter）">
                         <span class="c-button__wrapper c-button__wrapper--x p-top-contact__button-wrapper">
                             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo.webp" class="c-button__logo-normal" alt="" width="2400" height="2453">

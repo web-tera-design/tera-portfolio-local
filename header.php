@@ -55,26 +55,27 @@
     <header class="l-header">
         <div class="l-header__inner l-section__inner--wide">
             <h1 class="l-header__logo">
-                <a href="" class="l-header__logo-link">
+                <a href="/" class="l-header__logo-link">
                     Tera’s portfolio
                 </a>
             </h1>
             <nav class="l-header__nav">
+                <?php $is_front = is_front_page(); ?>
                 <ul class="c-global-nav u-mr30">
                     <li class="c-global-nav__item">
-                        <a href="#works" class="c-global-nav__link" data-section="works">実績紹介</a>
+                        <a href="<?php echo $is_front ? '#works' : home_url('/') . '#works'; ?>" class="c-global-nav__link" data-section="works">実績紹介</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="#service" class="c-global-nav__link" data-section="service">提供サービス</a>
+                        <a href="<?php echo $is_front ? '#service' : home_url('/') . '#service'; ?>" class="c-global-nav__link" data-section="service">提供サービス</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="#process" class="c-global-nav__link" data-section="process">ご依頼の流れ</a>
+                        <a href="<?php echo $is_front ? '#process' : home_url('/') . '#process'; ?>" class="c-global-nav__link" data-section="process">ご依頼の流れ</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="#profile" class="c-global-nav__link" data-section="profile">私について</a>
+                        <a href="<?php echo $is_front ? '#profile' : home_url('/') . '#profile'; ?>" class="c-global-nav__link" data-section="profile">私について</a>
                     </li>
                     <li class="c-global-nav__item">
-                        <a href="#contact" class="c-global-nav__link" data-section="contact">お問い合わせ</a>
+                        <a href="<?php echo $is_front ? '#contact' : home_url('/') . '#contact'; ?>" class="c-global-nav__link" data-section="contact">お問い合わせ</a>
                     </li>
                 </ul>
             </nav>

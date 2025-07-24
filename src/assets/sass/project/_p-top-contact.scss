@@ -126,44 +126,18 @@
     text-align: center;
 }
 
-.p-top-contact__data--radio {
+.p-top-contact__data--checkbox {
     background: none;
     border: none;
     padding: revert;
 }
 
-.p-top-contact__data--radio .wpcf7-not-valid-tip {
-    inset-inline-start: 16px;
-    inset-block-start: 50px;
-}
-
-.p-top-contact__explanations {
-    margin-block-start: 20px;
-    padding-inline: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.p-top-contact__explanation {
-    padding-bottom: 4px;
-    border-bottom: 1px solid #d9d9d9
-}
-.p-top-contact__explanation p {
-    inline-size: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    font-size: 14px;
+.p-top-contact__data--checkbox .wpcf7-not-valid-tip {
+    inset-inline-start: 0;
+     inset-block-start: 105px;   
     @include mq(md) {
-        grid-template-columns: 250px 1fr;
+        inset-block-start: 90px;
     }
-}
-
-.p-top-contact__explanation-heading {
-    display: inline-block;
-}
-.p-top-contact__explanation-heading-text {
-    inline-size: 100%;
 }
 
 .p-top-contact__data-checkbox label{
@@ -226,12 +200,16 @@ input[type=checkbox] {
     }
   }
 
+.wpcf7-not-valid-tip {
+    font-size: 14px;
+}
+
 .p-top-contact__row .wpcf7-not-valid-tip {
   display: block;
-  min-height: 1.2em;             /* エラーが無い時も高さを確保 */
+  min-height: 16px;             /* エラーが無い時も高さを確保 */
   margin-top: 4px;
   color: #e74c3c;
-  font-size: 0.9em;
+  font-size: 14px;
   transition: opacity 0.25s;
   opacity: 1;
 }
@@ -247,12 +225,12 @@ input[type=checkbox] {
 }
 
 .wpcf7-response-output {
-  margin-top: 1em;
+  margin-top: 16px;
   background: $color-wt;
   color: $color-rd;
   border: 1px solid $color-rd;
-  padding: 0.8em 1em;
-  font-size: 0.875rem;
+  padding: 16px;
+  font-size: 14px;
 }
 
 .wpcf7 form.invalid .wpcf7-response-output {
@@ -287,8 +265,19 @@ input[type="submit"] {
   }
 }
 
+input[type="submit"]:focus {
+  background-color: #e1e1e1; /* 既存ホバー背景色 */
+  color: $color-bk;
+  border:2px solid #0056b3;             /* 既存ホバー文字色 */
+}
+
+
 span.wpcf7-spinner {
   display: none;
+}
+
+.wpcf7-list-item {
+    margin: revert;
 }
 
 .wpcf7-radio .wpcf7-list-item label {
@@ -297,7 +286,7 @@ span.wpcf7-spinner {
   gap: 4px;
 }
 
-.wpcf7-radio {
+.wpcf7-checkbox {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 10px;
@@ -306,33 +295,41 @@ span.wpcf7-spinner {
     }
 }
 
-/* ラジオボタンを隠す */
-.wpcf7-radio input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  inline-size: 1px;
-  block-size: 1px;
-  margin: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);  /* クリップで範囲外に隠す */
-  overflow: hidden;
-  white-space: nowrap;
-  border: 0;
+
+
+input[type="radio"]:focus + .wpcf7-list-item-label::before {
+  background: #e1e1e1;
+  border: 2px solid #0071bc;
+}
+input[type="checkbox"]:focus + .wpcf7-list-item-label::before {
+  background: #e1e1e1;
+  border: 2px solid #0071bc;
 }
 
-/* ラベルに擬似要素で丸いボタンを作る */
-.wpcf7-radio .wpcf7-list-item-label {
+
+.p-top-contact__data--checkbox .wpcf7-list-item-label {
   position: relative;
-  padding-left: 22px;
+  padding-left: 28px;      /* チェックボックスの幅分の左余白 */
   cursor: pointer;
   user-select: none;
   display: inline-block;
-  line-height: 18px;
+  font-size: 16px;
 }
 
-/* 複製の丸ボタン */
-.wpcf7-radio .wpcf7-list-item-label::before {
+/* 非表示のチェックボックス */
+.p-top-contact__data--checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+/* 丸い枠（外側） */
+.p-top-contact__data--checkbox .wpcf7-list-item-label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -347,8 +344,8 @@ span.wpcf7-spinner {
   transition: border-color 0.3s;
 }
 
-/* 選択時の内部丸 */
-.wpcf7-radio input[type="radio"]:checked + .wpcf7-list-item-label::after {
+/* 選択時に丸い中身を塗りつぶす丸（内側） */
+.p-top-contact__data--checkbox input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
   content: "";
   position: absolute;
   left: 5px;
@@ -360,15 +357,16 @@ span.wpcf7-spinner {
   border-radius: 50%;
 }
 
-input[type="radio"]:focus + .wpcf7-list-item-label::before {
-  background: #e1e1e1;
-  border: 2px solid #0071bc;
-}
-input[type="checkbox"]:focus + .wpcf7-list-item-label::before {
-  background: #e1e1e1;
-  border: 2px solid #0071bc;
-}
+// /* 選択された枠線の色変更（青色など） */
+// .p-top-contact__data--checkbox input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
+//   border-color: #007BFF;
+// }
 
+/* フォーカス時の枠装飾 */
+.p-top-contact__data--checkbox input[type="checkbox"]:focus + .wpcf7-list-item-label::before {
+  box-shadow: 0 0 3px 2px rgba(0, 123, 255, 0.5);
+  border-color: #0056b3;
+}
 
 
 

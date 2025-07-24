@@ -3,28 +3,29 @@
         <div class="l-footer__container">
             <div class="l-footer__heading">
                 <h2 class="l-footer__logo">
-                    <a href="" class="l-footer__logo-link">Tera’s portfolio</a>
+                    <a href="/" class="l-footer__logo-link">Tera’s portfolio</a>
                 </h2>
             </div>
+            <?php $is_front = is_front_page(); ?>
             <ul class="l-footer__list">
                 <li class="l-footer__item">
-                    <a href="" class="l-footer__link">実績紹介</a>
+                    <a href="<?php echo $is_front ? '#works' : home_url('/') . '#works'; ?>" class="l-footer__link">実績紹介</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="" class="l-footer__link">提供サービス</a>
+                    <a href="<?php echo $is_front ? '#service' : home_url('/') . '#service'; ?>" class="l-footer__link">提供サービス</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="" class="l-footer__link">ご依頼の流れ</a>
+                    <a href="<?php echo $is_front ? '#process' : home_url('/') . '#process'; ?>" class="l-footer__link">ご依頼の流れ</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="" class="l-footer__link">私について</a>
+                    <a href="<?php echo $is_front ? '#profile' : home_url('/') . '#profile'; ?>" class="l-footer__link">私について</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="" class="l-footer__link">お問い合わせ</a>
+                    <a href="<?php echo $is_front ? '#contact' : home_url('/') . '#contact'; ?>" class="l-footer__link">お問い合わせ</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="mailto:info@web-tera-design.com" class="l-footer__sns-link">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/email-icon.webp" alt="" width="50" height="50">
+                    <a href="#" id="email-link" class="l-footer__sns-link">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/email-icon.webp" alt="メールアイコン" width="50" height="50">
                     </a>
                 </li>
                 <li class="l-footer__item">
@@ -53,7 +54,7 @@
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                     <video
                         class="c-video js-click-video"
                         autoplay
@@ -146,7 +147,7 @@
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                     <video
                         class="c-video js-click-video"
                         autoplay
@@ -236,7 +237,7 @@
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt="">
+                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                     <video
                         class="c-video js-click-video"
                         autoplay
@@ -274,7 +275,7 @@
                                 <p class="p-top-modal__message">自作のポモドーロタイマーです。</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">現在の時刻に応じて自動的に作業用・休憩用・昼休み用のYouTube動画を再生することで、集中力を高めつつ、自然な時間管理ができるツールです。</p>
+                                <p class="p-top-modal__message">実際の時刻に応じて自動的に作業用・休憩用・昼休み用のYouTube動画を再生することで、集中力を高めつつ、自然な時間管理ができるツールです。</p>
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">動画再生にはYouTube IFrame APIを利用しており、Javascript上で動画IDを指定するだけで切り替え可能な仕組みを構築しました。</p>
@@ -288,7 +289,7 @@
                                 <p class="p-top-modal__message">小さな演出や制御もすべてJavaScriptとGSAPで実装しています。</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">現在の時刻に連動し、毎時00分〜50分を「作業時間」、50分〜00分を「休憩時間」、12時台は「昼休憩」として、それぞれ自動で動画が切り替わるよう実装しました。</p>
+                                <p class="p-top-modal__message">実際の時刻に連動し、毎時00分〜50分を「作業時間」、50分〜00分を「休憩時間」、12時台は「昼休憩」として、それぞれ自動で動画が切り替わるよう実装しました。</p>
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">画面上のセレクトボックスからアラーム音を選択できるほか、フリー音声ファイルをHTMLとJavaScriptに記述することで、リストに任意のアラーム音を追加することも可能です。</p>
