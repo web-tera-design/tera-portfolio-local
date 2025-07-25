@@ -316,14 +316,28 @@ document.querySelectorAll("dialog").forEach((dialog) => {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".js-click-video").forEach((video) => {
     video.addEventListener("click", () => {
+      // videoの親要素を取得（ここでラッパーを想定）
+      const wrapper = video.closest(".c-video");
+      if (!wrapper) return;
+
       if (video.paused) {
         video.play();
-        video.classList.remove("is-paused");
+        // ラッパーからis-pausedクラスを外す
+        wrapper.classList.remove("is-paused");
       } else {
         video.pause();
-        video.classList.add("is-paused");
+        // ラッパーにis-pausedクラスを付与
+        wrapper.classList.add("is-paused");
       }
     });
+  });
+});
+
+// 9. ナビhoverアニメ
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".l-header__logo-link, .c-global-nav__link").forEach((link) => {
+    link.addEventListener("mouseenter", () => gsap.to(link, { scale: 1.1, duration: 0.3 }));
+    link.addEventListener("mouseleave", () => gsap.to(link, { scale: 1, duration: 0.3 }));
   });
 });
 

@@ -48,6 +48,18 @@
 }
 
 .p-top-works__image {
+  video {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    aspect-ratio: 336 / 236;
+  }
+  img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    aspect-ratio: 336 / 241;
+  }
 
 }
 
@@ -63,6 +75,7 @@
     font-size: rclamp(16, 18, 375, 1440);
     font-weight: 700;
     line-height: rclamp(24, 27, 375, 1440); /* 150% */
+    text-align: left;
 }
 
 .p-top-works__button {

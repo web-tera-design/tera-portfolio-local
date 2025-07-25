@@ -41,7 +41,6 @@
             <ul class="p-top-works__list">
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal1">
                     <div class="p-top-works__image p-top-mockup-container">
-                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                         <video
                             autoplay
                             loop
@@ -64,7 +63,6 @@
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal2">
                     <div class="p-top-works__image p-top-mockup-container">
-                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                         <video
                             autoplay
                             loop
@@ -74,7 +72,7 @@
                             width="100%"
                             height="auto">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic.webm" type="video/webm">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.webm" type="video/webm">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -97,7 +95,7 @@
                             width="100%"
                             height="auto">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro-top.webm" type="video/webm">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top.webm" type="video/webm">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -109,21 +107,32 @@
                     </ul>
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal4">
-                    <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="" width="672" height="449">
+                    <div class="p-top-works__image p-top-mockup-container">
+                        <video
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.mp4"
+                            width="100%"
+                            height="auto">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.mp4" type=" video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.webm" type="video/webm">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
                     </div>
-                    <h3 class="p-top-works__title">キャンペーンサイト（サンプル）</h3>
+                    <h3 class="p-top-works__title">ポートフォリオサイト</h3>
                     <ul class="c-tags">
-                        <li class="c-tag">LP</li>
-                        <li class="c-tag">Figma</li>
-                        <li class="c-tag">BEM</li>
+                        <li class="c-tag">Wordpress</li>
+                        <li class="c-tag">Javascript</li>
+                        <li class="c-tag">FLOCSS</li>
                     </ul>
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal5">
                     <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="" width="672" height="450">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="" width="672" height="449">
                     </div>
-                    <h3 class="p-top-works__title">美容サイト（サンプル）</h3>
+                    <h3 class="p-top-works__title">キャンペーンサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
                         <li class="c-tag">Figma</li>
@@ -137,11 +146,6 @@
                     <span class="p-top-works__detail">このページは近日公開予定です。
                     </span>
                     <h3 class="p-top-works__title"></h3>
-                    <ul class="c-tags">
-                        <li class="c-tag">LP</li>
-                        <li class="c-tag">Figma</li>
-                        <li class="c-tag">FLOCSS</li>
-                    </ul>
                 </li>
             </ul>
         </div>

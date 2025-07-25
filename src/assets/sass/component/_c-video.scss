@@ -1,19 +1,53 @@
 @use '../global' as *;
 
+.c-video {
+  cursor: pointer;
+  border-color: transparent;
+  @media (any-hover: hover) {
+    &:hover {
+      filter: brightness(0.75);
+    }
+  }
+}
+
 .c-video.is-paused {
-    filter: brightness(0.6);
     cursor: pointer;
     position: relative;
     z-index: 1;
   }
   
-  .c-video.is-paused::after {
-    content: "▶";
-    position: absolute;
-    z-index: 2;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    color: white;
-  }
-  
+/* 再生ボタンの丸い背景（before） */
+.c-video.is-paused::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: rclamp(100, 150, 375, 1440);   /* アイコンサイズ調整 */
+  height: rclamp(100, 150, 375, 1440);
+  background: radial-gradient(circle at 30% 30%, #f44336, #b71c1c);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.6),
+    0 4px 8px rgba(0,0,0,0.4);
+  z-index: 2;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+/* 三角アイコン本体（after） */
+.c-video.is-paused::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-40%, -50%); /* 少し左寄せ */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 25px; /* 15px高さ、25px幅の三角 */
+  border-color: transparent transparent transparent white;
+  filter: brightness(1); /* 明るさ補正 */
+  z-index: 3;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+

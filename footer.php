@@ -54,26 +54,22 @@
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
-                    <video
-                        class="c-video js-click-video"
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                        poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
-                        width="100%"
-                        height="auto">
-                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/interview-modal.mp4" type="video/mp4">
-                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/interview-modal.webm" type="video/webm">
-                        お使いのブラウザでは動画を再生できません。
-                    </video>
+                    <div class="c-video">
+                        <video
+                            class="js-click-video"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
+                            width="100%"
+                            height="auto">
+                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/interview-modal.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/interview-modal.webm" type="video/webm">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
+                    </div>
                 </div>
-                <!-- <ul class="c-tags u-mt14">
-                    <li class="c-tag">LP</li>
-                    <li class="c-tag">Figma</li>
-                    <li class="c-tag">BEM</li>
-                </ul> -->
             </div>
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
@@ -106,13 +102,14 @@
                                 <p class="p-top-modal__message">斜めスライダーは、どのデバイスでもレイアウトが崩れないよう、スライド幅や余白を細かく調整しています。</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">タイムラインの点は、要素の高さをJavaScriptで動的に計算し、テキスト量が変わっても正しい位置に表示されるよう実装しました。</p>
+                                <p class="p-top-modal__message">タイムラインの各ポイントをテキスト量に左右されることなく精緻に配置するJavaScript実装により、ユーザーは時系列情報を直感的に理解できる高い視認性と操作性を得られます。
+                                    さらに、動的なコンテンツの変化にも柔軟に追従することで、堅牢かつ拡張性の高いUIを実現しています。</p>
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">FAQセクションでは、表示数を画面幅に応じて自動調整。タブ切り替えやリサイズ後も状態を維持できるよう設計し、全体を関数化することで再利用性や拡張性も意識しています。</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">横スライダーのプログレスバーを自作し、バーをマウスドラッグしてスライド可能な実装を行いました。</p>
+                                <p class="p-top-modal__message">横スライダーのプログレスバーを自作し、バーをマウスドラッグしてスライド可能な実装を行いました。これにより操作性が大幅に向上し、ユーザーは直感的でストレスのない体験を得られます。</p>
                             </li>
                         </ul>
                     </li>
@@ -147,26 +144,22 @@
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
-                    <video
-                        class="c-video js-click-video"
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                        poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp"
-                        width="100%"
-                        height="auto">
-                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic-modal.mp4" type="video/mp4">
-                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic-modal.webm" type="video/webm">
-                        お使いのブラウザでは動画を再生できません。
-                    </video>
+                    <div class="c-video">
+                        <video
+                            class="js-click-video"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp"
+                            width="100%"
+                            height="auto">
+                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic-modal.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic-modal.webm" type="video/webm">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
+                    </div>
                 </div>
-                <!-- <ul class="c-tags u-mt14">
-                    <li class="c-tag">LP</li>
-                    <li class="c-tag">Figma</li>
-                    <li class="c-tag">BEM</li>
-                </ul> -->
             </div>
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
@@ -237,26 +230,22 @@
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
-                    <video
-                        class="c-video js-click-video"
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                        poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
-                        width="100%"
-                        height="auto">
-                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro.mp4" type="video/mp4">
-                        <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro.webm" type="video/webm">
-                        お使いのブラウザでは動画を再生できません。
-                    </video>
+                    <div class="c-video">
+                        <video
+                            class="js-click-video"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
+                            width="100%"
+                            height="auto">
+                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro.webm" type="video/webm">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
+                    </div>
                 </div>
-                <!-- <ul class="c-tags u-mt14">
-                    <li class="c-tag">LP</li>
-                    <li class="c-tag">Figma</li>
-                    <li class="c-tag">BEM</li>
-                </ul> -->
             </div>
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
@@ -326,17 +315,111 @@
         <button class="p-top-modal__close-btn">
             閉じる
         </button>
-        <h3 id="modal-head4" class="p-top-modal__title">キャンペーンサイト（サンプル）</h3>
+        <h3 id="modal-head3" class="p-top-modal__title">ポートフォリオサイト</h3>
+        <div class="p-top-modal__body">
+            <div class="p-top-modal__left">
+                <div class="p-top-modal__image p-top-modal-mockup-container">
+                    <div class="c-video">
+                        <video
+                            class="js-click-video"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.mp4"
+                            width="100%"
+                            height="auto">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.mp4" type="video/mp4" />
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.webm" type="video/webm" />
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="p-top-modal__right">
+                <ul class="p-top-modal__list">
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">担当範囲</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">コーディング</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">サイト概要</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">このポートフォリオサイトは、これまでの制作経験の集大成として制作しました。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">セマンティックなHTMLでは、見出しやリスト、ナビゲーションなど意味を持つタグを厳選して配置。
+                                    これにより、検索エンジン最適化（SEO）の強化やスクリーンリーダーなど支援技術のアクセスビリティ向上を両立させています。
+                                </p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">本サイトでは最初に目を引くローディングアニメーションを実装し、ユーザーの期待感を高めつつスムーズなページ遷移を演出しています。
+                                    一方で、ページ本文では過剰なアニメーションを控え、コンテンツの可読性と集中しやすさを重視しました。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">お問い合わせは専用ページを設けず一画面で完結させ、ユーザーが迷わずスムーズに問い合わせできるよう、視認性や操作性、アクセシビリティを重視して設計されています</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">実装の工夫</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">再生中の動画をタップ・クリックするだけで再生・一時停止ができます。見た目はシンプルに保ちつつ、操作性を大幅に向上。商品紹介やプロモーション動画など、多くのコンテンツで快適な視聴体験を実現します。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">初回アクセス時にのみ再生されるローディングアニメーションは、テキストを1文字ずつ分割し、スケールアップやフェードアウト、ぼかし、波紋状のリップルエフェクトを組み合わせています。GSAPのタイムラインで滑らかな同期とイージングを制御し、カラーグラデーションやシャドウの動的変化で視覚的な広がりを演出。訪問者に高品質で洗練された体験を提供します。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">ヘッダーはスクロールに応じて動的に状態を切り替え、視認性と操作性を向上させています。
+                                    GSAPのScrollTriggerで特定エリア到達時に背景色や文字色、影を滑らかに変化。
+                                    ナビリンクは閲覧エリアに合わせて色や点滅・拡大アニメーションを調整し、ユーザーの注目を効果的に誘導します。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">timeline形式のprofileセクションでは、各項目がスクロールトリガーにより順次フェードインし、GSAPを使って透明度、位置、拡大縮小、ぼかし効果を組み合わせたトランジションで動きを演出しています。
+                                    特に最終項目には、時間経過とスクロールに連動した光の流れを加え、洗練された印象と動的な演出によりユーザーの注目を集めやすく設計しています。
+                                    さらに、スクロール進行に合わせて項目間をつなぐtimelineラインの長さを動的に調整し、視覚的に進行度をわかりやすく示しています。</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">問い合わせセクションでは、ScrollTriggerを活用して表示時に最初の入力欄へ自動でフォーカスを当てることで、ユーザーがスムーズに入力を開始できるようにしています。フォーカス時には適切に視覚強調のクラスを付与し、キーボードユーザーやスクリーンリーダー利用者にも配慮しており、ラジオボタンなど特定要素は除外して誤った強調を防ぐ細やかな制御も行っています。また、タブキー操作で入力欄の区切りがわかりやすく、視覚的なフォーカスクラス付与により迷わずスムーズに入力できる工夫がされています。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：10日</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
+        <a href="https://web-tera-design.com/youtube-timer/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
+            <span class="c-button__link-text">サイトを見る</span>
+        </a>
+    </div>
+</dialog>
+
+<dialog id="modal5" aria-labelledby="modal-head5" aria-describedby="modal-text5" class="p-top-modal__content">
+    <div class="p-top-modal__inner l-section__inner--narrow l-section__inner--modal">
+        <button class="p-top-modal__close-btn">
+            閉じる
+        </button>
+        <h3 id="modal-head5" class="p-top-modal__title">キャンペーンサイト（サンプル）</h3>
         <div class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="" width="672" height="449">
                 </div>
-                <!-- <ul class="c-tags u-mt14">
-                    <li class="c-tag">LP</li>
-                    <li class="c-tag">Figma</li>
-                    <li class="c-tag">BEM</li>
-                </ul> -->
             </div>
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
@@ -389,73 +472,7 @@
     </div>
 </dialog>
 
-<dialog id="modal5" aria-labelledby="modal-head5" aria-describedby="modal-text5" class="p-top-modal__content">
-    <div class="p-top-modal__inner l-section__inner--narrow l-section__inner--modal">
-        <button class="p-top-modal__close-btn">
-            閉じる
-        </button>
-        <h3 id="modal-head5" class="p-top-modal__title">美容サイト（サンプル）</h3>
-        <div class="p-top-modal__body">
-            <div class="p-top-modal__left">
-                <div class="p-top-modal__image p-top-modal-mockup-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/sobolon.webp" alt="" width="672" height="450">
-                </div>
-                <!-- <ul class="c-tags u-mt14">
-                    <li class="c-tag">LP</li>
-                    <li class="c-tag">Figma</li>
-                    <li class="c-tag">BEM</li>
-                </ul> -->
-            </div>
-            <div class="p-top-modal__right">
-                <ul class="p-top-modal__list">
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">担当範囲</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">コーディング</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">サイト概要</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">架空のランディングページです。</p>
-                            </li>
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">カード型のセクションを多用したシンプルなLPです。レスポンシブ対応も行い、複数デバイスでの表示を想定して制作しています。</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">実装の工夫</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">擬似要素やFlexboxを用いた要素の整列、画像比率の維持、レスポンシブ対応など、見た目にシンプルでも破綻しない設計を意識しました。</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：１日</p>
-                            </li>
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：１万円</p>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="https://web-tera-design.com/tera_sobolon/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
-            <span class="c-button__link-text">サイトを見る</span>
-        </a>
-    </div>
-</dialog>
+
 
 <?php wp_footer(); ?>
 </body>
