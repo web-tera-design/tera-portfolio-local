@@ -66,10 +66,9 @@
 }
 
 .p-top-mv__lead {
-
     margin-block-start: 20px;
     color: $color-wt;
-    font-size: rclamp(28, 40, 375, 1440);
+    font-size: rclamp(24, 36, 375, 1440);
     font-weight: 700;
     letter-spacing: rclamp(2, 3, 375, 1440);
     line-height: 150%;
@@ -121,97 +120,35 @@
     }
 }
 
-
 .p-top-mv__label,
 .p-top-mv__title,
 .p-top-mv__lead {
-  visibility: hidden; // ← 一瞬の描画を防ぐ
+  visibility: visible;
+  font-weight: 800;
+  text-shadow:
+    0 0 4px #ff2400,
+    0 0 8px #ff4500,
+    0 0 12px #ff6347,
+    0 0 16px #cc1100,
+    0 0 20px rgba(204, 0, 0, 0.3);
+  animation: flameFlicker 2s infinite ease-in-out;
 }
 
-
-.is-flame {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    font-weight: 800;
-    filter: blur(2px);
+@keyframes flameFlicker {
+  0%, 100% {
     text-shadow:
-    0 0 4px #ff2400,   // vivid red-orange
-    0 0 8px #ff4500,   // orange-red
-    0 0 12px #ff6347,  // tomato
-    0 0 16px #cc1100,  // 濃い赤（深み）
-    0 0 20px rgba(204, 0, 0, 0.3); // 外側ぼかし（ワインレッド）
-  
-    animation: flameUp 1.2s ease forwards, flameFlicker 2s infinite ease-in-out;
-  }
-
-  .p-top-mv__lead .is-flame {
-    animation:
-      flameUp 1.2s ease forwards,
-      flameFlicker 2s infinite ease-in-out,
-  }
-
-  // ❤️‍🔥 リード全体に鼓動アニメ
-.p-top-mv__lead {
-    animation: flamePulse .5s ease-in-out infinite;
-  }
-  
-  
-  // バラつき出したい場合（オプション）
-  @for $i from 1 through 32 {
-    .is-flame:nth-child(#{$i}) {
-      animation-delay: #{($i - 1) * 0.04}s;
-    }
-  }
-  
-  @keyframes flameUp {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-      filter: blur(6px);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-      filter: blur(1px);
-    }
-  }
-  
-  @keyframes flameFlicker {
-    0%, 100% {
-      text-shadow:
       0 0 4px #ff2400,
       0 0 8px #ff4500,
       0 0 12px #ff6347,
       0 0 16px #cc1100,
       0 0 20px rgba(204, 0, 0, 0.3);
-    }
-    50% {
-      text-shadow:
-      0 0 6px #ff3300,       // 強赤
-      0 0 10px #ff5a36,      // 赤オレンジ
-      0 0 14px #e60000,      // 濃い赤
-      0 0 18px #990000,
-      0 0 26px rgba(160, 0, 0, 0.4); // 深めの赤
-    }
   }
-  
-  .is-flash {
-    color: #ff4444;
+  50% {
     text-shadow:
-      0 0 8px #ff4444,
-      0 0 16px #ff0000,
-      0 0 24px #ff3333,
-      0 0 32px #ff6666,
-      0 0 40px #ff9999;
-    transition: all 0.2s ease;
+      0 0 6px #ff3300,
+      0 0 10px #ff5a36,
+      0 0 14px #e60000,
+      0 0 18px #990000,
+      0 0 26px rgba(160, 0, 0, 0.4);
   }
-  
-  @keyframes flamePulse {
-    0%   { transform: scale(1); }
-    8%   { transform: scale(1.05); }
-    16%  { transform: scale(0.95); }
-    24%  { transform: scale(1.03); }
-    32%  { transform: scale(1); }
-    100% { transform: scale(1); }
-  }
+}

@@ -10,11 +10,37 @@
 
 }
 
-.p-top-profile__lead {
+.p-top-profile__lead-wrapper {
     margin-block-start: rclamp(40, 52, 375, 1440);
     display: flex;
     flex-direction: column;
     gap: 8px;
+    @include mq(sm) {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 20px;
+    }
+}
+
+
+
+.p-top-profile__lead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.p-top-profile__image {
+    margin-inline: auto;
+    inline-size: 50%;
+    img {
+        inline-size: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include mq(sm) {
+      inline-size: 200px;
+    }
 }
 
 .p-top-profile__lead-main {

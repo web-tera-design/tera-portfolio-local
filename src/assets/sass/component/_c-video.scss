@@ -22,8 +22,8 @@
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: rclamp(100, 150, 375, 1440);   /* アイコンサイズ調整 */
-  height: rclamp(100, 150, 375, 1440);
+  width: rclamp(150, 200, 375, 1440);   /* アイコンサイズ調整 */
+  height: rclamp(150, 200, 375, 1440);
   background: radial-gradient(circle at 30% 30%, #f44336, #b71c1c);
   border-radius: 50%;
   box-shadow:
@@ -43,7 +43,7 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 15px 0 15px 25px; /* 15px高さ、25px幅の三角 */
+  border-width: rclamp(30, 45, 375, 1440) 0 rclamp(30, 45, 375, 1440) rclamp(50, 75, 375, 1440); /* 15px高さ、25px幅の三角 */
   border-color: transparent transparent transparent white;
   filter: brightness(1); /* 明るさ補正 */
   z-index: 3;

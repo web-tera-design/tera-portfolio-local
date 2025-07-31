@@ -18,10 +18,9 @@
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-section__inner--mv">
             <div class="p-top-mv__content">
-                <p class="p-top-mv__label">Web coder</p>
-                <h2 class="p-top-mv__title">Tera’s portfolio</h2>
+                <h2 class="p-top-mv__title">正確さの先に、<br class="u-br--sm-down">伝わる力を。</h2>
                 <div class="p-top-mv__copy">
-                    <p class="p-top-mv__lead">納期を破るくらいなら、<br class="u-br--sp">寝ません。</p>
+                    <p class="p-top-mv__lead">デザインを引き立てるための、<br class="u-br--sm-down">実装にこだわります。</p>
                 </div>
             </div>
             <div class="p-top__image-wrapper">
@@ -286,7 +285,7 @@
                         </div>
                         <h3 class="p-top-service__title">WordPress構築</h3>
                     </div>
-                    <p class="p-top-service__text">ACFを用い、シンプルで運用しやすい管理画面を設計・実装します。カスタム投稿やカスタムフィールドの設計、既存テーマの改修にも柔軟に対応。編集者の使いやすさを大切に、無駄のない構成にします。</p>
+                    <p class="p-top-service__text">シンプルで運用しやすいサイトを設計・実装します。カスタム投稿やカスタムフィールドの設計、既存テーマの改修にも柔軟に対応。編集者の使いやすさを大切に、無駄のない構成にします。</p>
                 </li>
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
@@ -379,9 +378,18 @@
                 <p class="c-heading--en" aria-hidden="true">My story</p>
                 <h2 class="c-heading--title"><span class="u-red">私</span>について</h2>
             </div>
-            <div class="p-top-profile__lead">
-                <p class="p-top-profile__lead-main">寺川裕介<span class="p-top-profile__furigana">（てらかわ ゆうすけ）</span> </p>
-                <p class="p-top-profile__lead-sub">千葉在住のフリーランスWebコーダーです。</p>
+            <div class="p-top-profile__lead-wrapper">
+                <p class="p-top-profile__image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/tera-image.webp" alt="">
+                </p>
+                <div class="p-top-profile__lead">
+                    <p class=" p-top-profile__lead-main">テラ</p>
+                    <p class="p-top-profile__lead-sub">千葉県在住。</p>
+                    <p class="p-top-profile__lead-sub">趣味：ドライブと旅行。</p>
+                    <p class="p-top-profile__lead-sub">一番の思い出：千葉 → 御殿場アウトレット → 伊勢神宮 → 出雲大社 → 伊勢神宮 → 草津温泉 → 千葉の6泊ロングドライブ旅行。
+
+                    </p>
+                </div>
             </div>
             <ul class="p-top-profile__timeline">
                 <div class="p-top-profile__timeline-lines"></div>

@@ -74,6 +74,17 @@
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
                     <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：２週間</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">製作費：５万円</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
                         <h4 class="p-top-modal__heading">担当範囲</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
@@ -110,17 +121,6 @@
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">横スライダーのプログレスバーを自作し、バーをマウスドラッグしてスライド可能な実装を行いました。これにより操作性が大幅に向上し、ユーザーは直感的でストレスのない体験を得られます。</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：２週間</p>
-                            </li>
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：５万円</p>
                             </li>
                         </ul>
                     </li>
@@ -164,6 +164,17 @@
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
                     <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：１ヶ月</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">製作費：１０万円</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
                         <h4 class="p-top-modal__heading">担当範囲</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
@@ -196,17 +207,6 @@
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">お問い合わせフォームは、自動フォーカスやカナ変換、電話番号補正など入力支援機能をJavascriptで実装しました。<br>ラジオ・チェックボックスもTab操作時に強調表示しています。
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：１ヶ月</p>
-                            </li>
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：１０万円</p>
                             </li>
                         </ul>
                     </li>
@@ -250,6 +250,17 @@
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
                     <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：３日</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">製作費：応相談</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
                         <h4 class="p-top-modal__heading">担当範囲</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
@@ -285,17 +296,6 @@
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">音量調整には自作のスライダーUIを実装し、アラームとYouTube動画の音量はそれぞれ個別に設定可能です。<br>各音量設定はローカルストレージに保存され、次回以降も同じデバイスでタイマーを開くと、前回の設定が自動で反映されるようになっています。</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：３日</p>
-                            </li>
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：応相談</p>
                             </li>
                         </ul>
                     </li>
@@ -338,6 +338,14 @@
             </div>
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：10日</p>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="p-top-modal__item">
                         <h4 class="p-top-modal__heading">担当範囲</h4>
                         <ul class="p-top-modal__sublist">
@@ -390,14 +398,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：10日</p>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -424,6 +424,17 @@
             <div class="p-top-modal__right">
                 <ul class="p-top-modal__list">
                     <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">制作期間：１週間</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">製作費：３万円</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
                         <h4 class="p-top-modal__heading">担当範囲</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
@@ -447,17 +458,6 @@
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">CSSや構造の理解を深めることを目的としました。細かなレスポンシブ対応や擬似要素の調整など、基本の積み上げを意識しました。</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="p-top-modal__item">
-                        <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
-                        <ul class="p-top-modal__sublist">
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：１週間</p>
-                            </li>
-                            <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：３万円</p>
                             </li>
                         </ul>
                     </li>
