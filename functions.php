@@ -70,3 +70,8 @@ function theme_enqueue_assets()
     );
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_assets');
+add_action('send_headers', function () {
+    header('Cache-Control: no-cache, no-store, must-revalidate');
+    header('Pragma: no-cache');
+    header('Expires: 0');
+});
