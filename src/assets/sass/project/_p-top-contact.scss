@@ -252,15 +252,15 @@ input[type="submit"] {
   font-weight: 700;
   inline-size: min(200px, 100%);
   padding: 10px 20px;
-  background-color: $color-rd;
+  background-color: $color-wt;
   border: 2px solid $color-rd;
-  color: #fff;
+  color: $color-rd;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   @media (any-hover: hover) {
     &:hover {
-      background-color: $color-wt;
-      color: $color-rd;
+      background-color: $color-rd;
+      color: $color-wt;
     }
   }
 }

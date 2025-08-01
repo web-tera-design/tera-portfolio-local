@@ -800,12 +800,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ==== Intersection Observerに全面書き換え ここから ====
 document.addEventListener("DOMContentLoaded", () => {
+  // トップページ判定
   const isHome = document.body.classList.contains("home");
   if (!isHome) return;
 
   const header = document.querySelector(".l-header");
   const worksSections = document.querySelectorAll(".p-top-works");
 
+  if (!header || worksSections.length === 0) return;
+
+  // ヘッダー色切り替え関数（gsap対応）
   function updateHeaderColors(isActive) {
     if (!header) return;
     header.classList.toggle("js-active", isActive);
@@ -844,22 +848,36 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     } else {
       header.style.background = isActive ? "#fff" : "#222";
+      header.style.boxShadow = isActive ? "0 4px 8px rgba(0,0,0,0.2)" : "none";
     }
   }
 
-  if (header && worksSections.length) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let isActive = false;
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) isActive = true;
-        });
-        updateHeaderColors(isActive);
-      },
-      { threshold: 0 }
-    );
-    worksSections.forEach((el) => observer.observe(el));
-  }
+  // 初期は背景黒
+  updateHeaderColors(false);
+
+  // 1度白背景に切り替えたら戻らないようにフラグ管理
+  let isWhite = false;
+
+  // ScrollTriggerで監視（Worksセクションの最初の要素のみ）
+  const firstWorks = worksSections[0];
+  ScrollTrigger.create({
+    trigger: firstWorks,
+    start: "top top", // Worksセクションの先頭が画面トップに達したら
+    onEnter: () => {
+      if (!isWhite) {
+        isWhite = true;
+        updateHeaderColors(true);
+      }
+    },
+    onLeaveBack: () => {
+      if (isWhite) {
+        isWhite = false;
+        updateHeaderColors(false);
+      }
+    },
+  });
+
+  // ----- 以下、ナビゲーションのIntersection Observer部分（既存コード流用可能） -----
 
   const navLinks = Array.from(document.querySelectorAll(".c-global-nav__link, .l-header__logo-link"));
   const sections = navLinks.map((link) => document.getElementById(link.dataset.section));
@@ -874,12 +892,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = navLinks[i];
         if (entry.isIntersecting) {
           if (!pulseAnimations.has(link) && typeof gsap !== "undefined") {
-            // 他のリンクの点滅アニメを停止・リセット
+            // 他のリンクの点滅を停止・リセット
             pulseAnimations.forEach((tween, otherLink) => {
               if (otherLink !== link) {
                 tween.kill();
                 pulseAnimations.delete(otherLink);
-                // リセットスタイルを適用
                 gsap.to(otherLink, {
                   scale: 1,
                   color: header && header.classList.contains("js-active") ? "#222" : "#fff",
@@ -905,10 +922,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             pulseAnimations.set(link, tween);
           } else if (!pulseAnimations.has(link)) {
-            // pulseAnimations管理外でスタイルだけつける場合も他と区別
             pulseAnimations.forEach((_, otherLink) => {
               if (otherLink !== link) {
-                // リセット他のリンクスタイル
                 gsap.to(otherLink, {
                   scale: 1,
                   color: header && header.classList.contains("js-active") ? "#222" : "#fff",
@@ -949,26 +964,6 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => {
     if (section) navObserver.observe(section);
   });
-
-  // const mvTargets = document.querySelectorAll(".p-top-mv__label, .p-top-mv__title, .p-top-mv__lead");
-  // mvTargets.forEach((el) => {
-  //   const chars = el.textContent.trim().split("");
-  //   el.innerHTML = chars.map((char) => `<span class="is-flame is-glowIn">${char}</span>`).join("");
-  //   el.style.visibility = "visible";
-  // });
-  // const lead = document.querySelector(".p-top-mv__lead");
-  // if (lead) {
-  //   const chars = lead.querySelectorAll(".is-flame");
-  //   setInterval(() => {
-  //     const pick = Array.from(chars)
-  //       .sort(() => 0.5 - Math.random())
-  //       .slice(0, 2);
-  //     pick.forEach((el) => {
-  //       el.classList.add("is-flash");
-  //       setTimeout(() => el.classList.remove("is-flash"), 100);
-  //     });
-  //   }, 100);
-  // }
 });
 
 // 4. l-mainのmargin-block-startをl-headerの高さに合わせる (全ページ共通)
@@ -1150,12 +1145,16 @@ document.addEventListener("DOMContentLoaded", function () {
     setMainMargin();
   }
 });
+
 function startLoadingAnimation() {
   const chars = document.querySelectorAll(".p-top-loading__char");
   const portfolio = document.querySelector(".p-top-loading__portfolio");
   if (!portfolio) return;
+
   gsap.set(portfolio, { opacity: 0 });
+
   function showPortfolioRipple() {
+    // portfolioの各文字をspanで分割
     if (!portfolio.querySelector(".portfolio-char")) {
       const text = portfolio.textContent || "";
       portfolio.textContent = "";
@@ -1166,8 +1165,13 @@ function startLoadingAnimation() {
         portfolio.appendChild(span);
       }
     }
+
     const rippleChars = portfolio.querySelectorAll(".portfolio-char");
+
+    // ロゴ全体の初期状態セット
     gsap.set(portfolio, { opacity: 0, scale: 0, filter: "blur(8px)" });
+
+    // 文字色は統一でセット
     gsap.set(rippleChars, {
       color: "#fff",
       textShadow: `
@@ -1178,52 +1182,48 @@ function startLoadingAnimation() {
         0 0 20px rgba(204, 0, 0, 0.3)
       `,
     });
+
     const tl = gsap.timeline();
+
+    // 全体ズームイン＋ぼかし除去（必ず残す）
     tl.to(portfolio, {
       opacity: 1,
       scale: 1,
       filter: "blur(0px)",
       duration: 1,
-      delay: 0,
       ease: "expo.out",
     });
-    tl.fromTo(
-      rippleChars,
-      { y: 0 },
-      {
-        y: 0,
-        color: "#fff",
-        textShadow: `
-      0 0 8px #fff,
-      0 0 16px #fff,
-      0 0 32px #ff2400,
-      0 0 64px #ff2400,
-      0 0 128px #fff,
-      0 0 256px #ff2400
-    `,
-        filter: "brightness(3)",
-        duration: 0.12,
-        ease: "power1.in",
-        stagger: { amount: 0.08, from: "random" },
-      },
-      ">"
-    );
-    tl.to(rippleChars, { filter: "brightness(1)", duration: 0.1, ease: "power1.out" }, ">");
+
+    // ↓ 以下「ばらけ発光」は省略し、一斉アニメに変更または削除
+
+    // ばらけ発光の代わりに一斉だけ色やフィルターを微調整（必要なら）
     tl.to(
       rippleChars,
       {
-        opacity: 0.3,
+        color: "#fff", // 色を変えないならこの行は不要
+        textShadow: `
+          0 0 8px #fff,
+          0 0 16px #fff,
+          0 0 32px #ff2400,
+          0 0 64px #ff2400,
+          0 0 128px #fff,
+          0 0 256px #ff2400
+        `,
         filter: "brightness(3)",
-        duration: 0.03,
-        delay: 1,
-        yoyo: true,
-        repeat: 3,
-        ease: "steps(1)",
-        stagger: { amount: 0.12, from: "random" },
+        duration: 0.12,
+        ease: "power1.in",
+        // stagger: なし
       },
       ">"
     );
+
+    // 明度を元に戻す
+    tl.to(rippleChars, { filter: "brightness(1)", duration: 0.1, ease: "power1.out" }, ">");
+
+    // 黒幕フェードイン
     tl.to(".p-top-loading-blackout", { opacity: 1, duration: 1, ease: "power1.in" })
+
+      // ローディングの全体フェードアウト開始
       .to(
         ".p-top-loading",
         {
@@ -1237,7 +1237,11 @@ function startLoadingAnimation() {
         },
         "-=0.1"
       )
+
+      // ヘッダーを即座に表示
       .to(".l-header", { opacity: 1, y: 0, duration: 0, ease: "none" }, ">")
+
+      // 最後にローディング要素全面非表示
       .to(
         ".p-top-loading",
         {
@@ -1252,6 +1256,8 @@ function startLoadingAnimation() {
         "-=0.1"
       );
   }
+
+  // キャラ一つづつのバウンスアニメーション
   function bounceChar(index) {
     if (index >= chars.length) {
       showPortfolioRipple();
@@ -1616,4 +1622,22 @@ window.addEventListener("load", () => {
       btn.style.opacity = "1";
     });
   }, 100);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // トップページなら
+  if (location.pathname === "/" || location.pathname === "/index.php") {
+    document.querySelectorAll(".l-footer__link").forEach((link) => {
+      try {
+        const url = new URL(link.href);
+        if (url.origin === location.origin && url.hash) {
+          // hrefを書き換えて「#ハッシュ」のみをセット
+          link.href = url.hash;
+        }
+      } catch (e) {
+        // URL解析失敗時は無視
+        console.warn("Invalid URL in footer link:", link.href);
+      }
+    });
+  }
 });

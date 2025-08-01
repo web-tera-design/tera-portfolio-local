@@ -56,18 +56,6 @@
 .c-button--mail,
 .c-button--x {
   position: relative;
-//   transition: 
-//     transform 0.3s cubic-bezier(.4,0,.2,1);
-
-//   @media (any-hover: hover) {
-//     &:hover {
-
-//       // テキスト色も赤に
-//       .c-button__wrapper {
-//         color: $color-rd;
-//       }
-//     }
-//   }
 }
 
 // 共通ボタンラッパー
@@ -83,19 +71,23 @@
   min-block-size: 56px;
   min-inline-size: 160px;
   overflow: hidden;
-  transition: color 0.3s cubic-bezier(.4,1.6,.5,1);
+  transition: color 0.3s, background 0.3s;
 
   @media (any-hover: hover) {
     &:hover {
+      background: $color-rd;
       color: $color-wt;
 
-      &::before {
-        transform: scaleX(1);
-      }
       .c-button__link-text {
         color: $color-wt;
       }
     }
+  }
+
+  svg {
+    display: block;
+    inline-size: 32px;
+    block-size: 32px;
   }
 
   img {
@@ -104,45 +96,15 @@
     inline-size: 32px;
     block-size: 32px;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 100%;
-    background: $color-rd;
-    z-index: 0;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.5s cubic-bezier(.4,1.6,.5,1);
-  }
-}
-
-.c-button__wrapper--x {
-    @media (any-hover: hover) {
-      &:hover {
-        .c-button__logo-normal {
-            display: none;
-        }
-
-        .c-button__logo-hover {
-            display: inline-block;
-        }
-      }
-    }
-}
-
-.c-button__logo-normal {
-
-}
-
-.c-button__logo-hover {
-    display: none;
 }
 
 .c-button__link-text {
   position: relative;
   z-index: 2;
   color: $color-rd;
-  transition: color 0.3s cubic-bezier(.4,1.6,.5,1) 0.15s;
+  transition: color 0.3s;
+}
+
+.c-button__wrapper--x {
+
 }

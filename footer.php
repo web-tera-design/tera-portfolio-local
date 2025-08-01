@@ -6,22 +6,25 @@
                     <a href="/" class="l-footer__logo-link">Tera’s portfolio</a>
                 </h2>
             </div>
-            <?php $is_front = is_front_page(); ?>
+            <?php
+            // 末尾スラッシュ付きのトップページURL
+            $home_url = trailingslashit(home_url());
+            ?>
             <ul class="l-footer__list">
                 <li class="l-footer__item">
-                    <a href="<?php echo $is_front ? '#works' : home_url('/') . '#works'; ?>" class="l-footer__link">実績紹介</a>
+                    <a href="<?php echo $home_url . '#works'; ?>" class="l-footer__link">実績紹介</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="<?php echo $is_front ? '#service' : home_url('/') . '#service'; ?>" class="l-footer__link">提供サービス</a>
+                    <a href="<?php echo $home_url . '#service'; ?>" class="l-footer__link">提供サービス</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="<?php echo $is_front ? '#process' : home_url('/') . '#process'; ?>" class="l-footer__link">ご依頼の流れ</a>
+                    <a href="<?php echo $home_url . '#process'; ?>" class="l-footer__link">ご依頼の流れ</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="<?php echo $is_front ? '#profile' : home_url('/') . '#profile'; ?>" class="l-footer__link">私について</a>
+                    <a href="<?php echo $home_url . '#profile'; ?>" class="l-footer__link">私について</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="<?php echo $is_front ? '#contact' : home_url('/') . '#contact'; ?>" class="l-footer__link">お問い合わせ</a>
+                    <a href="<?php echo $home_url . '#contact'; ?>" class="l-footer__link">お問い合わせ</a>
                 </li>
                 <li class="l-footer__item">
                     <a href="#" id="email-link" class="l-footer__sns-link">
@@ -34,6 +37,7 @@
                     </a>
                 </li>
             </ul>
+
         </div>
         <div class="l-footer__bg-image">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="" width="1401" height="1221">
@@ -186,7 +190,7 @@
                         <h4 class="p-top-modal__heading">サイト概要</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">Wordpressで構築した架空のクリニックサイトです。</p>
+                                <p class="p-top-modal__message">WordPressで構築した架空のクリニックサイトです。</p>
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">カスタム投稿（例：お知らせ、スタッフ紹介、事例など）を導入し、クライアントが迷わず管理できる構成です。</p>
@@ -206,7 +210,7 @@
                                 <p class="p-top-modal__message">トップページのファーストビューには、GSAPによる立体的なスライドアクションを採用しました。<br>テキストは一文字ずつ上下にアニメーションさせながら表示し、印象的かつメッセージ性の高い演出を実現しています。</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">お問い合わせフォームは、自動フォーカスやカナ変換、電話番号補正など入力支援機能をJavascriptで実装しました。<br>ラジオ・チェックボックスもTab操作時に強調表示しています。
+                                <p class="p-top-modal__message">お問い合わせフォームは、自動フォーカスやカナ変換、電話番号補正など入力支援機能をJavaScriptで実装しました。<br>ラジオ・チェックボックスもTab操作時に強調表示しています。
                             </li>
                         </ul>
                     </li>

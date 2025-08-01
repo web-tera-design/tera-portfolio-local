@@ -72,7 +72,7 @@
 
 
 .p-top-profile__timeline-item {
-  margin-block-end: 200px;
+  margin-block-end: 70px;
   position: relative;
   background: rgba(255, 255, 255, 0.10);   // 透明度10%（かなり透ける）
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
@@ -99,7 +99,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 3px;
-  background: $color-rd;
+  background: #e1e1e1;
   z-index: 2;
   /* height, topはJSで動的に指定 */
 }

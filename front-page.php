@@ -18,9 +18,9 @@
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-section__inner--mv">
             <div class="p-top-mv__content">
-                <h2 class="p-top-mv__title">正確さの先に、<br class="u-br--sm-down">伝わる力を。</h2>
+                <h2 class="p-top-mv__title">正確さの先に、<br>伝わる力を。</h2>
                 <div class="p-top-mv__copy">
-                    <p class="p-top-mv__lead">デザインを引き立てるための、<br class="u-br--sm-down">実装にこだわります。</p>
+                    <p class="p-top-mv__lead">デザインを引き立てる<br class="u-br--sm-down">実装にこだわります。</p>
                 </div>
             </div>
             <div class="p-top__image-wrapper">
@@ -77,7 +77,7 @@
                     </div>
                     <h3 class="p-top-works__title">クリニックサイト（サンプル）</h3>
                     <ul class="c-tags">
-                        <li class="c-tag">Wordpress</li>
+                        <li class="c-tag">WordPress</li>
                         <li class="c-tag">Figma</li>
                         <li class="c-tag">FLOCSS</li>
                     </ul>
@@ -101,7 +101,7 @@
                     <h3 class="p-top-works__title">自作ポモドーロタイマー</h3>
                     <ul class="c-tags">
                         <li class="c-tag">その他</li>
-                        <li class="c-tag">Javascript</li>
+                        <li class="c-tag">JavaScript</li>
                         <li class="c-tag">GSAP</li>
                     </ul>
                 </li>
@@ -122,8 +122,8 @@
                     </div>
                     <h3 class="p-top-works__title">ポートフォリオサイト</h3>
                     <ul class="c-tags">
-                        <li class="c-tag">Wordpress</li>
-                        <li class="c-tag">Javascript</li>
+                        <li class="c-tag">WordPress</li>
+                        <li class="c-tag">JavaScript</li>
                         <li class="c-tag">FLOCSS</li>
                     </ul>
                 </li>
@@ -447,8 +447,9 @@
                     <span id="mail-link" class="c-button c-button--mail"></span>
                     <a href=" https://x.com/BR5J6DXbuz70037" target="_blank" rel="nofollow noopener" class="c-button c-button--x" aria-label="X（旧Twitter）">
                         <span class="c-button__wrapper c-button__wrapper--x p-top-contact__button-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo.webp" class="c-button__logo-normal" alt="" width="2400" height="2453">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/x-logo-wt.webp" class="c-button__logo-hover" alt="" width="2400" height="2453">
+                            <svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none">
+                                <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="currentColor" />
+                            </svg>
                             <span class="c-button__link-text">で連絡する</span>
                         </span>
                     </a>

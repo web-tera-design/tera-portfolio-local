@@ -113,6 +113,8 @@ dialog {
 
 .p-top-modal__body {
   margin-block-start: 32px;
+  max-inline-size: 800px;
+  margin-inline: auto;
 }
 
 .p-top-modal__left {
@@ -120,8 +122,6 @@ dialog {
 }
 
 .p-top-modal__image {
-  margin-inline: auto;
-  max-inline-size: 800px;
   img {
     inline-size: 100%;
     block-size: auto;

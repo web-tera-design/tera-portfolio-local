@@ -27,7 +27,6 @@
     position: relative;
     z-index: 1;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
-    padding-block-start: 80px;
     margin-inline: auto;
 
     @include mq(lg) {
@@ -51,13 +50,13 @@
     margin-block-start: rclamp(10, 20, 375, 1440);
     color: $color-wt;
     font-family: $font-sub;
-    font-size: rclamp(32, 56, 375, 1440);
+    font-size: rclamp(44, 70, 375, 1440);
     font-weight: 700;
     letter-spacing: rclamp(2, 3, 375, 1440);
     line-height: 150%;
 
     @include mq(lg) {
-      font-size: min(56px, 3.8888888888vw);
+      font-size: min(70px, 4.8611111111vw);
     }
 }
 
@@ -68,13 +67,13 @@
 .p-top-mv__lead {
     margin-block-start: 20px;
     color: $color-wt;
-    font-size: rclamp(24, 36, 375, 1440);
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: rclamp(2, 3, 375, 1440);
     line-height: 150%;
 
     @include mq(lg) {
-      font-size: min(40px, 2.7777777777vw);
+      font-size: min(22px, 1.52777777vw);
     }
 }
 
@@ -98,7 +97,7 @@
     position: absolute;
     z-index: -1;
     aspect-ratio: 115 / 100;
-    margin-block-start: rclamp(53, -350, 375, 900);
+    margin-block-start: rclamp(10, -250, 375, 900);
     right: -60px;
     inline-size: rclamp(419, 748, 375, 1440);
     // inline-size: 419px;
