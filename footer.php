@@ -27,7 +27,7 @@
                     <a href="<?php echo $home_url . '#contact'; ?>" class="l-footer__link">お問い合わせ</a>
                 </li>
                 <li class="l-footer__item">
-                    <a href="#" id="email-link" class="l-footer__sns-link">
+                    <a href="#" id="email-link" target="_blank" class="l-footer__sns-link">
                         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/email-icon.webp" alt="メールアイコン" width="50" height="50">
                     </a>
                 </li>
@@ -80,10 +80,59 @@
                         <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：２週間</p>
+                                <p class="p-top-modal__message">制作期間：2週間</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：５万円</p>
+                                <p class="p-top-modal__message">製作費：5万円</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">サイト仕様</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">種類：ランディングページ</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">セクション数：10セクション</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">縦の長さ：約11,500px</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">使用アニメーションなど</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">ハンバーガーメニュー/ドロワーメニュー</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">ヘッダーのドロップダウンメニュー</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">Swiperによるスライダー、またカスタムプログレスバーのドラッグ操作によるスライド制御</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">アコーディオン</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">タブ切り替え</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">モーダルウインドウ</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">GSAP ScrollTriggerを利用したスクロール連動アニメーション</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">線やドットの伸長アニメーション</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">CTAボタンの表示・非表示制御</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">パララックス</p>
                             </li>
                         </ul>
                     </li>
@@ -170,10 +219,65 @@
                         <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：１ヶ月</p>
+                                <p class="p-top-modal__message">制作期間：1ヶ月</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：１０万円</p>
+                                <p class="p-top-modal__message">費用の目安：10〜12万円</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">サイト仕様</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">種類：WordPressサイト</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">ページ数：15ページ</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">トップページ1ページ、固定ページ7ページ（About、Contact、診療内容、予約など）、投稿系ページ6ページ（お知らせ・ブログの一覧／詳細／カテゴリ）、404ページの合計15ページ構成になっています。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-top-modal__item">
+                        <h4 class="p-top-modal__heading">使用アニメーションなど</h4>
+                        <ul class="p-top-modal__sublist">
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">ハンバーガーメニュー/ドロワーメニュー</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">ヘッダーのドロップダウンメニュー</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">Swiperによるスライダー</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">アコーディオン</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">モーダルウインドウ</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">GSAP ScrollTriggerを利用したスクロール連動アニメーション</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">CTAボタンの表示・非表示制御</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">問い合わせフォーム</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">投稿機能</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">カスタムフィールド</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">カスタムHTML組み込み</p>
+                            </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">自動バックアップ対応</p>
                             </li>
                         </ul>
                     </li>
@@ -256,10 +360,10 @@
                         <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：３日</p>
+                                <p class="p-top-modal__message">制作期間：3日</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：応相談</p>
+                                <p class="p-top-modal__message">費用の目安：応相談</p>
                             </li>
                         </ul>
                     </li>
@@ -347,6 +451,9 @@
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">制作期間：10日</p>
                             </li>
+                            <li class="p-top-modal__subitem">
+                                <p class="p-top-modal__message">費用の目安：応相談</p>
+                            </li>
                         </ul>
                     </li>
                     <li class="p-top-modal__item">
@@ -429,10 +536,10 @@
                         <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：１週間</p>
+                                <p class="p-top-modal__message">制作期間：1週間</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：３万円</p>
+                                <p class="p-top-modal__message">費用の目安：3〜4万円</p>
                             </li>
                         </ul>
                     </li>
