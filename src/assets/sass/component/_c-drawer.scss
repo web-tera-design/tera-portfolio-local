@@ -114,3 +114,8 @@
     }
 }
 
+.c-drawer__link:focus,
+.c-drawer__link:focus-visible {
+  color: $color-rd;
+  transform: scale(1.1);
+}

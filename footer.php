@@ -54,7 +54,7 @@
             閉じる
         </button>
         <h3 id="modal-head1" class="p-top-modal__title">求人サイト（サンプル）</h3>
-        <div class="p-top-modal__body">
+        <div id="modal-text1" class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <div class="c-video">
@@ -64,11 +64,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/interview-modal.mp4" type="video/mp4"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/interview-modal.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/interview-modal.webm" type="video/webm">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/interview-modal.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -193,7 +192,7 @@
             閉じる
         </button>
         <h3 id="modal-head2" class="p-top-modal__title">クリニックサイト（サンプル）</h3>
-        <div class="p-top-modal__body">
+        <div id="modal-text2" class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <div class="c-video">
@@ -203,11 +202,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic-modal.mp4" type="video/mp4"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic-modal.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/clinic-modal.webm" type="video/webm">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic-modal.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -334,7 +332,7 @@
             閉じる
         </button>
         <h3 id="modal-head3" class="p-top-modal__title">自作ポモドーロタイマー</h3>
-        <div class="p-top-modal__body">
+        <div id="modal-text3" class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <div class="c-video">
@@ -344,11 +342,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro.mp4" type="video/mp4"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/src/assets/video/pomodoro.webm" type="video/webm">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -422,8 +419,8 @@
         <button class="p-top-modal__close-btn">
             閉じる
         </button>
-        <h3 id="modal-head3" class="p-top-modal__title">ポートフォリオサイト</h3>
-        <div class="p-top-modal__body">
+        <h3 id="modal-head4" class="p-top-modal__title">ポートフォリオサイト</h3>
+        <div id="modal-text4" class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <div class="c-video">
@@ -433,11 +430,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.mp4"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.mp4" type="video/mp4"
                             width="100%"
                             height="auto">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.mp4" type="video/mp4" />
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.webm" type="video/webm" />
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -524,7 +520,7 @@
             閉じる
         </button>
         <h3 id="modal-head5" class="p-top-modal__title">キャンペーンサイト（サンプル）</h3>
-        <div class="p-top-modal__body">
+        <div id="modal-text5" class="p-top-modal__body">
             <div class="p-top-modal__left">
                 <div class="p-top-modal__image p-top-modal-mockup-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="" width="672" height="449">

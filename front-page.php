@@ -18,14 +18,14 @@
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-section__inner--mv">
             <div class="p-top-mv__content">
-                <h2 class="p-top-mv__title">正確さの先に、<br>伝わる力を。</h2>
+                <h1 class="p-top-mv__title">正確さの先に、<br>伝わる力を。</h1>
                 <div class="p-top-mv__copy">
                     <p class="p-top-mv__lead">デザインを引き立てる<br class="u-br--sm-down">実装にこだわります。</p>
                 </div>
             </div>
             <div class="p-top__image-wrapper">
                 <div class="p-top-mv__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="" width="1401" height="1221">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mv-image-pc.webp" alt="パソコンの画面" width="1401" height="1221" loading="eager">
                 </div>
             </div>
         </div>
@@ -34,25 +34,24 @@
     <section id="works" class="p-top-works">
         <div class="p-top-works__inner l-section__inner l-section__inner--narrow">
             <div class="c-section-heading">
-                <p class="c-heading--en" aria-hidden="true">Works</p>
+                <span class="c-heading--en" aria-hidden="true">Works</span>
                 <h2 class="c-heading--title"><span class="u-red">実</span>績紹介</h2>
             </div>
             <ul class="p-top-works__list">
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal1">
-                    <div class="p-top-works__image p-top-mockup-container">
+                    <a href="#modal1" class="p-top-works__image p-top-mockup-container">
                         <video
                             autoplay
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top.mp4" type="video/mp4"
                             width="100%"
                             height="auto">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top.webm" type="video/webm">
                             お使いのブラウザでは動画を再生できません。
                         </video>
-                    </div>
+                    </a>
                     <h3 class="p-top-works__title">求人サイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
@@ -61,20 +60,19 @@
                     </ul>
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal2">
-                    <div class="p-top-works__image p-top-mockup-container">
+                    <a href="#modal2" class="p-top-works__image p-top-mockup-container">
                         <video
                             autoplay
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.mp4" type="video/mp4"
                             width="100%"
                             height="auto">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.webm" type="video/webm">
                             お使いのブラウザでは動画を再生できません。
                         </video>
-                    </div>
+                    </a>
                     <h3 class="p-top-works__title">クリニックサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">WordPress</li>
@@ -83,21 +81,20 @@
                     </ul>
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal3">
-                    <div class="p-top-works__image p-top-mockup-container">
+                    <a href="#modal3" class="p-top-works__image p-top-mockup-container">
                         <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                         <video
                             autoplay
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top.mp4" type="video/mp4"
                             width="100%"
                             height="auto">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top.mp4" type="video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top.webm" type="video/webm">
                             お使いのブラウザでは動画を再生できません。
                         </video>
-                    </div>
+                    </a>
                     <h3 class="p-top-works__title">自作ポモドーロタイマー</h3>
                     <ul class="c-tags">
                         <li class="c-tag">その他</li>
@@ -106,7 +103,7 @@
                     </ul>
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal4">
-                    <div class="p-top-works__image p-top-mockup-container">
+                    <a href="#modal4" class="p-top-works__image p-top-mockup-container">
                         <video
                             autoplay
                             loop
@@ -116,10 +113,9 @@
                             width="100%"
                             height="auto">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.mp4" type=" video/mp4">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.webm" type="video/webm">
                             お使いのブラウザでは動画を再生できません。
                         </video>
-                    </div>
+                    </a>
                     <h3 class="p-top-works__title">ポートフォリオサイト</h3>
                     <ul class="c-tags">
                         <li class="c-tag">WordPress</li>
@@ -128,9 +124,9 @@
                     </ul>
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal5">
-                    <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="" width="672" height="449">
-                    </div>
+                    <a href="#modal5" class="p-top-works__image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/campaign.webp" alt="キャンペーサイトの画像" width="672" height="449" loading="lazy">
+                    </a>
                     <h3 class="p-top-works__title">キャンペーンサイト（サンプル）</h3>
                     <ul class="c-tags">
                         <li class="c-tag">LP</li>
@@ -139,12 +135,11 @@
                     </ul>
                 </li>
                 <li class="p-top-works__item p-top-works__item--disabled p-modal__open-btn js-modal__open-btn" data-dialog="modal6">
-                    <div class="p-top-works__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-koumuten.webp" alt="" width="672" height="450">
-                    </div>
+                    <a href="#modal6" class="p-top-works__image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-koumuten.webp" alt="丸山工務店の画像" width="672" height="450" loading="lazy">
+                    </a>
                     <span class="p-top-works__detail">このページは近日公開予定です。
                     </span>
-                    <h3 class="p-top-works__title"></h3>
                 </li>
             </ul>
         </div>
@@ -153,7 +148,7 @@
     <section class="p-top-commitment">
         <div class="p-top-commitment__inner l-section__inner">
             <div class="c-section-heading">
-                <p class="c-heading--en" aria-hidden="true">Commitment</p>
+                <span class="c-heading--en" aria-hidden="true">Commitment</span>
                 <h2 class="c-heading--title"><span class="u-red">信</span>念とこだわり</h2>
             </div>
             <ul class="p-top-commitment__list">
@@ -179,8 +174,8 @@
                     </h3>
                     <p class="p-top-commitment__message">
                         朝5時から夜9時まで、年中無休で対応。<br>即レス・即対応でやり取りのストレスをなくし、<br>進捗は
-                        <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
-                            <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
+                        <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">
+                            情報共有シート
                         </a>
                         でいつでも確認可能。<br>安心してお任せいただける体制を整えています。
                     </p>
@@ -193,66 +188,63 @@
         <div class="p-top-assurance__inner l-section__inner l-section__inner--narrow">
             <div class="p-top-assurance__heading">
                 <div class="c-section-heading">
-                    <p class="c-heading--en p-top-section-heading" aria-hidden="true">Assurance</p>
+                    <span class="c-heading--en p-top-section-heading" aria-hidden="true">Assurance</span>
                     <h2 class="c-heading--title p-top-assurance__heading-title"><span class="u-red">安</span>心して<br>ご依頼いただくために</h2>
                 </div>
                 <p class="p-top-assurance__lead">お客様に心からご満足いただけるよう、細部までこだわった安心の体制を整えています。</p>
                 <div class="p-top-assurance__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/assurance-image.webp" alt="" width="780" height="620">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/assurance-image.webp" alt="" width="780" height="620" loading="lazy">
                 </div>
             </div>
             <ul class="p-top-assurance__list">
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">緊急対応・仕様変更への柔軟な対応</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li>
-                            <p class="p-top-assurance__text">ご相談いただければ、当日・翌日の緊急案件にもできる限り対応します。</p>
+                        <li class="p-top-assurance__text">
+                            ご相談いただければ、当日・翌日の緊急案件にもできる限り対応します。
                         </li>
-                        <li>
-                            <p class="p-top-assurance__text">修正のご依頼は、完了までにかかる日数をすぐにご案内し、安心してお任せいただけるよう努めています。</p>
+                        <li class="p-top-assurance__text">
+                            修正のご依頼は、完了までにかかる日数をすぐにご案内し、安心してお任せいただけるよう努めています。
                         </li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">納品ルールの遵守と品質の担保</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li>
-                            <p class="p-top-assurance__text">FLOCSSやBEMなどの一般的な設計はもちろん、プロジェクト固有ルールにも対応します。</p>
+                        <li class="p-top-assurance__text">
+                            FLOCSSやBEMなどの一般的な設計はもちろん、プロジェクト固有ルールにも対応します。
                         </li>
-                        <li>
-                            <p class="p-top-assurance__text">意味に合ったHTMLタグを適切に使い分け、構造的なマークアップを行うことで、SEOやアクセシビリティにも配慮した設計を心がけています。</p>
+                        <li class="p-top-assurance__text">
+                            意味に合ったHTMLタグを適切に使い分け、構造的なマークアップを行うことで、SEOやアクセシビリティにも配慮した設計を心がけています。
                         </li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">スムーズな進行管理と報連相</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li>
-                            <p class="p-top-assurance__text">
-                                <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
-                                    <span class="p-top-commitment__tooltip">情報共有シートを<br>ご覧ください</span>
-                                </a>を使って、進捗情報を共有・可視化しています。
-                            </p>
+                        <li class="p-top-assurance__text">
+                            <a class="p-top-commitment__link" href="https://docs.google.com/spreadsheets/d/1HAcFoCzCtzHXlFC8dfEGhRxUAdHLj8vURv6Hsz660_U/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">情報共有シート
+                            </a>を使って、進捗情報を共有・可視化しています。
                         </li>
-                        <li>
-                            <p class="p-top-assurance__text">どんな内容でも当日中に必ずご返信します。対応の早さで、安心と信頼をお届けします。</p>
+                        <li class="p-top-assurance__text">
+                            どんな内容でも当日中に必ずご返信します。対応の早さで、安心と信頼をお届けします。>
                         </li>
                     </ul>
                 </li>
                 <li class="p-top-assurance__item">
                     <h3 class="p-top-assurance__title">使用ツール・環境への柔軟な対応</h3>
                     <ul class="p-top-assurance__sublist">
-                        <li>
-                            <p class="p-top-assurance__text">対応カンプ： Figma / XD / Photoshop / Illustrator</p>
+                        <li class="p-top-assurance__text">
+                            対応カンプ： Figma / XD / Photoshop / Illustrator>
                         </li>
-                        <li>
-                            <p class="p-top-assurance__text">対応ツール： Zeplin / Backlog / Git</p>
+                        <li class="p-top-assurance__text">
+                            対応ツール： Zeplin / Backlog / Git>
                         </li>
-                        <li>
-                            <p class="p-top-assurance__text">対応ブラウザ： Safari / Chrome / Firefox / Edge</p>
+                        <li class="p-top-assurance__text">
+                            対応ブラウザ： Safari / Chrome / Firefox / Edge>
                         </li>
-                        <li>
-                            <p class="p-top-assurance__text">対応OS： Mac / Windows / iPhone / Android</p>
+                        <li class="p-top-assurance__text">
+                            対応OS： Mac / Windows / iPhone / Android>
                         </li>
                     </ul>
                 </li>
@@ -265,14 +257,14 @@
     <section id="service" class="p-top-service">
         <div class="p-top-service__inner l-section__inner l-section__inner--narrow">
             <div class="c-section-heading">
-                <p class="c-heading--en" aria-hidden="true">Services</p>
+                <span class="c-heading--en" aria-hidden="true">Services</span>
                 <h2 class="c-heading--title"><span class="u-red">提</span>供サービス</h2>
             </div>
             <ul class="p-top-service__list">
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
                         <div class="p-top-service__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-coding.svg" alt="" width="61" height="61">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-coding.svg" alt="" width="61" height="61" loading="lazy">
                         </div>
                         <h3 class="p-top-service__title">コーディング</h3>
                     </div>
@@ -281,7 +273,7 @@
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
                         <div class="p-top-service__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-wordpress.svg" alt="" width="61" height="61">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-wordpress.svg" alt="" width="61" height="61" loading="lazy">
                         </div>
                         <h3 class="p-top-service__title">WordPress構築</h3>
                     </div>
@@ -290,7 +282,7 @@
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
                         <div class="p-top-service__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-animation.svg" alt="" width="61" height="61">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-animation.svg" alt="" width="61" height="61" loading="lazy">
                         </div>
                         <h3 class="p-top-service__title">アニメーション実装</h3>
                     </div>
@@ -299,7 +291,7 @@
                 <li class="p-top-service__item">
                     <div class="p-top-service__heading">
                         <div class="p-top-service__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-spot.svg" alt="" width="61" height="60">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/service-spot.svg" alt="" width="61" height="60" loading="lazy">
                         </div>
                         <h3 class="p-top-service__title">修正対応・スポット作業</h3>
                     </div>
@@ -313,21 +305,21 @@
         <div class="p-top-process__inner l-section__inner--lg l-section__inner--narrow">
             <div class="p-top-process__heading">
                 <div class="c-section-heading">
-                    <p class="c-heading--en" aria-hidden="true">Process</p>
+                    <span class="c-heading--en" aria-hidden="true">Process</span>
                     <h2 class="c-heading--title"><span class="u-red">ご</span>依頼の流れ</h2>
                 </div>
                 <p class="p-top-process__heading-lead">
 
                 </p>
             </div>
-            <ul class="p-top-process__steps">
+            <ol class="p-top-process__steps">
                 <li class="p-top-process__step">
                     <div class="p-top-process__icon-wrapper">
                         <div class="p-top-process__icon-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101" loading="lazy">
                         </div>
                         <div class="p-top-process__icon" aria-hidden="true">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step1.svg" alt="" width="57" height="57">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step1.svg" alt="" width="57" height="57" loading="lazy">
                         </div>
                     </div>
                     <div class="p-top-process__content">
@@ -340,10 +332,10 @@
                 <li class="p-top-process__step">
                     <div class="p-top-process__icon-wrapper">
                         <div class="p-top-process__icon-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101" loading="lazy">
                         </div>
                         <div class="p-top-process__icon" aria-hidden="true">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step2.svg" alt="" width="57" height="57">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step2.svg" alt="" width="57" height="57" loading="lazy">
                         </div>
                     </div>
                     <div class="p-top-process__content">
@@ -356,10 +348,10 @@
                 <li class="p-top-process__step">
                     <div class="p-top-process__icon-wrapper">
                         <div class="p-top-process__icon-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-bg.svg" alt="" width="101" height="101" loading="lazy">
                         </div>
                         <div class="p-top-process__icon" aria-hidden="true">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step3.svg" alt="" width="53" height="45">
+                            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/process-step3.svg" alt="" width="53" height="45" loading="lazy">
                         </div>
                     </div>
                     <div class="p-top-process__content">
@@ -368,19 +360,19 @@
                         <p class="p-top-process__step-description">共有いただいた資料やご要望に沿って、制作をスタートいたします。進行中も適宜ご連絡を差し上げ、ご確認いただきながら進めますので、はじめての方でも安心してご依頼いただけます。</p>
                     </div>
                 </li>
-            </ul>
+            </ol>
         </div>
     </section>
 
     <section id="profile" class="p-top-profile">
         <div class="p-top-profile__inner l-section__inner--lg l-section__inner--narrow">
             <div class="c-section-heading">
-                <p class="c-heading--en" aria-hidden="true">My story</p>
+                <span class="c-heading--en" aria-hidden="true">My story</span>
                 <h2 class="c-heading--title"><span class="u-red">私</span>について</h2>
             </div>
             <div class="p-top-profile__lead-wrapper">
                 <p class="p-top-profile__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/tera-image.webp" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/tera-image.webp" alt="プロフィール写真" width="400" height="400" loading="lazy">
                 </p>
                 <div class="p-top-profile__lead">
                     <p class=" p-top-profile__lead-main">テラ</p>
@@ -439,7 +431,7 @@
         <div class="p-top-contact__inner l-section__inner--lg l-section__inner--narrow">
             <div class="p-top-contact__heading">
                 <div class="c-section-heading">
-                    <p class="c-heading--en" aria-hidden="true">Contact</p>
+                    <span class="c-heading--en" aria-hidden="true">Contact</span>
                     <h2 class="c-heading--title"><span class="u-red">お</span>問い合わせ</h2>
                 </div>
                 <p class="p-top-contact__description">1営業日以内に必ずご返信します！<br class="u-br--sp">（5:00〜21:00対応）<br>お気軽にお問い合わせください。</p>
