@@ -75,8 +75,11 @@
 .p-top-contact__data .wpcf7-not-valid-tip {
   position: absolute;
   inset-inline-start: -20px;
-  inset-block-start: 45px;
+  inset-block-end: -70px;
   inline-size: 100%;
+  @include mq(ct) {
+    inset-block-end: -50px;
+  }
   /* ここでliの下に見えるようにレイアウト調整 */
 }
 
@@ -134,9 +137,8 @@
 
 .p-top-contact__data--checkbox .wpcf7-not-valid-tip {
     inset-inline-start: 0;
-     inset-block-start: 105px;   
+     inset-block-end: -30px;   
     @include mq(md) {
-        inset-block-start: 90px;
     }
 }
 

@@ -45,10 +45,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top.mp4" type="video/mp4"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </a>
@@ -66,10 +66,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.mp4" type="video/mp4"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </a>
@@ -82,16 +82,15 @@
                 </li>
                 <li class="p-top-works__item p-modal__open-btn js-modal__open-btn" data-dialog="modal3">
                     <a href="#modal3" class="p-top-works__image p-top-mockup-container">
-                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/img/mockup.webp" alt=""> -->
                         <video
                             autoplay
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top.mp4" type="video/mp4"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </a>
@@ -112,7 +111,7 @@
                             poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.mp4"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.mp4" type=" video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top2.mp4" type=" video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </a>
@@ -251,8 +250,6 @@
             </ul>
         </div>
     </section>
-
-
 
     <section id="service" class="p-top-service">
         <div class="p-top-service__inner l-section__inner l-section__inner--narrow">

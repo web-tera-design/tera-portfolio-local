@@ -64,10 +64,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/interview-modal.mp4" type="video/mp4"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/interview-modal.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/interview-modal2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -202,10 +202,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic-modal.mp4" type="video/mp4"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp" type="video/mp4"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic-modal.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic-modal2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -342,10 +342,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro.mp4" type="video/mp4"
-                            width="100%"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
+                            width=" 100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
@@ -430,10 +430,10 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.mp4" type="video/mp4"
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/portfolio.webp"
                             width="100%"
                             height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal.mp4" type="video/mp4" />
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-modal2.mp4" type="video/mp4" />
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </div>
