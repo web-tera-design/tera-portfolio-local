@@ -18,7 +18,7 @@
     if (is_singular() && has_post_thumbnail()) {
         $og_image = get_the_post_thumbnail_url(null, 'full');
     } else {
-        $og_image = get_template_directory_uri() . '/img/og-image.jpg';
+        $og_image = get_template_directory_uri() . '/dist/assets/img/ogp-portfolio.webp';
     }
     // OGP URL
     $og_url = is_singular() ? get_permalink() : home_url();

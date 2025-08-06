@@ -136,9 +136,11 @@
 }
 
 .p-top-contact__data--checkbox .wpcf7-not-valid-tip {
+  display: none;
+  @include mq(md) {
+    display: block;
     inset-inline-start: 0;
      inset-block-end: -30px;   
-    @include mq(md) {
     }
 }
 

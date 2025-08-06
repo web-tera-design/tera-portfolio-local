@@ -34,5 +34,7 @@ html, body {
 /* 共通のフォーカススタイル */
 a:focus, a:focus-visible,
 button:focus, button:focus-visible {
-  border: 3px solid #0071bc;
+  transition: transform 0.3s, color 0.3s ease;
+  transform: scale(1.05);
+  color: $color-rd;
 }

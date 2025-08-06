@@ -79,10 +79,10 @@
                         <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：2週間</p>
+                                <p class="p-top-modal__message">制作期間：1週間程度</p>
                             </li>
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">製作費：5万円</p>
+                                <p class="p-top-modal__message">製作費：5〜6万円</p>
                             </li>
                         </ul>
                     </li>
@@ -217,7 +217,7 @@
                         <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：1ヶ月</p>
+                                <p class="p-top-modal__message">制作期間：2〜3週間程度</p>
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">費用の目安：10〜12万円</p>
@@ -445,7 +445,7 @@
                         <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：10日</p>
+                                <p class="p-top-modal__message">制作期間：1週間程度</p>
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">費用の目安：応相談</p>
@@ -508,7 +508,7 @@
         </div>
     </div>
     <div class="p-top-modal__link-body l-section__inner--narrow l-section__inner--modal">
-        <a href="https://web-tera-design.com/youtube-timer/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
+        <a href="https://tera-portfolio.web-tera-design.com/" target="_blank" rel="nofollow noopener" class="c-button c-button__wrapper">
             <span class="c-button__link-text">サイトを見る</span>
         </a>
     </div>
@@ -532,7 +532,7 @@
                         <h4 class="p-top-modal__heading">制作期間と費用の目安</h4>
                         <ul class="p-top-modal__sublist">
                             <li class="p-top-modal__subitem">
-                                <p class="p-top-modal__message">制作期間：1週間</p>
+                                <p class="p-top-modal__message">制作期間：1週間程度</p>
                             </li>
                             <li class="p-top-modal__subitem">
                                 <p class="p-top-modal__message">費用の目安：3〜4万円</p>

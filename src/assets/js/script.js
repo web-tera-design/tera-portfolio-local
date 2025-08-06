@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 7. 動画クリック再生/停止 (全ページ共通)
+// // 7. 動画クリック再生/停止 (全ページ共通)
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".js-click-video").forEach((video) => {
     video.addEventListener("click", () => {
@@ -670,14 +670,16 @@ let lineTriggers = [];
 function updateTimelineLines() {
   const ul = document.querySelector(".p-top-profile__timeline");
   if (!ul) return;
+
   const linesContainer = ul.querySelector(".p-top-profile__timeline-lines");
   const items = ul.querySelectorAll(".p-top-profile__timeline-item");
   if (!linesContainer || !items.length) return;
 
-  // 既存のScrollTriggerを破棄
+  // 既存のScrollTriggerインスタンスを破棄
   lineTriggers.forEach((trigger) => trigger.kill());
   lineTriggers = [];
 
+  // 線要素をクリアして作り直す
   linesContainer.innerHTML = "";
   const lines = [];
 
@@ -694,9 +696,9 @@ function updateTimelineLines() {
     }
   });
 
-  lines.forEach(({ line, item, i }) => {
+  lines.forEach(({ line, item }) => {
     const style = window.getComputedStyle(item);
-    const marginEnd = parseFloat(style.marginBlockEnd);
+    const marginEnd = parseFloat(style.marginBlockEnd) || 20;
 
     const trigger = ScrollTrigger.create({
       trigger: item,
@@ -704,7 +706,7 @@ function updateTimelineLines() {
       end: "bottom 50%",
       scrub: true,
       onUpdate: (self) => {
-        const ulRect = ul.getBoundingClientRect(); // ←必須
+        const ulRect = ul.getBoundingClientRect();
         const rect = item.getBoundingClientRect();
         line.style.top = rect.bottom - ulRect.top + "px";
         line.style.height = marginEnd * self.progress + "px";
@@ -712,83 +714,41 @@ function updateTimelineLines() {
     });
     lineTriggers.push(trigger);
   });
-
-  items.forEach((item, i) => {
-    if (i === 0) {
-      // 最初のitemは常に表示状態にしておく
-      gsap.set(item, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        filter: "blur(0px)",
-        textShadow: "none",
-        color: "#222",
-      });
-    } else if (i === items.length - 1) {
-      gsap.fromTo(
-        item,
-        {
-          opacity: 0,
-          y: 60,
-          scale: 0.88,
-          filter: "blur(8px)",
-          textShadow: "0 12px 32px rgba(0,0,0,0.35)",
-          color: "#bfa046",
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-          textShadow: "0 4px 16px rgba(191,160,70,0.4)",
-          color: "#222",
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "bottom 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
-          },
-        }
-      );
-    } else {
-      gsap.fromTo(
-        item,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 0.5,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "bottom 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
-          },
-        }
-      );
-    }
-  });
-
   ScrollTrigger.refresh();
 }
 
-window.addEventListener("load", () => setTimeout(updateTimelineLines, 1000));
-window.addEventListener("resize", () => {
-  updateTimelineLines();
-  ScrollTrigger.refresh();
+// 画面ロード時に二重のrequestAnimationFrame＋適度な遅延を入れて呼び出し
+function delayedUpdate() {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      updateTimelineLines();
+      ScrollTrigger.refresh();
+    });
+  });
+}
+window.addEventListener("load", () => {
+  // 2秒は環境やコンテンツによって調整してください
+  setTimeout(delayedUpdate, 2000);
 });
 
+// ResizeObserverで関連要素を監視して変化あれば再描画
 const ulTimeline = document.querySelector(".p-top-profile__timeline");
 if (ulTimeline) {
+  const linesContainer = ulTimeline.querySelector(".p-top-profile__timeline-lines");
+  const timelineItems = ulTimeline.querySelectorAll(".p-top-profile__timeline-item");
+
   const resizeObserver = new ResizeObserver(() => {
     updateTimelineLines();
     ScrollTrigger.refresh();
   });
+
   resizeObserver.observe(ulTimeline);
+
+  if (linesContainer) resizeObserver.observe(linesContainer);
+  timelineItems.forEach((item) => resizeObserver.observe(item));
 }
 
+// shineアニメーション（必要ならそのまま）
 const shine = document.querySelector(".u-shine");
 const shineTarget = document.querySelector(".u-shine-target");
 if (shine && shineTarget && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -888,31 +848,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Contact section フォーカス (observerでなくscroll判定で。必要に応じてobserver化可)
-const contactSection = document.getElementById("contact");
-if (contactSection) {
-  window.addEventListener("scroll", () => {
-    const rect = contactSection.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.2) {
-      const firstData = contactSection.querySelector(".p-top-contact__data");
-      if (firstData && !firstData.classList.contains("is-focus")) {
-        firstData.classList.add("is-focus");
-        const inputElement = firstData.querySelector("input, textarea, select");
-        if (inputElement)
-          setTimeout(() => {
-            inputElement.focus();
-          }, 100);
-      }
-    } else {
-      const firstData = contactSection.querySelector(".p-top-contact__data");
-      if (firstData && firstData.classList.contains("is-focus")) {
-        firstData.classList.remove("is-focus");
-        const inputElement = firstData.querySelector("input, textarea, select");
-        if (inputElement) inputElement.blur();
-      }
+document.addEventListener("DOMContentLoaded", () => {
+  const contactSection = document.getElementById("contact");
+  if (!contactSection) return;
+
+  contactSection.addEventListener("keydown", (e) => {
+    if (e.key !== "Tab") return;
+
+    const focusableElements = Array.from(contactSection.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')).filter((el) => el.offsetParent !== null);
+
+    if (focusableElements.length === 0) return;
+
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (!e.shiftKey && document.activeElement === lastElement) {
+      e.preventDefault();
+      firstElement.focus();
+      firstElement.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+    } else if (e.shiftKey && document.activeElement === firstElement) {
+      e.preventDefault();
+      lastElement.focus();
+      lastElement.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
     }
   });
-}
+});
 
 const modals = document.querySelectorAll("dialog.p-top-modal__content");
 
@@ -1000,5 +960,62 @@ document.querySelectorAll(".p-top-works__image").forEach((container) => {
     video.play().catch(() => {
       // 自動再生が抑制された場合のフォールバック処理（不要なら省略）
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+  // ドロワーメニューの状態を確認できる要素を取得
+  const drawer = document.querySelector(".c-drawer");
+
+  // Contactセクションの要素
+  const contactSection = document.getElementById("contact");
+
+  if (!contactSection) return;
+
+  window.addEventListener("scroll", () => {
+    // ドロワーメニューが開いている場合はフォーカス処理を禁止（優先度高い）
+    if (drawer && drawer.classList.contains("js-show")) return;
+
+    const rect = contactSection.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.2) {
+      const firstData = contactSection.querySelector(".p-top-contact__data");
+
+      if (firstData && !firstData.classList.contains("is-focus")) {
+        firstData.classList.add("is-focus");
+        // スマホは自動フォーカス禁止
+        if (!isMobile) {
+          const inputElement = firstData.querySelector("input, textarea, select");
+          if (inputElement) {
+            setTimeout(() => {
+              inputElement.focus();
+            }, 100);
+          }
+        }
+      }
+    } else {
+      const firstData = contactSection.querySelector(".p-top-contact__data");
+      if (firstData && firstData.classList.contains("is-focus")) {
+        firstData.classList.remove("is-focus");
+        const inputElement = firstData.querySelector("input, textarea, select");
+        if (inputElement) inputElement.blur();
+      }
+    }
+  });
+
+  // 既にあるフォーカスin/outの処理は必要に応じてスマホ判定を入れて制御
+  document.querySelectorAll(".p-top-contact__data").forEach((el) => {
+    if (isMobile) return; // スマホは無効化
+
+    if (!el.classList.contains("p-top-contact__data--checkbox")) {
+      el.addEventListener("focusin", () => {
+        el.classList.add("is-focus");
+      });
+      el.addEventListener("focusout", () => {
+        el.classList.remove("is-focus");
+      });
+    }
   });
 });
