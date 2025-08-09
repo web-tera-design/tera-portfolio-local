@@ -18,7 +18,7 @@
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-section__inner--mv">
             <div class="p-top-mv__content">
-                <h1 class="p-top-mv__title">正確さの先に、<br>伝わる力を。</h1>
+                <h2 class="p-top-mv__title">正確さの先に、<br>伝わる力を。</h2>
                 <div class="p-top-mv__copy">
                     <p class="p-top-mv__lead">デザインを引き立てる<br class="u-br--sm-down">実装にこだわります。</p>
                 </div>
@@ -45,9 +45,7 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp"
-                            width="100%"
-                            height="auto">
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/bluesky.webp">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/bluesky-top2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
@@ -66,9 +64,7 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp"
-                            width="100%"
-                            height="auto">
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/clinic.webp">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/clinic2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
@@ -87,9 +83,7 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp"
-                            width="100%"
-                            height="auto">
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/img/pomodoro.webp">
                             <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/pomodoro-top2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
@@ -108,10 +102,8 @@
                             loop
                             muted
                             playsinline
-                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.mp4"
-                            width="100%"
-                            height="auto">
-                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top2.mp4" type=" video/mp4">
+                            poster="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top.mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/dist/assets/video/portfolio-top2.mp4" type="video/mp4">
                             お使いのブラウザでは動画を再生できません。
                         </video>
                     </a>
@@ -381,7 +373,9 @@
                 </div>
             </div>
             <ul class="p-top-profile__timeline">
-                <div class="p-top-profile__timeline-lines"></div>
+                <li>
+                    <div class="p-top-profile__timeline-lines"></div>
+                </li>
                 <li class="p-top-profile__timeline-item">
                     <div class="p-top-profile__timeline-content">
                         <h3 class="p-top-profile__career-title">バイクレーサー時代</h3>

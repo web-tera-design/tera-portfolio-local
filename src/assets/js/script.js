@@ -1019,3 +1019,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+(function () {
+  try {
+    var s = document.createElement("script");
+    s.type = "speculationrules";
+    s.textContent = JSON.stringify({
+      prefetch: [{ source: "document", where: { href_matches: ["/*"] }, eagerness: "moderate" }],
+    });
+    document.head.appendChild(s);
+  } catch (e) {}
+})();

@@ -76,9 +76,20 @@ add_action('send_headers', function () {
     header('Expires: 0');
 });
 
-function remove_type_attr($tag)
-{
-    return preg_replace('/\s*type=["\']text\/(javascript|css)["\']/', '', $tag);
-}
-add_filter('script_loader_tag', 'remove_type_attr');
-add_filter('style_loader_tag', 'remove_type_attr');
+add_filter('script_loader_tag', function ($tag, $handle, $src) {
+    return str_replace(" type='text/javascript'", '', $tag);
+}, 10, 3);
+
+add_filter('style_loader_tag', function ($tag, $handle) {
+    return str_replace(" type='text/css'", '', $tag);
+}, 10, 2);
+
+add_action('template_redirect', function () {
+    ob_start(function ($html) {
+        $html = str_replace(" type='text/css'", '', $html);
+        $html = str_replace(' type="text/css"', '', $html);
+        $html = str_replace(" type='text/javascript'", '', $html);
+        $html = str_replace(' type="text/javascript"', '', $html);
+        return $html;
+    });
+});

@@ -8,6 +8,10 @@
       filter: brightness(0.75);
     }
   }
+  video {
+    inline-size: 100%;
+    block-size: auto;
+  }
 }
 
 .c-video.is-paused {
