@@ -14,8 +14,7 @@
     padding-inline: 20px;
   @include mq(lg) {
     margin-block: min(32px, 2.222222222vw) min(373px, 25.9027777777vw);
-    // inline-size: min(calc(1220px + 80px * 2), 100%);
-    inline-size: 1440px;
+    inline-size: min(calc(1220px + 80px * 2), 100%);
     padding-inline: 80px;
   }
 }
@@ -67,7 +66,7 @@
 
 .p-top-mv__lead {
     margin-block-start: 20px;
-    // color: $color-wt;
+    color: $color-wt;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: rclamp(2, 3, 375, 1440);
@@ -105,8 +104,7 @@
     // inline-size: 419px;
     @include mq(lg) {
         margin-block-start: revert;
-        // inset-inline-start: min(607px, 42.152777777vw);
-        inset-inline-end: 0;
+        inset-inline-start: min(607px, 42.152777777vw);
         inset-block-start: 0;
         inline-size: min(748px, 51.9444vw);
     }
@@ -122,35 +120,35 @@
     }
 }
 
-// .p-top-mv__label,
-// .p-top-mv__title,
-// .p-top-mv__lead {
-//   visibility: visible;
-//   font-weight: 800;
-//   text-shadow:
-//     0 0 4px #ff2400,
-//     0 0 8px #ff4500,
-//     0 0 12px #ff6347,
-//     0 0 16px #cc1100,
-//     0 0 20px rgba(204, 0, 0, 0.3);
-//   animation: flameFlicker 2s infinite ease-in-out;
-// }
+.p-top-mv__label,
+.p-top-mv__title,
+.p-top-mv__lead {
+  visibility: visible;
+  font-weight: 800;
+  text-shadow:
+    0 0 4px #ff2400,
+    0 0 8px #ff4500,
+    0 0 12px #ff6347,
+    0 0 16px #cc1100,
+    0 0 20px rgba(204, 0, 0, 0.3);
+  animation: flameFlicker 2s infinite ease-in-out;
+}
 
-// @keyframes flameFlicker {
-//   0%, 100% {
-//     text-shadow:
-//       0 0 4px #ff2400,
-//       0 0 8px #ff4500,
-//       0 0 12px #ff6347,
-//       0 0 16px #cc1100,
-//       0 0 20px rgba(204, 0, 0, 0.3);
-//   }
-//   50% {
-//     text-shadow:
-//       0 0 6px #ff3300,
-//       0 0 10px #ff5a36,
-//       0 0 14px #e60000,
-//       0 0 18px #990000,
-//       0 0 26px rgba(160, 0, 0, 0.4);
-//   }
-// }
+@keyframes flameFlicker {
+  0%, 100% {
+    text-shadow:
+      0 0 4px #ff2400,
+      0 0 8px #ff4500,
+      0 0 12px #ff6347,
+      0 0 16px #cc1100,
+      0 0 20px rgba(204, 0, 0, 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 6px #ff3300,
+      0 0 10px #ff5a36,
+      0 0 14px #e60000,
+      0 0 18px #990000,
+      0 0 26px rgba(160, 0, 0, 0.4);
+  }
+}

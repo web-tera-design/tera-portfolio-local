@@ -19,7 +19,7 @@
 }
 
 .l-section__inner--mv {
-    inline-size: 2000px;
+    inline-size: min(calc(1220px + 80px * 2), 100%);
     padding-inline: 80px;
     margin-inline: auto;
 }
