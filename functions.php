@@ -75,3 +75,10 @@ add_action('send_headers', function () {
     header('Pragma: no-cache');
     header('Expires: 0');
 });
+
+function remove_type_attr($tag)
+{
+    return preg_replace('/\s*type=["\']text\/(javascript|css)["\']/', '', $tag);
+}
+add_filter('script_loader_tag', 'remove_type_attr');
+add_filter('style_loader_tag', 'remove_type_attr');

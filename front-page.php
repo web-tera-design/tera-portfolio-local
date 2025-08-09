@@ -18,9 +18,9 @@
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-section__inner--mv">
             <div class="p-top-mv__content">
-                <h1 class="p-top-mv__title">正確さの先に、<br>伝わる力を。</h1>
+                <h1 class="p-top-mv__title">デザインを引き立てる<br>実装にこだわります。</h1>
                 <div class="p-top-mv__copy">
-                    <p class="p-top-mv__lead">デザインを引き立てる<br class="u-br--sm-down">実装にこだわります。</p>
+                    <p class="p-top-mv__lead">GSAPで魅せる、視線を誘導するアニメーション。<br>デザインの世界観まで丁寧に実装します。</p>
                 </div>
             </div>
             <div class="p-top__image-wrapper">
