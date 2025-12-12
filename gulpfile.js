@@ -203,8 +203,15 @@ function generateWebp() {
     .pipe(gulp.dest(paths.dist.img));
 }
 
-// 動画コピー（元のコードから移植）
-function copyVideos() {
+// 動画コピー（フォルダがなければスキップする安全設計）
+function copyVideos(done) {
+  // videoフォルダが存在するか確認
+  if (!fs.existsSync(paths.src.video)) {
+    console.log("Skipping copyVideos: No video folder found.");
+    return done(); // なければ何もしないで終了
+  }
+
+  // あればコピー実行
   return gulp
     .src([`${paths.src.video}/**/*.{mp4,webm,mov,ogg}`, `!${paths.src.video}/**/.DS_Store`], { encoding: false })
     .pipe(newer(paths.dist.video))
